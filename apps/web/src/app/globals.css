@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+/*
+ * Semantic design tokens (Tailwind v4 CSS-first @theme).
+ * Components reference these by semantic name (e.g. `text-heading`,
+ * `bg-body`) — never raw hex. Real palette is finalized in Phase 5.
+ */
+@theme {
+  --color-body: #0b0f1a;
+  --color-surface: #131a2a;
+  --color-heading: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-accent: #6366f1;
+}

@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+.next/
+out/
+*.tsbuildinfo
+
+# Test / coverage
+coverage/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Dev-only LLM provider (Claude is dev-only — never committed)
+apps/api/src/adapters/llm/providers/claude.ts
+
+# Co-working artifacts (never pushed)
+docs/
+graphify-out/
+decisions/
+.worktrees/
+archive/
+CLAUDE.md
+.claude/

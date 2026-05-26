@@ -1,0 +1,10 @@
+{
+  "app": {
+    "name": "VedaAI",
+    "tagline": "Generate structured exam papers with AI."
+  },
+  "home": {
+    "heading": "VedaAI",
+    "subheading": "Foundations are in place. The assessment creator arrives in Phase 3."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@vedaai/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "VedaAI single source of truth: Zod contracts + inferred types, shared by web and api.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
