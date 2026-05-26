@@ -50,7 +50,7 @@ terminal.
 ```bash
 # 1. Install CodeRabbit CLI (once per machine)
 npm install -g @coderabbit/coderabbit-cli
-# or: brew install coderabbit
+# or via Homebrew: see https://docs.coderabbit.ai/cli for install options
 
 # 2. Install git hooks (once per clone)
 bash scripts/install-hooks.sh
