@@ -28,6 +28,10 @@ pnpm-debug.log*
 # Dev-only LLM provider (Claude is dev-only — never committed)
 apps/api/src/adapters/llm/providers/claude.ts
 
+# Infra CLI link artifacts (local only)
+.vercel/
+.railway/
+
 # Co-working artifacts (never pushed)
 docs/
 graphify-out/
