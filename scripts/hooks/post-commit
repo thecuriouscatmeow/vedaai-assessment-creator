@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# CodeRabbit per-commit review
+# Runs automatically after every `git commit`.
+# Advisory only — exits 0 regardless of findings so commits are never blocked.
+
+set -euo pipefail
+
+# ── Guard: CR must be installed ────────────────────────────────────────────────
+if ! command -v coderabbit &>/dev/null; then
+  echo "⚠  coderabbit not found — skipping review (run: npm i -g @coderabbit/coderabbit-cli)"
+  exit 0
+fi
+
+# ── Determine diff range ───────────────────────────────────────────────────────
+# On the very first commit HEAD~1 does not exist; review the full tree instead.
+if git rev-parse --verify HEAD~1 &>/dev/null; then
+  RANGE="HEAD~1..HEAD"
+else
+  RANGE="HEAD"
+fi
+
+echo ""
+echo "🐇 CodeRabbit review — $RANGE"
+echo "──────────────────────────────────────────"
+
+# Run CR; capture exit code but always exit 0 so the commit is never rolled back.
+coderabbit review "$RANGE" || {
+  echo "⚠  coderabbit review exited with an error — check your CR config/token."
+}
+
+echo "──────────────────────────────────────────"
+echo ""
+
+exit 0
