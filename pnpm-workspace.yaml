@@ -3,6 +3,7 @@ packages:
   - "packages/*"
 allowBuilds:
   esbuild: true
+  msgpackr-extract: true
   sharp: true
 minimumReleaseAgeExclude:
   - '@typescript-eslint/eslint-plugin@8.60.0'

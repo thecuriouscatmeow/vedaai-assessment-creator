@@ -3,6 +3,8 @@ import type { Logger } from 'pino';
 import type { AppConfig } from './lib/config';
 import { httpLogger } from './lib/logger';
 import { errorHandler, notFoundHandler } from './lib/error';
+import type { PingService } from './services/ping.service';
+import { createPingRouter } from './routes/ping';
 
 /**
  * Express application factory.
@@ -11,14 +13,24 @@ import { errorHandler, notFoundHandler } from './lib/error';
  * the fully-wired app — middleware order included — without binding a port.
  * `mountTestRoutes` injects probe routes *before* the error handler so the
  * real error pipeline is what gets verified.
+ *
+ * Feature routes (e.g. ping) are only mounted when their service dependency is
+ * provided via `deps`, keeping the base test app lean and the existing
+ * /health + error tests untouched.
  */
+
+export interface AppDeps {
+  pingService: PingService;
+}
+
 export interface CreateAppOptions {
   config: AppConfig;
   logger: Logger;
+  deps?: AppDeps;
   mountTestRoutes?: (app: Express) => void;
 }
 
-export function createApp({ config, logger, mountTestRoutes }: CreateAppOptions): Express {
+export function createApp({ config, logger, deps, mountTestRoutes }: CreateAppOptions): Express {
   const app = express();
   app.disable('x-powered-by');
 
@@ -28,6 +40,10 @@ export function createApp({ config, logger, mountTestRoutes }: CreateAppOptions)
   app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'ok', service: 'vedaai-api', uptime: process.uptime() });
   });
+
+  if (deps) {
+    app.use('/api', createPingRouter({ pingService: deps.pingService }));
+  }
 
   mountTestRoutes?.(app);
 
