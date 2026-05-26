@@ -25,5 +25,5 @@ install_hook() {
 }
 
 echo "Installing git hooks..."
-install_hook "post-commit"
+install_hook "post-commit" || exit 1
 echo "Done. Run: npm i -g @coderabbit/coderabbit-cli (once per machine) to enable reviews."
