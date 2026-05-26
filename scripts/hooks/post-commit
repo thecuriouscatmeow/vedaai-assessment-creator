@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# CodeRabbit per-commit review
+# CodeRabbit per-commit review (uses coderabbit CLI plugin — requires v0.4.0+)
 # Runs automatically after every `git commit`.
 # Advisory only — exits 0 regardless of findings so commits are never blocked.
 
@@ -11,22 +11,21 @@ if ! command -v coderabbit &>/dev/null; then
   exit 0
 fi
 
-# ── Determine diff range ───────────────────────────────────────────────────────
-# On the very first commit HEAD~1 does not exist; review the full tree instead.
-if git rev-parse --verify HEAD~1 &>/dev/null; then
-  RANGE="HEAD~1..HEAD"
-else
-  RANGE="$(git hash-object -t tree /dev/null)..HEAD"
-fi
-
 echo ""
-echo "🐇 CodeRabbit review — $RANGE"
+echo "🐇 CodeRabbit review — HEAD"
 echo "──────────────────────────────────────────"
 
-# Run CR; capture exit code but always exit 0 so the commit is never rolled back.
-coderabbit review "$RANGE" || {
-  echo "⚠  coderabbit review exited with an error — check your CR config/token."
-}
+# Use --agent for structured output + proper committed-changes scope.
+# On the very first commit HEAD~1 does not exist; omit --base-commit.
+if git rev-parse --verify HEAD~1 &>/dev/null; then
+  coderabbit review --agent -t committed --base-commit HEAD~1 || {
+    echo "⚠  coderabbit review exited with an error — check your CR config/token."
+  }
+else
+  coderabbit review --agent -t committed || {
+    echo "⚠  coderabbit review exited with an error — check your CR config/token."
+  }
+fi
 
 echo "──────────────────────────────────────────"
 echo ""
