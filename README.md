@@ -41,6 +41,24 @@ pnpm --filter @vedaai/api dev    # start the API
 pnpm --filter @vedaai/web dev    # start the web app
 ```
 
+### Code-quality hooks (run once per clone)
+
+This repo uses [CodeRabbit CLI](https://docs.coderabbit.ai/cli) as a `post-commit`
+hook. After every `git commit`, it reviews the diff and prints findings to the
+terminal.
+
+```bash
+# 1. Install CodeRabbit CLI (once per machine)
+npm install -g @coderabbit/coderabbit-cli
+# or: brew install coderabbit
+
+# 2. Install git hooks (once per clone)
+bash scripts/install-hooks.sh
+```
+
+> The hook is advisory — it never blocks a commit. If CodeRabbit is not installed,
+> a warning is printed and the hook skips silently.
+
 ## Engineering standards
 
 Layered architecture (route → service → domain → Zod contract → adapter),
