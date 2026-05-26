@@ -19,6 +19,7 @@ const EnvSchema = z.object({
   CLOUDINARY_CLOUD_NAME: z.string().min(1),
   CLOUDINARY_API_KEY: z.string().min(1),
   CLOUDINARY_API_SECRET: z.string().min(1),
+  WEB_ORIGIN: z.string().url().default('http://localhost:3000'),
 });
 
 export interface AppConfig {
@@ -29,6 +30,7 @@ export interface AppConfig {
   logLevel: string;
   mongodbUri: string;
   redisUrl: string;
+  webOrigin: string;
   gemini: { apiKey: string };
   cloudinary: { cloudName: string; apiKey: string; apiSecret: string };
 }
@@ -51,6 +53,7 @@ export function loadConfig(env: Record<string, string | undefined> = process.env
     logLevel: e.LOG_LEVEL,
     mongodbUri: e.MONGODB_URI,
     redisUrl: e.REDIS_URL,
+    webOrigin: e.WEB_ORIGIN,
     gemini: { apiKey: e.GEMINI_API_KEY },
     cloudinary: {
       cloudName: e.CLOUDINARY_CLOUD_NAME,

@@ -1,11 +1,13 @@
 import { describe, it, expect } from 'vitest';
 import {
   SOCKET_EVENTS,
+  SOCKET_CLIENT_EVENTS,
   AssignmentStatusSchema,
   AssignmentQueuedSchema,
   AssignmentProgressSchema,
   AssignmentDoneSchema,
   AssignmentFailedSchema,
+  AssignmentSubscribeSchema,
 } from '../index';
 
 const validPaper = {
@@ -66,5 +68,26 @@ describe('socket payloads', () => {
 
   it('rejects a failed payload missing the error', () => {
     expect(() => AssignmentFailedSchema.parse({ assignmentId: 'a1' })).toThrow();
+  });
+});
+
+describe('SOCKET_CLIENT_EVENTS', () => {
+  it('exposes the subscribe event name', () => {
+    expect(SOCKET_CLIENT_EVENTS.subscribe).toBe('assignment:subscribe');
+  });
+});
+
+describe('AssignmentSubscribeSchema', () => {
+  it('accepts a valid subscribe payload', () => {
+    const parsed = AssignmentSubscribeSchema.parse({ assignmentId: 'abc-123' });
+    expect(parsed.assignmentId).toBe('abc-123');
+  });
+
+  it('rejects a payload with an empty assignmentId', () => {
+    expect(() => AssignmentSubscribeSchema.parse({ assignmentId: '' })).toThrow();
+  });
+
+  it('rejects a payload missing the assignmentId', () => {
+    expect(() => AssignmentSubscribeSchema.parse({})).toThrow();
   });
 });

@@ -13,9 +13,9 @@ import { GENERATE_QUEUE, type GenerateJobData } from './lib/queue';
  * Worker; Phase 4 swaps `buildStubPaper` for the Gemini adapter without
  * touching the worker infrastructure.
  *
- * M2 seam: after `buildStubPaper` resolves, emit `SOCKET_EVENTS.done` to the
- * Socket.IO room identified by `assignmentId`. The server instance should be
- * passed into `main` (or resolved from a module-level singleton) at that point.
+ * The worker is a pure processor: it returns a `QuestionPaper` and has no
+ * knowledge of Socket.IO. Result delivery to clients is handled by the API
+ * process via BullMQ `QueueEvents` in `lib/socket.ts`.
  */
 
 /** Minimal job shape the processor handles. Internal, not exported. */
@@ -45,7 +45,6 @@ export function createGenerateProcessor(
       await new Promise<void>((resolve) => setTimeout(resolve, delayMs));
     }
 
-    // M2 seam: emit SOCKET_EVENTS.done to assignmentId room here.
     return buildStubPaper(job.data.assignmentId);
   };
 }
@@ -76,7 +75,6 @@ async function main(): Promise<void> {
       { jobId: job.id, assignmentId: job.data.assignmentId, title: result.title },
       'worker: job completed',
     );
-    // M2 seam: io.to(job.data.assignmentId).emit(SOCKET_EVENTS.done, { assignmentId, paper: result })
   });
 
   worker.on('failed', (job, err) => {

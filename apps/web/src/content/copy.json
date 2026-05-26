@@ -6,5 +6,15 @@
   "home": {
     "heading": "VedaAI",
     "subheading": "Foundations are in place. The assessment creator arrives in Phase 3."
+  },
+  "ping": {
+    "heading": "Socket Round-Trip Test",
+    "button": "Generate stub paper",
+    "status": {
+      "idle": "Idle — press the button to enqueue a job.",
+      "queued": "Queued — waiting for the worker…",
+      "done": "Done — paper received.",
+      "failed": "Generation failed."
+    }
   }
 }

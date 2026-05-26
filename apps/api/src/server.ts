@@ -1,43 +1,87 @@
+import { createServer } from 'node:http';
 import { loadConfig } from './lib/config';
 import { createLogger } from './lib/logger';
 import { createRedisConnection } from './lib/redis';
 import { createGenerateQueue } from './lib/queue';
+import { createSocketServer, attachGenerateQueueEvents } from './lib/socket';
 import { createPingService } from './services/ping.service';
 import { createApp } from './app';
 
 /**
- * Process entrypoint: load + validate config (fail fast), build the logger,
- * wire up Redis + queue + services, then listen.
+ * Process entrypoint.
  *
- * Dependency order: config → logger → redis → queue → services → app → listen.
- * Graceful shutdown closes the queue connection so in-flight jobs can drain.
+ * Dependency order:
+ *   config → logger → redis → queue → services → app
+ *   → http server → Socket.IO → QueueEvents → listen
+ *
+ * The explicit http server is required so Socket.IO can share the same port as
+ * Express. QueueEvents runs in THIS process (not the worker) so that socket
+ * emission stays in the process that holds the client connections.
+ *
+ * Graceful shutdown closes Socket.IO, QueueEvents, the queue, and the http
+ * server in the correct order.
  */
 const config = loadConfig();
 const logger = createLogger(config);
 
 const redisConnection = createRedisConnection(config);
+// QueueEvents needs its own ioredis connection (BullMQ requirement)
+const queueEventsConnection = createRedisConnection(config);
+
 const generateQueue = createGenerateQueue(redisConnection);
 const pingService = createPingService({ queue: generateQueue });
 
 const app = createApp({ config, logger, deps: { pingService } });
 
-const server = app.listen(config.port, () => {
+const httpServer = createServer(app);
+
+const io = createSocketServer(httpServer, {
+  logger,
+  corsOrigin: config.webOrigin,
+});
+
+const queueEvents = attachGenerateQueueEvents(io, {
+  connection: queueEventsConnection,
+  logger,
+});
+
+httpServer.listen(config.port, () => {
   logger.info({ port: config.port, env: config.nodeEnv }, 'vedaai-api listening');
 });
 
 function shutdown(): void {
-  server.close(() => {
-    generateQueue
-      .close()
-      .then(() => {
-        logger.info('server closed');
-        process.exit(0);
-      })
-      .catch((err: unknown) => {
-        logger.error({ err }, 'shutdown error');
-        process.exit(1);
-      });
-  });
+  logger.info('shutdown: signal received');
+
+  new Promise<void>((resolve, reject) => {
+    io.close((err) => {
+      if (err) reject(err);
+      else {
+        logger.info('shutdown: socket.io closed');
+        resolve();
+      }
+    });
+  })
+    .then(() => queueEvents.close())
+    .then(() => generateQueue.close())
+    .then(() => redisConnection.quit())
+    .then(() => queueEventsConnection.quit())
+    .then(
+      () =>
+        new Promise<void>((resolve, reject) => {
+          httpServer.close((err) => {
+            if (err) reject(err);
+            else resolve();
+          });
+        }),
+    )
+    .then(() => {
+      logger.info('shutdown: complete');
+      process.exit(0);
+    })
+    .catch((err: unknown) => {
+      logger.error({ err }, 'shutdown: error');
+      process.exit(1);
+    });
 }
 
 process.on('SIGTERM', shutdown);

@@ -19,6 +19,12 @@ describe('loadConfig', () => {
     expect(config.port).toBe(4100);
     expect(config.isProduction).toBe(false);
     expect(config.cloudinary.cloudName).toBe('demo');
+    expect(config.webOrigin).toBe('http://localhost:3000');
+  });
+
+  it('accepts a custom WEB_ORIGIN', () => {
+    const config = loadConfig({ ...validEnv, WEB_ORIGIN: 'http://localhost:5000' });
+    expect(config.webOrigin).toBe('http://localhost:5000');
   });
 
   it('coerces PORT to a number', () => {

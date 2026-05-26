@@ -43,3 +43,20 @@ export const AssignmentFailedSchema = z.object({
   error: z.string().min(1),
 });
 export type AssignmentFailed = z.infer<typeof AssignmentFailedSchema>;
+
+/**
+ * Client → server events.
+ *
+ * The client emits `assignment:subscribe` with an `assignmentId` immediately
+ * after connecting so the server can join it to the correct room. This is the
+ * only client-originated event in the generation lifecycle.
+ */
+export const SOCKET_CLIENT_EVENTS = {
+  subscribe: 'assignment:subscribe',
+} as const;
+export type SocketClientEventName = (typeof SOCKET_CLIENT_EVENTS)[keyof typeof SOCKET_CLIENT_EVENTS];
+
+export const AssignmentSubscribeSchema = z.object({
+  assignmentId: z.string().min(1),
+});
+export type AssignmentSubscribe = z.infer<typeof AssignmentSubscribeSchema>;

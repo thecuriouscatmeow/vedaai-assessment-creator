@@ -35,7 +35,12 @@ export function createGenerateQueue(connection: IORedis): GenerateQueue {
 
   return {
     async enqueue(data) {
-      const job = await bullQueue.add(GENERATE_QUEUE, data);
+      // Pin the BullMQ job id to the assignmentId so the QueueEvents listener
+      // can use `jobId` directly as the Socket.IO room key (no extra lookup).
+      // This also makes enqueue idempotent: BullMQ silently ignores a duplicate
+      // jobId, so re-enqueuing the same assignmentId won't create a second job.
+      // AssignmentIds are hyphenated UUIDs (no colons) and are Redis-key safe.
+      const job = await bullQueue.add(GENERATE_QUEUE, data, { jobId: data.assignmentId });
       if (!job.id) {
         throw new Error('BullMQ did not return a job id');
       }

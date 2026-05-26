@@ -8,6 +8,13 @@ export { createLogger, httpLogger, type LoggerConfig } from './lib/logger';
 export { HttpError, errorHandler, notFoundHandler } from './lib/error';
 export { createRedisConnection } from './lib/redis';
 export { createGenerateQueue, GENERATE_QUEUE, type GenerateJobData, type GenerateQueue } from './lib/queue';
+export {
+  createSocketServer,
+  attachGenerateQueueEvents,
+  roomFor,
+  type SocketServerOptions,
+  type QueueEventsOptions,
+} from './lib/socket';
 export { createPingService, type PingService } from './services/ping.service';
 export { createPingRouter, type PingRouterDeps } from './routes/ping';
 export { createGenerateProcessor, type ProcessorOptions } from './worker';
