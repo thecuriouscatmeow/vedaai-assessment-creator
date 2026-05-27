@@ -17,6 +17,17 @@ export class HttpError extends Error {
   }
 }
 
+/**
+ * Thrown by the repository when an entity is missing. Routes translate it to a
+ * 404 via `instanceof` — no brittle message string-matching.
+ */
+export class NotFoundError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'NotFoundError';
+  }
+}
+
 export const notFoundHandler: RequestHandler = (req, res) => {
   res.status(404).json({ error: { status: 404, message: 'Not Found', requestId: req.id } });
 };

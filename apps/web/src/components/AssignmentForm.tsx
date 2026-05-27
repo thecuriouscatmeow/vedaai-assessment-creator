@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm, useFieldArray, useWatch } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
@@ -34,6 +35,7 @@ export function AssignmentForm() {
   const uploading = useAppSelector((s) => s.assignmentForm.uploading);
   const { upload } = useCloudinaryUpload();
   const subscribeToAssignment = useAssignmentSocket();
+  const [fileError, setFileError] = useState<string | null>(null);
 
   const {
     register,
@@ -66,9 +68,11 @@ export function AssignmentForm() {
 
     const MAX_BYTES = 10 * 1024 * 1024;
     if (file.size > MAX_BYTES) {
+      setFileError(copy.assignmentForm.errors.fileSize);
       return;
     }
 
+    setFileError(null);
     const url = await upload(file);
     if (url) {
       setValue('fileUrl', url);
@@ -160,6 +164,11 @@ export function AssignmentForm() {
           </div>
           <span id="file-hint">{copy.assignmentForm.fields.file.uploadImages}</span>
           {uploading && <span aria-live="polite">{copy.assignmentForm.uploading}</span>}
+          {fileError && (
+            <span role="alert" aria-live="assertive">
+              {fileError}
+            </span>
+          )}
         </div>
 
         {/* Due date — required */}

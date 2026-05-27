@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import type { Logger } from 'pino';
 import { AssignmentInputSchema } from '@vedaai/shared';
 import type { AssignmentService } from '../services/assignment.service';
-import { HttpError } from '../lib/error';
+import { HttpError, NotFoundError } from '../lib/error';
 
 /**
  * Assignment router.
@@ -122,7 +122,7 @@ export function createAssignmentRouter({
       logger.info({ id }, 'route: assignment deleted');
       res.status(204).send();
     } catch (err) {
-      if (err instanceof Error && err.message.includes('not found')) {
+      if (err instanceof NotFoundError) {
         next(new HttpError(404, err.message));
         return;
       }

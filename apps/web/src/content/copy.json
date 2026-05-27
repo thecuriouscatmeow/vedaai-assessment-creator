@@ -116,6 +116,7 @@
       "marksPositive": "Marks must be a positive integer.",
       "uploadFailed": "File upload failed. Please try again.",
       "submitFailed": "Failed to submit assignment. Please try again.",
+   "connectionError": "Lost connection to the server before generation finished. Please try again.",
       "fileSize": "File must be 10 MB or smaller.",
       "fileType": "Only JPEG, PNG, or PDF files are accepted."
     }

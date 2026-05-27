@@ -17,7 +17,7 @@ import { QUESTION_TYPE_LABELS, type AssignmentInput } from '@vedaai/shared';
 export function buildPrompt(input: AssignmentInput): string {
   const questionSpecLines = input.questions
     .map((q, i) => {
-      const label = QUESTION_TYPE_LABELS[q.type];
+      const label = QUESTION_TYPE_LABELS[q.type] ?? q.type;
       return `  ${i + 1}. ${label} — ${q.count} question(s), ${q.marks} mark(s) each`;
     })
     .join('\n');

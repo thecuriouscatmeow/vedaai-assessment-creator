@@ -1,5 +1,6 @@
 import type { AssignmentInput, AssignmentSummary, QuestionPaper } from '@vedaai/shared';
 import { AssignmentModel, type AssignmentRecord } from '../../models/assignment';
+import { NotFoundError } from '../../lib/error';
 
 /**
  * Repository contract for assignment persistence.
@@ -89,7 +90,7 @@ export function createAssignmentRepository(): AssignmentRepository {
     async deleteById(id) {
       const result = await AssignmentModel.findByIdAndDelete(id).lean().exec();
       if (!result) {
-        throw new Error(`Assignment ${id} not found`);
+        throw new NotFoundError(`Assignment ${id} not found`);
       }
     },
 
@@ -102,7 +103,7 @@ export function createAssignmentRepository(): AssignmentRepository {
         .lean()
         .exec();
       if (!result) {
-        throw new Error(`Assignment ${id} not found`);
+        throw new NotFoundError(`Assignment ${id} not found`);
       }
     },
 
@@ -115,7 +116,7 @@ export function createAssignmentRepository(): AssignmentRepository {
         .lean()
         .exec();
       if (!result) {
-        throw new Error(`Assignment ${id} not found`);
+        throw new NotFoundError(`Assignment ${id} not found`);
       }
     },
 
@@ -128,7 +129,7 @@ export function createAssignmentRepository(): AssignmentRepository {
         .lean()
         .exec();
       if (!result) {
-        throw new Error(`Assignment ${id} not found`);
+        throw new NotFoundError(`Assignment ${id} not found`);
       }
     },
   };
