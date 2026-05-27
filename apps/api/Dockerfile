@@ -32,6 +32,10 @@ RUN pnpm install --frozen-lockfile --filter @vedaai/api...
 
 # ── Stage 2: runner ───────────────────────────────────────────────────────────
 FROM base AS runner
+
+# Run as non-root for container security best practice.
+RUN addgroup -g 1001 -S nodejs && adduser -S nodejs -u 1001
+
 WORKDIR /app
 
 # Copy the pnpm virtual store (node_modules/.pnpm/) and package-level .bin
@@ -52,6 +56,8 @@ COPY apps/api        ./apps/api
 # Configurable entry point (ARG → ENV so sh -c expands it at runtime).
 ARG  ENTRY=server
 ENV  VEDA_ENTRY=${ENTRY}
+
+USER nodejs
 
 EXPOSE 4000
 

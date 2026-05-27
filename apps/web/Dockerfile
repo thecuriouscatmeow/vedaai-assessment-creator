@@ -46,6 +46,10 @@ RUN pnpm --filter @vedaai/web build
 
 # ── Stage 3: runner (standalone) ─────────────────────────────────────────────
 FROM node:20-alpine AS runner
+
+# Run as non-root for container security best practice.
+RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
+
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -57,6 +61,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 COPY --from=builder /app/apps/web/.next/standalone ./
 COPY --from=builder /app/apps/web/.next/static     ./apps/web/.next/static
 COPY --from=builder /app/apps/web/public           ./apps/web/public
+
+USER nextjs
 
 EXPOSE 3000
 ENV  PORT=3000
