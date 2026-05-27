@@ -1,0 +1,36 @@
+# ── Version control ────────────────────────────────────────────────────────────
+.git/
+.gitignore
+
+# ── Dependencies ───────────────────────────────────────────────────────────────
+# Installed fresh inside each build stage; never copy from host.
+node_modules/
+**/node_modules/
+
+# ── Next.js build artifacts ────────────────────────────────────────────────────
+.next/
+**/.next/
+out/
+
+# ── Environment / secrets ──────────────────────────────────────────────────────
+# Never copy real secrets into the build context.
+.env
+.env.*
+!.env.example
+
+# ── Dev tooling / editor ───────────────────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/
+
+# ── Co-working artifacts (gitignored locally) ──────────────────────────────────
+docs/
+graphify-out/
+decisions/
+.worktrees/
+archive/
+
+# ── Test / coverage artifacts ──────────────────────────────────────────────────
+coverage/
+**/coverage/

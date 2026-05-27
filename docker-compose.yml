@@ -1,0 +1,114 @@
+# =============================================================================
+# VedaAI — full local stack
+#
+# Services: redis · mongo · api · worker · web
+#
+# Usage:
+#   docker compose up --build          # first run; rebuilds images
+#   docker compose up                  # subsequent runs (uses image cache)
+#   docker compose down -v             # stop + remove volumes
+#
+# Secrets (GEMINI_API_KEY, CLOUDINARY_*) are read from the host environment
+# or a .env file in this directory.  During Phase 2 (walking skeleton) the
+# api/worker stubs never call Gemini or Cloudinary, so placeholders suffice.
+# =============================================================================
+
+services:
+  # ── Redis ─────────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── MongoDB ───────────────────────────────────────────────────────────────
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: vedaai
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── API (Express + Socket.IO) ─────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+      args:
+        ENTRY: server
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: production
+      PORT: "4000"
+      LOG_LEVEL: info
+      MONGODB_URI: mongodb://mongo:27017/vedaai
+      REDIS_URL: redis://redis:6379
+      # These three are validated by loadConfig() but unused until Phase 4.
+      # The :-stub defaults let the stack start without real keys.
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-stub}
+      CLOUDINARY_CLOUD_NAME: ${CLOUDINARY_CLOUD_NAME:-stub}
+      CLOUDINARY_API_KEY: ${CLOUDINARY_API_KEY:-stub}
+      CLOUDINARY_API_SECRET: ${CLOUDINARY_API_SECRET:-stub}
+      # Allow requests from the browser (localhost:3000 → web container port).
+      WEB_ORIGIN: http://localhost:3000
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+
+  # ── Worker (BullMQ generate processor) ───────────────────────────────────
+  worker:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+      args:
+        ENTRY: worker
+    environment:
+      NODE_ENV: production
+      # PORT / WEB_ORIGIN are unused by the worker but required by loadConfig().
+      PORT: "4000"
+      LOG_LEVEL: info
+      MONGODB_URI: mongodb://mongo:27017/vedaai
+      REDIS_URL: redis://redis:6379
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-stub}
+      CLOUDINARY_CLOUD_NAME: ${CLOUDINARY_CLOUD_NAME:-stub}
+      CLOUDINARY_API_KEY: ${CLOUDINARY_API_KEY:-stub}
+      CLOUDINARY_API_SECRET: ${CLOUDINARY_API_SECRET:-stub}
+      WEB_ORIGIN: http://localhost:3000
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+
+  # ── Web (Next.js standalone) ──────────────────────────────────────────────
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        # Baked into the Next.js bundle at build time (NEXT_PUBLIC_* are
+        # build-time-only).  Must be browser-accessible, not Docker-internal.
+        NEXT_PUBLIC_API_URL: http://localhost:4000
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    depends_on:
+      - api
+
+volumes:
+  mongo_data:

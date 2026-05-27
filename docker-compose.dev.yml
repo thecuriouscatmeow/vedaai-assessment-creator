@@ -1,0 +1,17 @@
+# =============================================================================
+# VedaAI — local dev shortcut: Redis only
+#
+# Run api and worker locally with tsx watch:
+#   pnpm --filter @vedaai/api dev          # server (port 4000)
+#   pnpm --filter @vedaai/api start:worker  # worker
+#
+# Usage:
+#   docker compose -f docker-compose.dev.yml up -d    # start redis
+#   docker compose -f docker-compose.dev.yml down      # stop redis
+# =============================================================================
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
