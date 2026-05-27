@@ -6,6 +6,9 @@ import { createRedisConnection } from './lib/redis';
 import { createGenerateQueue } from './lib/queue';
 import { createSocketServer, attachGenerateQueueEvents } from './lib/socket';
 import { createPingService } from './services/ping.service';
+import { createAssignmentRepository } from './adapters/db/assignment.repository';
+import { createAssignmentService } from './services/assignment.service';
+import { createCloudinaryAdapter } from './adapters/storage/cloudinary.adapter';
 import { createApp } from './app';
 
 /**
@@ -34,7 +37,11 @@ const queueEventsConnection = createRedisConnection(config);
 const generateQueue = createGenerateQueue(redisConnection);
 const pingService = createPingService({ queue: generateQueue });
 
-const app = createApp({ config, logger, deps: { pingService } });
+const assignmentRepo = createAssignmentRepository();
+const assignmentService = createAssignmentService({ repo: assignmentRepo, queue: generateQueue });
+const storageAdapter = createCloudinaryAdapter(config);
+
+const app = createApp({ config, logger, deps: { pingService, assignmentService, storageAdapter } });
 
 const httpServer = createServer(app);
 

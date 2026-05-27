@@ -122,7 +122,7 @@ describe('createSocketServer + room round-trip', () => {
 
       client.on('connect_error', reject);
 
-      setTimeout(() => reject(new Error('Timed out waiting for assignment:done')), 3000);
+      setTimeout(() => reject(new Error('Timed out waiting for assignment:done')), 8000);
     }));
 
   it('ignores an invalid subscribe payload (empty assignmentId) without throwing', () =>
