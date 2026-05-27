@@ -4,7 +4,9 @@ import type { LlmAdapter } from '../adapters/llm/index';
 
 const validPaper = {
   title: 'Final Exam',
+  schoolName: 'Delhi Public School, Sector-4, Bokaro',
   subject: 'Mathematics',
+  className: 'Class 8',
   totalMarks: 10,
   studentInfo: {},
   sections: [

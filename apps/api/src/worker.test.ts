@@ -25,9 +25,12 @@ beforeEach(async () => {
   }
 });
 
+// Mocked LLM output — the academic subset (schoolName/schoolAddress are injected
+// by the worker before validation, so they are intentionally absent here).
 const validPaperJson = JSON.stringify({
   title: 'Test Paper',
   subject: 'Science',
+  className: 'Class 5',
   totalMarks: 10,
   studentInfo: {},
   sections: [{ title: 'Section A', questions: [{ text: 'Q1?', difficulty: 'easy', marks: 10 }] }],
@@ -45,8 +48,7 @@ describe('createGenerateProcessor (real generation path)', () => {
     const repo = createAssignmentRepository();
     const { id: assignmentId } = await repo.create({
       dueDate: '2025-12-01',
-      questionTypes: ['mcq'],
-      questions: [{ count: 5, marks: 2 }],
+      questions: [{ type: 'mcq', count: 5, marks: 2 }],
     });
 
     const llm = makeMockLlm();
@@ -63,8 +65,7 @@ describe('createGenerateProcessor (real generation path)', () => {
     const repo = createAssignmentRepository();
     const { id: assignmentId } = await repo.create({
       dueDate: '2025-12-01',
-      questionTypes: ['short'],
-      questions: [{ count: 3, marks: 5 }],
+      questions: [{ type: 'short', count: 3, marks: 5 }],
     });
 
     const llm = makeMockLlm();
@@ -80,8 +81,7 @@ describe('createGenerateProcessor (real generation path)', () => {
     const repo = createAssignmentRepository();
     const { id: assignmentId } = await repo.create({
       dueDate: '2025-12-01',
-      questionTypes: ['mcq'],
-      questions: [{ count: 1, marks: 1 }],
+      questions: [{ type: 'mcq', count: 1, marks: 1 }],
     });
 
     const failingLlm: LlmAdapter = {
@@ -103,8 +103,7 @@ describe('createGenerateProcessor (real generation path)', () => {
     const repo = createAssignmentRepository();
     const { id: assignmentId } = await repo.create({
       dueDate: '2025-12-01',
-      questionTypes: ['mcq'],
-      questions: [{ count: 1, marks: 1 }],
+      questions: [{ type: 'mcq', count: 1, marks: 1 }],
     });
 
     const badLlm: LlmAdapter = {
@@ -126,8 +125,7 @@ describe('createGenerateProcessor (real generation path)', () => {
     const repo = createAssignmentRepository();
     const { id: assignmentId } = await repo.create({
       dueDate: '2025-12-01',
-      questionTypes: ['mcq'],
-      questions: [{ count: 1, marks: 1 }],
+      questions: [{ type: 'mcq', count: 1, marks: 1 }],
     });
 
     let statusDuringLlmCall: string | undefined;

@@ -4,11 +4,15 @@ import type { LlmAdapter } from '../adapters/llm/index';
 /**
  * Parse + validate the LLM's raw text output into a schema-valid QuestionPaper.
  *
+ * NOTE: the worker injects `schoolName`/`schoolAddress` BEFORE calling this
+ * function, so the full `QuestionPaperSchema` (which requires those fields) is
+ * used for validation.
+ *
  * Strategy:
  *  1. Attempt to JSON.parse the raw string and Zod-validate it.
  *  2. On any failure (parse error or schema violation), perform EXACTLY ONE
  *     repair-retry: re-prompt the LLM with the validation error message, then
- *     attempt parse+validate again.
+ *     attempt parse + validate again.
  *  3. If the retry also fails, throw — the worker will mark the job as failed.
  *
  * The LLM adapter is only called for the repair step; a valid first response
@@ -20,9 +24,19 @@ export async function parsePaper(raw: string, llm: LlmAdapter): Promise<Question
     return firstAttempt.data;
   }
 
-  // Repair-retry: give the LLM the validation error + ask it to fix the JSON
+  // Repair-retry: give the LLM the validation error + ask it to fix the JSON.
   const repairPrompt = buildRepairPrompt(raw, firstAttempt.error);
-  const repaired = await llm.complete({ prompt: repairPrompt });
+
+  let repaired: string;
+  try {
+    repaired = await llm.complete({ prompt: repairPrompt });
+  } catch (repairErr) {
+    throw new Error(
+      `LLM repair call failed (original validation error: ${firstAttempt.error}): ${
+        repairErr instanceof Error ? repairErr.message : String(repairErr)
+      }`,
+    );
+  }
 
   const secondAttempt = tryParse(repaired);
   if (secondAttempt.success) {
@@ -67,18 +81,21 @@ ${originalRaw}
 
 Please produce a corrected JSON object that EXACTLY matches the QuestionPaper schema:
 - title: string (min 1 char)
+- schoolName: string (min 1 char) — use "Delhi Public School, Sector-4, Bokaro"
 - subject: string (min 1 char)
+- className: string (min 1 char)
 - totalMarks: positive integer (must equal sum of all question marks)
 - durationMinutes?: positive integer (optional)
 - generalInstructions?: string (optional)
-- studentInfo: object (name?, rollNumber?, className?, examDate? — all optional strings)
+- studentInfo: object (name?, rollNumber?, section? — all optional empty strings)
 - sections: array of at least 1 section, each with:
   - title: string (min 1 char)
   - instruction?: string (optional)
   - questions: array of at least 1 question, each with:
     - text: string (min 1 char)
-    - difficulty: "easy" | "moderate" | "hard"
+    - difficulty: "easy" | "moderate" | "challenging"  (NOT "hard")
     - marks: positive integer
+    - answer?: string (optional model answer)
 
 Return ONLY the corrected JSON object — no markdown, no explanation, no code fences.`;
 }

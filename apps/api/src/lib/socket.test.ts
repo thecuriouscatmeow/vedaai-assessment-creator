@@ -36,7 +36,9 @@ const validEnv = {
 
 const validPaper = {
   title: 'Test Paper',
+  schoolName: 'Delhi Public School, Sector-4, Bokaro',
   subject: 'Mathematics',
+  className: 'Class 8',
   totalMarks: 50,
   studentInfo: {},
   sections: [

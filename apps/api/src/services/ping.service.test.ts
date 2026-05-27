@@ -49,8 +49,7 @@ describe('PingService', () => {
     const service = createPingService({ queue });
     const input = {
       dueDate: '2026-06-01',
-      questionTypes: ['short' as const],
-      questions: [{ count: 2, marks: 5 }],
+      questions: [{ type: 'short' as const, count: 2, marks: 5 }],
     };
 
     await service.ping(input);

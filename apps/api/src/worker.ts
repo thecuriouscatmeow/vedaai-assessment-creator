@@ -6,6 +6,7 @@ import type { LlmAdapter } from './adapters/llm/index';
 import { buildPrompt } from './domain/prompt';
 import { parsePaper } from './domain/parse';
 import { GENERATE_QUEUE, type GenerateJobData } from './lib/queue';
+import { SCHOOL_ADDRESS, SCHOOL_NAME } from './lib/school';
 
 /**
  * Generation worker — real Gemini-backed processor (Phase 4).
@@ -14,10 +15,12 @@ import { GENERATE_QUEUE, type GenerateJobData } from './lib/queue';
  *   1. Loads the assignment from the DB.
  *   2. Sets status → processing.
  *   3. Builds the LLM prompt from the stored input.
- *   4. Calls the LLM adapter.
- *   5. Parses + validates the response (with one repair-retry).
- *   6. Persists status → done + paper.
- *   7. Returns the paper (QueueEvents emits assignment:done from the API process).
+ *   4. Calls the LLM adapter (with optional inlineData file attachment).
+ *   5. Injects school identity (schoolName, schoolAddress) into the raw JSON
+ *      before parse so the full QuestionPaperSchema can validate.
+ *   6. Parses + validates the response (with one repair-retry).
+ *   7. Persists status → done + paper + title.
+ *   8. Returns the paper (QueueEvents emits assignment:done from the API process).
  *
  * On any failure the processor sets status → failed + error, then re-throws so
  * BullMQ marks the job as failed and QueueEvents emits assignment:failed.
@@ -50,7 +53,7 @@ export function createGenerateProcessor(
   return async (job: ProcessableJob): Promise<QuestionPaper> => {
     const { assignmentId } = job.data;
 
-    let assignment = await repo.findById(assignmentId);
+    const assignment = await repo.findById(assignmentId);
     if (!assignment) {
       throw new Error(`Assignment ${assignmentId} not found in database`);
     }
@@ -59,10 +62,23 @@ export function createGenerateProcessor(
       await repo.setProcessing(assignmentId);
 
       const prompt = buildPrompt(assignment.input);
-      const rawOutput = await llm.complete({ prompt });
-      const paper = await parsePaper(rawOutput, llm);
 
-      await repo.setDone(assignmentId, paper);
+      // Pass the fileUrl through so the Gemini adapter can attach it as
+      // inlineData (image or PDF). Other adapters ignore unknown fields.
+      const rawOutput = await llm.complete({
+        prompt,
+        fileUrl: assignment.input.fileUrl,
+      });
+
+      // Inject school identity into the raw JSON string before validation.
+      // This avoids the LLM needing to know the school — it generates the
+      // academic fields; we own the institutional branding.
+      const injectedRaw = injectSchoolIdentity(rawOutput);
+
+      const paper = await parsePaper(injectedRaw, llm);
+      const title = paper.title;
+
+      await repo.setDone(assignmentId, paper, title);
       return paper;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : String(err);
@@ -70,6 +86,32 @@ export function createGenerateProcessor(
       throw err;
     }
   };
+}
+
+/**
+ * Inject `schoolName` and `schoolAddress` into the raw LLM JSON string.
+ *
+ * The model generates everything except school identity. We merge these fields
+ * before Zod-parsing so the full `QuestionPaperSchema` (which requires
+ * `schoolName`) validates successfully.
+ *
+ * Throws if the raw string is not parseable JSON — the caller's try/catch will
+ * propagate this to `repo.setFailed`.
+ */
+function injectSchoolIdentity(rawJson: string): string {
+  let parsed: Record<string, unknown>;
+  try {
+    parsed = JSON.parse(rawJson) as Record<string, unknown>;
+  } catch (err) {
+    // Let parsePaper's JSON parse error surface cleanly; return the raw string
+    // so parsePaper can report the proper error.
+    return rawJson;
+  }
+
+  parsed['schoolName'] = SCHOOL_NAME;
+  parsed['schoolAddress'] = SCHOOL_ADDRESS;
+
+  return JSON.stringify(parsed);
 }
 
 /** Worker bootstrap — runs only when this file is the process entry. */

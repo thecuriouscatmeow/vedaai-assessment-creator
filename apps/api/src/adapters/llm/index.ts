@@ -8,6 +8,12 @@ export interface LlmCompletionRequest {
   prompt: string;
   system?: string;
   temperature?: number;
+  /**
+   * Optional URL of a file (image or PDF) to attach as inline data alongside
+   * the prompt. The Gemini adapter fetches the URL, base64-encodes the bytes,
+   * and passes them as `inlineData` parts. Other adapters may ignore this.
+   */
+  fileUrl?: string;
 }
 
 export interface LlmAdapter {

@@ -3,17 +3,19 @@ import { QuestionPaperSchema, DifficultySchema } from '../index';
 
 const validPaper = {
   title: 'Mid-Term Examination',
+  schoolName: 'Delhi Public School, Sector-4, Bokaro',
   subject: 'Physics',
+  className: '5th',
   totalMarks: 20,
   durationMinutes: 60,
   generalInstructions: 'Answer all questions.',
-  studentInfo: { name: '', rollNumber: '', className: '', examDate: '' },
+  studentInfo: { name: '', rollNumber: '', section: '' },
   sections: [
     {
       title: 'Section A — Multiple Choice',
       instruction: 'Choose the correct option.',
       questions: [
-        { text: 'What is the SI unit of force?', difficulty: 'easy', marks: 2 },
+        { text: 'What is the SI unit of force?', difficulty: 'easy', marks: 2, answer: 'Newton' },
         { text: 'State Newton’s second law.', difficulty: 'moderate', marks: 3 },
       ],
     },
@@ -24,7 +26,7 @@ describe('DifficultySchema', () => {
   it('accepts the three allowed difficulty levels', () => {
     expect(DifficultySchema.parse('easy')).toBe('easy');
     expect(DifficultySchema.parse('moderate')).toBe('moderate');
-    expect(DifficultySchema.parse('hard')).toBe('hard');
+    expect(DifficultySchema.parse('challenging')).toBe('challenging');
   });
 
   it('rejects an unknown difficulty level', () => {
@@ -36,6 +38,14 @@ describe('QuestionPaperSchema', () => {
   it('accepts a valid question paper', () => {
     const parsed = QuestionPaperSchema.parse(validPaper);
     expect(parsed.sections[0]?.questions).toHaveLength(2);
+    expect(parsed.sections[0]?.questions[0]?.answer).toBe('Newton');
+  });
+
+  it('requires school identity and class', () => {
+    const { schoolName: _schoolName, ...withoutSchool } = validPaper;
+    expect(() => QuestionPaperSchema.parse(withoutSchool)).toThrow();
+    const { className: _className, ...withoutClass } = validPaper;
+    expect(() => QuestionPaperSchema.parse(withoutClass)).toThrow();
   });
 
   it('rejects a paper with no sections', () => {

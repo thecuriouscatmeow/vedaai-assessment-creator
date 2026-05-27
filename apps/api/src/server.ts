@@ -38,7 +38,11 @@ const generateQueue = createGenerateQueue(redisConnection);
 const pingService = createPingService({ queue: generateQueue });
 
 const assignmentRepo = createAssignmentRepository();
-const assignmentService = createAssignmentService({ repo: assignmentRepo, queue: generateQueue });
+const assignmentService = createAssignmentService({
+  repo: assignmentRepo,
+  queue: generateQueue,
+  logger,
+});
 const storageAdapter = createCloudinaryAdapter(config);
 
 const app = createApp({ config, logger, deps: { pingService, assignmentService, storageAdapter } });

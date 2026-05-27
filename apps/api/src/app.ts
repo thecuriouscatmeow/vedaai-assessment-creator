@@ -66,7 +66,10 @@ export function createApp({ config, logger, deps, mountTestRoutes }: CreateAppOp
   }
 
   if (deps?.assignmentService) {
-    app.use('/api/assignments', createAssignmentRouter({ assignmentService: deps.assignmentService }));
+    app.use(
+      '/api/assignments',
+      createAssignmentRouter({ assignmentService: deps.assignmentService, logger }),
+    );
   }
 
   if (deps?.storageAdapter) {

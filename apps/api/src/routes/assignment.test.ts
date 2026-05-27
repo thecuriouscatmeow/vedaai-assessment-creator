@@ -51,14 +51,13 @@ function buildTestApp(queue: GenerateQueue = makeFakeQueue()): Express {
   });
   const logger = createLogger({ ...config, logLevel: 'silent' });
   const repo = createAssignmentRepository();
-  const assignmentService = createAssignmentService({ repo, queue });
+  const assignmentService = createAssignmentService({ repo, queue, logger });
   return createApp({ config, logger, deps: { assignmentService } });
 }
 
 const validPayload = {
   dueDate: '2025-12-01',
-  questionTypes: ['mcq' as const],
-  questions: [{ count: 5, marks: 2 }],
+  questions: [{ type: 'mcq' as const, count: 5, marks: 2 }],
 };
 
 describe('POST /api/assignments', () => {
@@ -77,7 +76,7 @@ describe('POST /api/assignments', () => {
     const doc = await AssignmentModel.findById(res.body.assignmentId);
     expect(doc).not.toBeNull();
     expect(doc?.status).toBe('queued');
-    expect(doc?.input.questionTypes).toEqual(['mcq']);
+    expect(doc?.input.questions[0]?.type).toBe('mcq');
   });
 
   it('enqueues a generate job with the assignmentId', async () => {
@@ -94,7 +93,7 @@ describe('POST /api/assignments', () => {
     expect(enqueued).toContain(res.body.assignmentId);
   });
 
-  it('returns 400 with Zod error envelope for invalid input (missing questionTypes)', async () => {
+  it('returns 400 with Zod error envelope when a question is missing its type', async () => {
     const res = await request(buildTestApp())
       .post('/api/assignments')
       .send({ dueDate: '2025-12-01', questions: [{ count: 1, marks: 1 }] });
@@ -105,18 +104,18 @@ describe('POST /api/assignments', () => {
     expect(Array.isArray(res.body.error.issues)).toBe(true);
   });
 
-  it('returns 400 for empty questionTypes array', async () => {
+  it('returns 400 for an empty questions array', async () => {
     const res = await request(buildTestApp())
       .post('/api/assignments')
-      .send({ ...validPayload, questionTypes: [] });
+      .send({ ...validPayload, questions: [] });
 
     expect(res.status).toBe(400);
   });
 
-  it('returns 400 for invalid questionType enum value', async () => {
+  it('returns 400 for an invalid question type enum value', async () => {
     const res = await request(buildTestApp())
       .post('/api/assignments')
-      .send({ ...validPayload, questionTypes: ['unknown-type'] });
+      .send({ ...validPayload, questions: [{ type: 'unknown-type', count: 1, marks: 1 }] });
 
     expect(res.status).toBe(400);
   });

@@ -5,11 +5,10 @@ import { QuestionPaperSchema } from './question-paper';
  * Socket.IO event contract for the generation lifecycle.
  *
  * The worker emits these to the requesting client room as a job moves
- * queued → processing → done | failed.
+ * queued → processing → done | failed. The `AssignmentStatus` enum lives in
+ * `./assignment` (re-exported from the package root) as it is an assignment
+ * concept shared by the REST and socket layers.
  */
-
-export const AssignmentStatusSchema = z.enum(['queued', 'processing', 'done', 'failed']);
-export type AssignmentStatus = z.infer<typeof AssignmentStatusSchema>;
 
 export const SOCKET_EVENTS = {
   queued: 'assignment:queued',

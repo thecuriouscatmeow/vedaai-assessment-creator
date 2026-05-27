@@ -42,6 +42,7 @@ beforeEach(async () => {
 const validPaperJson = JSON.stringify({
   title: 'Full Flow Paper',
   subject: 'History',
+  className: 'Class 8',
   totalMarks: 20,
   studentInfo: {},
   sections: [
@@ -49,7 +50,7 @@ const validPaperJson = JSON.stringify({
       title: 'Section A',
       questions: [
         { text: 'When did WWI start?', difficulty: 'easy', marks: 10 },
-        { text: 'Explain the causes of WWII.', difficulty: 'hard', marks: 10 },
+        { text: 'Explain the causes of WWII.', difficulty: 'challenging', marks: 10 },
       ],
     },
   ],
@@ -84,7 +85,7 @@ function buildTestApp(queue: GenerateQueue): Express {
   });
   const logger = createLogger({ ...config, logLevel: 'silent' });
   const repo = createAssignmentRepository();
-  const assignmentService = createAssignmentService({ repo, queue });
+  const assignmentService = createAssignmentService({ repo, queue, logger });
   return createApp({ config, logger, deps: { assignmentService } });
 }
 
@@ -97,8 +98,7 @@ describe('Full flow: create → process → read', () => {
     // Step 1: POST to create
     const createRes = await request(app).post('/api/assignments').send({
       dueDate: '2025-12-01',
-      questionTypes: ['short', 'mcq'],
-      questions: [{ count: 2, marks: 10 }],
+      questions: [{ type: 'short', count: 2, marks: 10 }],
     });
     expect(createRes.status).toBe(201);
     const { assignmentId } = createRes.body as { assignmentId: string };
@@ -122,15 +122,14 @@ describe('Full flow: create → process → read', () => {
     expect(getRes.body.assignmentId).toBe(assignmentId);
   });
 
-  it('re-enqueue (regenerate): can enqueue same assignmentId again', async () => {
+  it('re-enqueue (regenerate): creates a new unique assignmentId on repeated POST', async () => {
     const enqueued: string[] = [];
     const queue = makeCaptureQueue(enqueued);
     const app = buildTestApp(queue);
 
     const createRes = await request(app).post('/api/assignments').send({
       dueDate: '2025-12-15',
-      questionTypes: ['mcq'],
-      questions: [{ count: 3, marks: 5 }],
+      questions: [{ type: 'mcq', count: 3, marks: 5 }],
     });
     expect(createRes.status).toBe(201);
     const { assignmentId } = createRes.body as { assignmentId: string };
@@ -138,8 +137,7 @@ describe('Full flow: create → process → read', () => {
     // Trigger regeneration via POST again with same content
     const regenRes = await request(app).post('/api/assignments').send({
       dueDate: '2025-12-15',
-      questionTypes: ['mcq'],
-      questions: [{ count: 3, marks: 5 }],
+      questions: [{ type: 'mcq', count: 3, marks: 5 }],
     });
     expect(regenRes.status).toBe(201);
     // Each POST creates a new assignment (with a new id)

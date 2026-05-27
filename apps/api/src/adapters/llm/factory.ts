@@ -24,10 +24,19 @@ export async function createLlmAdapter(config: AppConfig): Promise<LlmAdapter> {
         const claudeModulePath = './providers/claude';
         const { createClaudeAdapter } = await import(claudeModulePath);
         return createClaudeAdapter(''); // API key sourced from env in a full impl
-      } catch {
-        throw new Error(
-          'LLM_PROVIDER="claude" is a dev-only stub and is not present in this build. Use "gemini".',
-        );
+      } catch (err: unknown) {
+        // Only swallow "module not found" errors for the gitignored dev stub.
+        // Any other error (e.g. a runtime crash inside the module) must propagate.
+        const isModuleNotFound =
+          (err instanceof Error &&
+            ((err as NodeJS.ErrnoException).code === 'ERR_MODULE_NOT_FOUND' ||
+              err.message.includes('./providers/claude'))) ;
+        if (isModuleNotFound) {
+          throw new Error(
+            'LLM_PROVIDER="claude" is a dev-only stub and is not present in this build. Use "gemini".',
+          );
+        }
+        throw err;
       }
     }
     default:

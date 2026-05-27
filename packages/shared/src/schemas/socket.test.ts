@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest';
 import {
   SOCKET_EVENTS,
   SOCKET_CLIENT_EVENTS,
-  AssignmentStatusSchema,
   AssignmentQueuedSchema,
   AssignmentProgressSchema,
   AssignmentDoneSchema,
@@ -12,7 +11,9 @@ import {
 
 const validPaper = {
   title: 'Quiz',
+  schoolName: 'Delhi Public School, Sector-4, Bokaro',
   subject: 'Maths',
+  className: '5th',
   totalMarks: 10,
   studentInfo: {},
   sections: [
@@ -28,13 +29,6 @@ describe('SOCKET_EVENTS', () => {
       done: 'assignment:done',
       failed: 'assignment:failed',
     });
-  });
-});
-
-describe('AssignmentStatusSchema', () => {
-  it('accepts known statuses and rejects unknown ones', () => {
-    expect(AssignmentStatusSchema.parse('queued')).toBe('queued');
-    expect(() => AssignmentStatusSchema.parse('paused')).toThrow();
   });
 });
 

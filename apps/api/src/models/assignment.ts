@@ -1,27 +1,42 @@
-import mongoose, { type Document, type Model } from 'mongoose';
-import type { AssignmentInput, QuestionPaper } from '@vedaai/shared';
+import mongoose, { type Model } from 'mongoose';
+import type { AssignmentInput, AssignmentStatus, QuestionPaper } from '@vedaai/shared';
 
 /**
  * Mongoose document for an assignment generation job.
  *
- * Stores the teacher's input, the current generation status, and (once done)
- * the produced QuestionPaper. The `_id` doubles as the BullMQ job id so the
- * Socket.IO room look-up is O(1).
+ * Stores the teacher's input, the current generation status, an optional title
+ * (populated once done), and (once done) the produced QuestionPaper. The `_id`
+ * doubles as the BullMQ job id so the Socket.IO room look-up is O(1).
  *
  * All typing flows from `@vedaai/shared` — no scattered defs here.
+ * The repo layer maps documents to plain `AssignmentRecord` domain objects so
+ * Mongoose types never leak past the repository boundary.
  */
 
-export interface AssignmentDocument extends Document {
+/** Plain domain record returned by the repository — no Mongoose Document. */
+export interface AssignmentRecord {
+  id: string;
   input: AssignmentInput;
-  status: 'queued' | 'processing' | 'done' | 'failed';
+  status: AssignmentStatus;
+  title?: string;
   paper?: QuestionPaper;
   error?: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
+// ─── Mongoose sub-schemas ────────────────────────────────────────────────────
+
 const questionSpecSchema = new mongoose.Schema(
-  { count: { type: Number, required: true }, marks: { type: Number, required: true } },
+  {
+    type: {
+      type: String,
+      enum: ['mcq', 'short', 'diagram_graph', 'numerical'],
+      required: true,
+    },
+    count: { type: Number, required: true },
+    marks: { type: Number, required: true },
+  },
   { _id: false },
 );
 
@@ -29,9 +44,8 @@ const inputSchema = new mongoose.Schema(
   {
     fileUrl: { type: String },
     dueDate: { type: String, required: true },
-    questionTypes: { type: [String], required: true },
     questions: { type: [questionSpecSchema], required: true },
-    instructions: { type: String },
+    additionalInfo: { type: String },
   },
   { _id: false },
 );
@@ -39,8 +53,9 @@ const inputSchema = new mongoose.Schema(
 const questionSchema = new mongoose.Schema(
   {
     text: { type: String, required: true },
-    difficulty: { type: String, enum: ['easy', 'moderate', 'hard'], required: true },
+    difficulty: { type: String, enum: ['easy', 'moderate', 'challenging'], required: true },
     marks: { type: Number, required: true },
+    answer: { type: String },
   },
   { _id: false },
 );
@@ -58,8 +73,7 @@ const studentInfoSchema = new mongoose.Schema(
   {
     name: { type: String },
     rollNumber: { type: String },
-    className: { type: String },
-    examDate: { type: String },
+    section: { type: String },
   },
   { _id: false },
 );
@@ -67,7 +81,10 @@ const studentInfoSchema = new mongoose.Schema(
 const paperSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
+    schoolName: { type: String, required: true },
+    schoolAddress: { type: String },
     subject: { type: String, required: true },
+    className: { type: String, required: true },
     totalMarks: { type: Number, required: true },
     durationMinutes: { type: Number },
     generalInstructions: { type: String },
@@ -77,7 +94,7 @@ const paperSchema = new mongoose.Schema(
   { _id: false },
 );
 
-const assignmentSchema = new mongoose.Schema<AssignmentDocument>(
+const assignmentSchema = new mongoose.Schema(
   {
     input: { type: inputSchema, required: true },
     status: {
@@ -85,11 +102,29 @@ const assignmentSchema = new mongoose.Schema<AssignmentDocument>(
       enum: ['queued', 'processing', 'done', 'failed'],
       required: true,
     },
+    title: { type: String },
     paper: { type: paperSchema },
     error: { type: String },
   },
   { timestamps: true },
 );
 
-export const AssignmentModel: Model<AssignmentDocument> =
-  mongoose.models['Assignment'] ?? mongoose.model<AssignmentDocument>('Assignment', assignmentSchema);
+/**
+ * Mongoose document fields (timestamps added by the schema). Kept internal to
+ * the models layer — the repository maps it to the plain {@link AssignmentRecord}.
+ */
+interface AssignmentDoc {
+  input: AssignmentInput;
+  status: AssignmentStatus;
+  title?: string;
+  paper?: QuestionPaper;
+  error?: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+// Expose the raw Mongoose model only within the models layer. The repository
+// maps it to AssignmentRecord; nothing else imports AssignmentModel directly.
+export const AssignmentModel: Model<AssignmentDoc> =
+  (mongoose.models['Assignment'] as Model<AssignmentDoc> | undefined) ??
+  mongoose.model<AssignmentDoc>('Assignment', assignmentSchema);
