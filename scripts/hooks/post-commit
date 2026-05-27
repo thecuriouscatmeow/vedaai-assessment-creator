@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# CodeRabbit per-commit review (coderabbit CLI — plain text output)
+# CodeRabbit per-commit review (coderabbit CLI — agent mode)
 # Runs automatically after every `git commit`.
 # Advisory only — exits 0 regardless of findings so commits are never blocked.
 
@@ -15,14 +15,14 @@ echo ""
 echo "🐇 CodeRabbit review — HEAD"
 echo "──────────────────────────────────────────"
 
-# Plain-text review of committed changes only.
+# Agent-mode review of committed changes only (structured findings for agent workflows).
 # On the very first commit HEAD~1 does not exist; omit --base-commit.
 if git rev-parse --verify HEAD~1 &>/dev/null; then
-  coderabbit review --plain -t committed --base-commit HEAD~1 || {
+  coderabbit review --agent -t committed --base-commit HEAD~1 -c CLAUDE.md || {
     echo "⚠  coderabbit review exited with an error — check your CR config/token."
   }
 else
-  coderabbit review --plain -t committed || {
+  coderabbit review --agent -t committed -c CLAUDE.md || {
     echo "⚠  coderabbit review exited with an error — check your CR config/token."
   }
 fi
