@@ -28,6 +28,24 @@ describe('GET /health', () => {
   });
 });
 
+describe('CORS middleware', () => {
+  it('handles OPTIONS requests with allowed origin', async () => {
+    const res = await request(buildTestApp())
+      .options('/health')
+      .set('Origin', 'http://localhost:3000');
+    expect(res.status).toBe(204);
+    expect(res.headers['access-control-allow-origin']).toBe('http://localhost:3000');
+  });
+
+  it('does not include ACAO header for requests from disallowed origins', async () => {
+    const res = await request(buildTestApp())
+      .get('/health')
+      .set('Origin', 'http://evil.example.com');
+    expect(res.status).toBe(200);
+    expect(res.headers['access-control-allow-origin']).toBeUndefined();
+  });
+});
+
 describe('central error handling', () => {
   it('converts a thrown error into a structured JSON response', async () => {
     const app = buildTestApp((a) => {

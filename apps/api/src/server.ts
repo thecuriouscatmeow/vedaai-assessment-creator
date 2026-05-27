@@ -1,6 +1,7 @@
 import { createServer } from 'node:http';
 import { loadConfig } from './lib/config';
 import { createLogger } from './lib/logger';
+import { createMongooseAdapter } from './adapters/db/mongoose.adapter';
 import { createRedisConnection } from './lib/redis';
 import { createGenerateQueue } from './lib/queue';
 import { createSocketServer, attachGenerateQueueEvents } from './lib/socket';
@@ -24,6 +25,8 @@ import { createApp } from './app';
 const config = loadConfig();
 const logger = createLogger(config);
 
+const dbAdapter = createMongooseAdapter(config.mongodbUri, logger);
+
 const redisConnection = createRedisConnection(config);
 // QueueEvents needs its own ioredis connection (BullMQ requirement)
 const queueEventsConnection = createRedisConnection(config);
@@ -45,9 +48,17 @@ const queueEvents = attachGenerateQueueEvents(io, {
   logger,
 });
 
-httpServer.listen(config.port, () => {
-  logger.info({ port: config.port, env: config.nodeEnv }, 'vedaai-api listening');
-});
+// Connect to MongoDB before listening
+dbAdapter.connect()
+  .then(() => {
+    httpServer.listen(config.port, () => {
+      logger.info({ port: config.port, env: config.nodeEnv }, 'vedaai-api listening');
+    });
+  })
+  .catch((err: unknown) => {
+    logger.error({ err }, 'Failed to connect to database');
+    process.exit(1);
+  });
 
 function shutdown(): void {
   logger.info('shutdown: signal received');
@@ -65,6 +76,7 @@ function shutdown(): void {
     .then(() => generateQueue.close())
     .then(() => redisConnection.quit())
     .then(() => queueEventsConnection.quit())
+    .then(() => dbAdapter.disconnect())
     .then(
       () =>
         new Promise<void>((resolve, reject) => {

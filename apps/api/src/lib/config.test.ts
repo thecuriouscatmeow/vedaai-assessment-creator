@@ -40,4 +40,22 @@ describe('loadConfig', () => {
     const { NODE_ENV: _omit, ...noEnv } = validEnv;
     expect(loadConfig(noEnv).nodeEnv).toBe('development');
   });
+
+  it('isDevelopment is true when NODE_ENV=development', () => {
+    const config = loadConfig({ ...validEnv, NODE_ENV: 'development' });
+    expect(config.isDevelopment).toBe(true);
+    expect(config.isProduction).toBe(false);
+  });
+
+  it('isProduction is true when NODE_ENV=production', () => {
+    const config = loadConfig({ ...validEnv, NODE_ENV: 'production' });
+    expect(config.isProduction).toBe(true);
+    expect(config.isDevelopment).toBe(false);
+  });
+
+  it('both isDevelopment and isProduction are false in test mode', () => {
+    const config = loadConfig({ ...validEnv, NODE_ENV: 'test' });
+    expect(config.isDevelopment).toBe(false);
+    expect(config.isProduction).toBe(false);
+  });
 });

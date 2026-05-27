@@ -1,4 +1,5 @@
 import express, { type Express } from 'express';
+import cors from 'cors';
 import type { Logger } from 'pino';
 import type { AppConfig } from './lib/config';
 import { httpLogger } from './lib/logger';
@@ -33,6 +34,20 @@ export interface CreateAppOptions {
 export function createApp({ config, logger, deps, mountTestRoutes }: CreateAppOptions): Express {
   const app = express();
   app.disable('x-powered-by');
+
+  app.use(
+    cors({
+      origin: (origin, callback) => {
+        if (!origin || origin === config.webOrigin) {
+          callback(null, true);
+        } else {
+          callback(null, false);
+        }
+      },
+      credentials: true,
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    }),
+  );
 
   app.use(httpLogger(logger));
   app.use(express.json({ limit: '16kb' }));
