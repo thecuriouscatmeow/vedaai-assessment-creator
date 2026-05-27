@@ -1,0 +1,24 @@
+# =============================================================================
+# Fly.io — VedaAI Worker (BullMQ generate processor)
+#
+# Build context: monorepo root (.)
+# Dockerfile:    apps/api/Dockerfile  (ARG ENTRY=worker)
+# No HTTP ports  — background process only.
+# =============================================================================
+
+app = "vedaai-worker"
+primary_region = "iad"
+
+[build]
+  dockerfile = "apps/api/Dockerfile"
+  [build.args]
+    ENTRY = "worker"
+
+[env]
+  NODE_ENV  = "production"
+  PORT      = "4000"
+  LOG_LEVEL = "info"
+
+[[vm]]
+  size   = "shared-cpu-1x"
+  memory = "256mb"

@@ -1,0 +1,36 @@
+# =============================================================================
+# Fly.io — VedaAI API (Express + Socket.IO)
+#
+# Build context: monorepo root (.)
+# Dockerfile:    apps/api/Dockerfile  (ARG ENTRY=server)
+# Internal port: 4000
+# =============================================================================
+
+app = "vedaai-api"
+primary_region = "iad"
+
+[build]
+  dockerfile = "apps/api/Dockerfile"
+  [build.args]
+    ENTRY = "server"
+
+[env]
+  NODE_ENV = "production"
+  PORT     = "4000"
+  LOG_LEVEL = "info"
+
+[http_service]
+  internal_port       = 4000
+  force_https         = true
+  auto_stop_machines  = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [http_service.concurrency]
+    type       = "connections"
+    hard_limit = 25
+    soft_limit = 20
+
+[[vm]]
+  size   = "shared-cpu-1x"
+  memory = "256mb"

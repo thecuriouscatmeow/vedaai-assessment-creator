@@ -39,4 +39,6 @@ decisions/
 .worktrees/
 archive/
 CLAUDE.md
+.coderabbit-instructions.md
 .claude/
+railway.json

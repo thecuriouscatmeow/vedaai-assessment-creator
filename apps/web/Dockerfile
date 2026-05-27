@@ -10,7 +10,7 @@
 # =============================================================================
 
 # ── Base: Node 20 + pnpm ──────────────────────────────────────────────────────
-FROM node:20-alpine AS base
+FROM node:22-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable && corepack prepare pnpm@11.3.0 --activate
@@ -45,7 +45,7 @@ ENV  NEXT_TELEMETRY_DISABLED=1
 RUN pnpm --filter @vedaai/web build
 
 # ── Stage 3: runner (standalone) ─────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 
 # Run as non-root for container security best practice.
 RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001

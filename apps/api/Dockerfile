@@ -12,7 +12,7 @@
 # =============================================================================
 
 # ── Base: Node 20 + pnpm ──────────────────────────────────────────────────────
-FROM node:20-alpine AS base
+FROM node:22-alpine AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable && corepack prepare pnpm@11.3.0 --activate
@@ -64,4 +64,4 @@ EXPOSE 4000
 # tsx runs TypeScript directly — no compilation step required.
 # @vedaai/shared TS source in packages/shared/ is reachable via the workspace
 # symlink in node_modules/@vedaai/shared → packages/shared.
-CMD ["sh", "-c", "exec node apps/api/node_modules/.bin/tsx apps/api/src/${VEDA_ENTRY}.ts"]
+CMD ["sh", "-c", "exec apps/api/node_modules/.bin/tsx apps/api/src/${VEDA_ENTRY}.ts"]
