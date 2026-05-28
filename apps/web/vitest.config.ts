@@ -42,6 +42,13 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      // Route @react-pdf/renderer to a manual mock in test environments.
+      // The real package uses browser-only APIs (canvas, blob) that are
+      // unavailable in jsdom — this prevents "web specific API" errors.
+      '@react-pdf/renderer': path.resolve(
+        __dirname,
+        './src/__mocks__/@react-pdf/renderer.tsx',
+      ),
     },
   },
 });

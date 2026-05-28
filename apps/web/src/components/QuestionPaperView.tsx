@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import type { QuestionPaper } from '@vedaai/shared';
 import { DifficultyBadge } from '@/components/DifficultyBadge';
 import copy from '@/content/copy.json';
+import { AssignmentPDF } from '@/components/AssignmentPDF';
 
 interface Props {
   paper: QuestionPaper;
@@ -223,16 +225,21 @@ export function QuestionPaperView({ paper }: Props) {
         </section>
       )}
 
-      {/* Download as PDF — T6 will wire @react-pdf/renderer export */}
+      {/* Download as PDF — @react-pdf/renderer export via dynamic PDFDownloadLink */}
       <div className="flex justify-end">
-        <button
-          type="button"
-          onClick={() => window.print()}
-          data-testid="download-pdf-button"
-          className="bg-btn-dark text-white rounded-full px-6 py-3 text-p3 font-medium"
+        <PDFDownloadLink
+          document={<AssignmentPDF paper={paper} />}
+          fileName={`${paper.title.replace(/\s+/g, '-')}.pdf`}
         >
-          {copy.output.downloadPdf}
-        </button>
+          {({ loading }: { loading: boolean }) => (
+            <span
+              data-testid="download-pdf-button"
+              className="bg-btn-dark text-white rounded-full px-6 py-3 text-p3 font-medium cursor-pointer inline-block"
+            >
+              {loading ? copy.output.downloadPdfPreparing : copy.output.downloadPdf}
+            </span>
+          )}
+        </PDFDownloadLink>
       </div>
     </article>
   );

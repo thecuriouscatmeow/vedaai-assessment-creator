@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
+    "@react-pdf/renderer": "^4.5.1",
     "@reduxjs/toolkit": "^2.12.0",
     "@vedaai/shared": "workspace:*",
     "next": "^16.2.6",
