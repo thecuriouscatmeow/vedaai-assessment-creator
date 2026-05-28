@@ -48,7 +48,8 @@ describe('AssignmentModel', () => {
     ).rejects.toThrow();
   });
 
-  it('stores a paper with new schema fields (schoolName, className, challenging difficulty)', async () => {
+  it('accepts paperId field when present (done status without embedded paper)', async () => {
+    const fakeId = new (await import('mongoose')).default.Types.ObjectId();
     const doc = await AssignmentModel.create({
       input: {
         dueDate: '2025-12-01',
@@ -56,52 +57,13 @@ describe('AssignmentModel', () => {
       },
       status: 'done',
       title: 'Science Test',
-      paper: {
-        title: 'Science Test',
-        schoolName: 'Delhi Public School, Sector-4, Bokaro',
-        subject: 'Science',
-        className: 'Class 10',
-        totalMarks: 15,
-        studentInfo: {},
-        sections: [
-          {
-            title: 'Section A',
-            questions: [{ text: 'Q1?', difficulty: 'challenging', marks: 5 }],
-          },
-        ],
-      },
+      paperId: fakeId,
     });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const raw = doc.toObject() as any;
-    expect(raw.paper?.title).toBe('Science Test');
-    expect(raw.paper?.schoolName).toBe('Delhi Public School, Sector-4, Bokaro');
-    expect(raw.paper?.className).toBe('Class 10');
-    expect(raw.paper?.sections?.[0]?.questions?.[0]?.difficulty).toBe('challenging');
     expect(raw.title).toBe('Science Test');
-  });
-
-  it('rejects "hard" difficulty (only easy|moderate|challenging allowed)', async () => {
-    await expect(
-      AssignmentModel.create({
-        input: { dueDate: '2025-12-01', questions: [{ type: 'mcq', count: 1, marks: 1 }] },
-        status: 'done',
-        paper: {
-          title: 'T',
-          schoolName: 'S',
-          subject: 'S',
-          className: 'C',
-          totalMarks: 1,
-          studentInfo: {},
-          sections: [
-            {
-              title: 'A',
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              questions: [{ text: 'Q?', difficulty: 'hard' as any, marks: 1 }],
-            },
-          ],
-        },
-      }),
-    ).rejects.toThrow();
+    expect(raw.paperId?.toString()).toBe(fakeId.toString());
+    expect(raw.paper).toBeUndefined();
   });
 });

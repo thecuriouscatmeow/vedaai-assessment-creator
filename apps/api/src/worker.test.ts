@@ -61,7 +61,6 @@ describe('createGenerateProcessor (real generation path)', () => {
   });
 
   it('persists assignment as done with the paper after success', async () => {
-    const { AssignmentModel } = await import('./models/assignment');
     const repo = createAssignmentRepository();
     const { id: assignmentId } = await repo.create({
       dueDate: '2025-12-01',
@@ -71,9 +70,10 @@ describe('createGenerateProcessor (real generation path)', () => {
     const llm = makeMockLlm();
     await createGenerateProcessor({ repo, llm })({ data: { assignmentId } });
 
-    const doc = await AssignmentModel.findById(assignmentId);
-    expect(doc?.status).toBe('done');
-    expect(doc?.paper?.title).toBe('Test Paper');
+    // Verify through the repository — paper is reconstructed via aggregate
+    const record = await repo.findById(assignmentId);
+    expect(record?.status).toBe('done');
+    expect(record?.paper?.title).toBe('Test Paper');
   });
 
   it('persists assignment as failed when LLM throws', async () => {

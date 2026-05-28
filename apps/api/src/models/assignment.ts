@@ -1,16 +1,15 @@
-import mongoose, { type Model } from 'mongoose';
+import mongoose, { type Model, type Types } from 'mongoose';
 import type { AssignmentInput, AssignmentStatus, QuestionPaper } from '@vedaai/shared';
 
 /**
  * Mongoose document for an assignment generation job.
  *
- * Stores the teacher's input, the current generation status, an optional title
- * (populated once done), and (once done) the produced QuestionPaper. The `_id`
- * doubles as the BullMQ job id so the Socket.IO room look-up is O(1).
+ * Stores the teacher's input, lifecycle status, and a reference to the
+ * generated QuestionPaper (paperId). The paper itself lives in the
+ * question_papers + questions collections; the repository reconstructs the
+ * full QuestionPaper via an aggregate read path.
  *
- * All typing flows from `@vedaai/shared` — no scattered defs here.
- * The repo layer maps documents to plain `AssignmentRecord` domain objects so
- * Mongoose types never leak past the repository boundary.
+ * The `_id` doubles as the BullMQ job id so the Socket.IO room look-up is O(1).
  */
 
 /** Plain domain record returned by the repository — no Mongoose Document. */
@@ -50,50 +49,6 @@ const inputSchema = new mongoose.Schema(
   { _id: false },
 );
 
-const questionSchema = new mongoose.Schema(
-  {
-    text: { type: String, required: true },
-    difficulty: { type: String, enum: ['easy', 'moderate', 'challenging'], required: true },
-    marks: { type: Number, required: true },
-    answer: { type: String },
-  },
-  { _id: false },
-);
-
-const sectionSchema = new mongoose.Schema(
-  {
-    title: { type: String, required: true },
-    instruction: { type: String },
-    questions: { type: [questionSchema], required: true },
-  },
-  { _id: false },
-);
-
-const studentInfoSchema = new mongoose.Schema(
-  {
-    name: { type: String },
-    rollNumber: { type: String },
-    section: { type: String },
-  },
-  { _id: false },
-);
-
-const paperSchema = new mongoose.Schema(
-  {
-    title: { type: String, required: true },
-    schoolName: { type: String, required: true },
-    schoolAddress: { type: String },
-    subject: { type: String, required: true },
-    className: { type: String, required: true },
-    totalMarks: { type: Number, required: true },
-    durationMinutes: { type: Number },
-    generalInstructions: { type: String },
-    studentInfo: { type: studentInfoSchema, default: {} },
-    sections: { type: [sectionSchema], required: true },
-  },
-  { _id: false },
-);
-
 const assignmentSchema = new mongoose.Schema(
   {
     input: { type: inputSchema, required: true },
@@ -103,11 +58,14 @@ const assignmentSchema = new mongoose.Schema(
       required: true,
     },
     title: { type: String },
-    paper: { type: paperSchema },
+    /** Reference to the generated QuestionPaper; absent until status = done. */
+    paperId: { type: mongoose.Schema.Types.ObjectId, ref: 'QuestionPaper' },
     error: { type: String },
   },
   { timestamps: true },
 );
+
+assignmentSchema.index({ createdAt: -1 });
 
 /**
  * Mongoose document fields (timestamps added by the schema). Kept internal to
@@ -117,7 +75,7 @@ interface AssignmentDoc {
   input: AssignmentInput;
   status: AssignmentStatus;
   title?: string;
-  paper?: QuestionPaper;
+  paperId?: Types.ObjectId;
   error?: string;
   createdAt: Date;
   updatedAt: Date;
