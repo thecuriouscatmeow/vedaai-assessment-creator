@@ -1,4 +1,8 @@
+'use client';
+
+import { useState } from 'react';
 import type { QuestionPaper } from '@vedaai/shared';
+import { DifficultyBadge } from '@/components/DifficultyBadge';
 import copy from '@/content/copy.json';
 
 interface Props {
@@ -6,15 +10,17 @@ interface Props {
 }
 
 /**
- * QuestionPaperView — structural wireframe of a generated question paper.
+ * QuestionPaperView — Figma page 04 "Assignment Output" layout.
  *
- * Renders all QuestionPaper contract fields without decorative styling (Phase 5
- * handles Figma design tokens). Blank studentInfo fields are printed as
- * label + fill-in line, as they would appear on a physical printed paper.
+ * Renders the full generated question paper with styled sections, per-question
+ * DifficultyBadge chips, a collapsible Answer Key, and a Download button slot
+ * (T6 will wire the actual @react-pdf/renderer export).
  *
- * Includes a collated Answer Key section built from each question's `answer`.
+ * All data-testid attributes from the frozen test suite are preserved.
  */
 export function QuestionPaperView({ paper }: Props) {
+  const [answerKeyOpen, setAnswerKeyOpen] = useState(true);
+
   // Flatten all questions for the answer key, tracking global number
   let questionNumber = 0;
   const allAnswers: { number: number; text: string; answer: string }[] = [];
@@ -32,90 +38,136 @@ export function QuestionPaperView({ paper }: Props) {
   let renderNumber = 0;
 
   return (
-    <article aria-label={paper.title}>
+    <article
+      aria-label={paper.title}
+      className="max-w-[700px] mx-auto mt-[clamp(2rem,5dvh,4rem)] mb-16 bg-surface rounded-[24px] shadow-[var(--shadow-modal)] p-8 sm:p-10 flex flex-col gap-6"
+    >
       {/* Paper header */}
-      <header>
-        <h1>{paper.title}</h1>
-        <address>
-          <p>{paper.schoolName}</p>
-          {paper.schoolAddress && <p>{paper.schoolAddress}</p>}
-        </address>
-        <dl>
-          <div>
-            <dt>{copy.output.subject}</dt>
-            <dd>{paper.subject}</dd>
-          </div>
-          <div>
-            <dt className="sr-only">Class</dt>
-            <dd>{paper.className}</dd>
-          </div>
+      <header className="flex flex-col gap-2">
+        <h1 className="font-bold text-p1 text-text-primary text-center">{paper.title}</h1>
+        <p className="font-bold text-p1 text-text-primary text-center">{paper.schoolName}</p>
+        {paper.schoolAddress && (
+          <p className="text-p4 text-text-secondary text-center">{paper.schoolAddress}</p>
+        )}
+        <hr className="border-grey-2 my-2" />
+        {/* Info row */}
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <span className="text-p4 text-text-primary">
+            {copy.output.subject}{' '}
+            <span className="font-medium">{paper.subject}</span>
+          </span>
+          <span className="text-p4 text-text-primary">
+            {copy.output.className}{' '}
+            <span className="font-medium">{paper.className}</span>
+          </span>
           {paper.durationMinutes !== undefined && (
-            <div>
-              <dt>{copy.output.timeAllowed}</dt>
-              <dd>
+            <span className="text-p4 text-text-primary">
+              {copy.output.timeAllowed}{' '}
+              <span className="font-medium">
                 {paper.durationMinutes} {copy.output.minutes}
-              </dd>
-            </div>
+              </span>
+            </span>
           )}
-          <div>
-            <dt>{copy.output.maximumMarks}</dt>
-            <dd>{paper.totalMarks}</dd>
-          </div>
-        </dl>
+          <span className="bg-btn-dark text-white rounded-full px-3 py-1 text-p5 font-medium">
+            {copy.output.maximumMarks}{' '}
+            <span>{paper.totalMarks}</span>
+          </span>
+        </div>
       </header>
 
       {/* General instructions */}
       {paper.generalInstructions && (
-        <section aria-label={copy.output.generalInstructions}>
-          <h2>{copy.output.generalInstructions}</h2>
-          <p>{paper.generalInstructions}</p>
+        <section aria-label={copy.output.generalInstructions} className="flex flex-col gap-1">
+          <h2 className="font-semibold text-p4 text-text-primary">
+            {copy.output.generalInstructions}
+          </h2>
+          <p className="text-p4 text-text-secondary italic">{paper.generalInstructions}</p>
         </section>
       )}
 
       {/* Student info — blank fill-in fields for printing */}
-      <section aria-label="Student information">
-        <dl>
-          <div>
-            <dt>{copy.output.studentInfo.name}</dt>
-            <dd data-testid="student-name">
-              {paper.studentInfo.name ?? copy.output.studentInfo.fillIn}
-            </dd>
-          </div>
-          <div>
-            <dt>{copy.output.studentInfo.rollNumber}</dt>
-            <dd data-testid="student-roll">
-              {paper.studentInfo.rollNumber ?? copy.output.studentInfo.fillIn}
-            </dd>
-          </div>
-          <div>
-            <dt>{copy.output.studentInfo.section}</dt>
-            <dd data-testid="student-section">
-              {paper.studentInfo.section ?? copy.output.studentInfo.fillIn}
-            </dd>
-          </div>
-        </dl>
+      <section
+        aria-label="Student information"
+        className="bg-surface-hover rounded-[12px] p-4 grid grid-cols-1 sm:grid-cols-3 gap-4"
+      >
+        {/* Name */}
+        <div className="flex flex-col gap-1">
+          <span className="text-p5 text-text-secondary font-medium">
+            {copy.output.studentInfo.name}
+          </span>
+          <span
+            data-testid="student-name"
+            className="border-b border-grey-2 h-6 text-p4 text-text-primary"
+          >
+            {paper.studentInfo.name ?? copy.output.studentInfo.fillIn}
+          </span>
+        </div>
+        {/* Roll Number */}
+        <div className="flex flex-col gap-1">
+          <span className="text-p5 text-text-secondary font-medium">
+            {copy.output.studentInfo.rollNumber}
+          </span>
+          <span
+            data-testid="student-roll"
+            className="border-b border-grey-2 h-6 text-p4 text-text-primary"
+          >
+            {paper.studentInfo.rollNumber ?? copy.output.studentInfo.fillIn}
+          </span>
+        </div>
+        {/* Section */}
+        <div className="flex flex-col gap-1">
+          <span className="text-p5 text-text-secondary font-medium">
+            {copy.output.studentInfo.section}
+          </span>
+          <span
+            data-testid="student-section"
+            className="border-b border-grey-2 h-6 text-p4 text-text-primary"
+          >
+            {paper.studentInfo.section ?? copy.output.studentInfo.fillIn}
+          </span>
+        </div>
       </section>
 
       {/* Sections */}
       {paper.sections.map((section, sIdx) => (
         <section key={sIdx} aria-label={section.title}>
-          <h2>{section.title}</h2>
-          {section.instruction && <p>{section.instruction}</p>}
-          <ol>
+          <h2 className="font-bold text-p3 bg-surface-hover rounded px-2 py-1 inline-block mb-3">
+            {section.title}
+          </h2>
+          {section.instruction && (
+            <p className="text-p4 text-text-secondary italic mb-3">{section.instruction}</p>
+          )}
+          <ol className="list-none space-y-4">
             {section.questions.map((question, qIdx) => {
               renderNumber++;
               return (
-                <li key={qIdx} data-testid={`question-${String(sIdx)}-${String(qIdx)}`}>
-                  <span data-testid={`question-number-${String(sIdx)}-${String(qIdx)}`}>
-                    {renderNumber}.
-                  </span>
-                  <span>{question.text}</span>
-                  <span data-testid={`difficulty-${String(sIdx)}-${String(qIdx)}`}>
-                    {copy.output.difficulty[question.difficulty]}
-                  </span>
-                  <span data-testid={`marks-${String(sIdx)}-${String(qIdx)}`}>
-                    {question.marks} {copy.output.marks}
-                  </span>
+                <li
+                  key={qIdx}
+                  data-testid={`question-${String(sIdx)}-${String(qIdx)}`}
+                  className="flex items-start justify-between gap-4"
+                >
+                  {/* Left: number + text */}
+                  <div className="flex gap-3">
+                    <span
+                      data-testid={`question-number-${String(sIdx)}-${String(qIdx)}`}
+                      className="font-semibold text-p4 text-text-secondary w-8 shrink-0"
+                    >
+                      {renderNumber}.
+                    </span>
+                    <span className="text-p4 text-text-primary">{question.text}</span>
+                  </div>
+                  {/* Right: badge + marks */}
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span data-testid={`difficulty-${String(sIdx)}-${String(qIdx)}`}>
+                      <DifficultyBadge difficulty={question.difficulty} />
+                    </span>
+                    <span
+                      data-testid={`marks-${String(sIdx)}-${String(qIdx)}`}
+                      className="text-p4 text-text-secondary"
+                    >
+                      [{question.marks} {copy.output.marks}]
+                    </span>
+                  </div>
                 </li>
               );
             })}
@@ -123,33 +175,65 @@ export function QuestionPaperView({ paper }: Props) {
         </section>
       ))}
 
-      {/* Answer Key */}
+      {/* Answer Key — collapsible */}
       {allAnswers.length > 0 && (
         <section aria-label={copy.output.answerKey.heading} data-testid="answer-key">
-          <h2>{copy.output.answerKey.heading}</h2>
-          <ol>
-            {allAnswers.map(({ number, text, answer }) => (
-              <li key={number} data-testid={`answer-${String(number)}`}>
-                <strong>
-                  {copy.output.answerKey.questionLabel}
-                  {number}.
-                </strong>{' '}
-                <span data-testid={`answer-question-${String(number)}`}>{text}</span>
-                <p data-testid={`answer-text-${String(number)}`}>{answer}</p>
-              </li>
-            ))}
-          </ol>
+          <button
+            type="button"
+            aria-expanded={answerKeyOpen}
+            onClick={() => setAnswerKeyOpen((prev) => !prev)}
+            className="flex items-center gap-2 font-bold text-p3 text-text-primary cursor-pointer mb-3"
+          >
+            <span>{copy.output.answerKey.heading}</span>
+            <svg
+              aria-hidden="true"
+              className={`w-4 h-4 transition-transform ${answerKeyOpen ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {answerKeyOpen && (
+            <ol className="list-none space-y-3">
+              {allAnswers.map(({ number, text, answer }) => (
+                <li key={number} data-testid={`answer-${String(number)}`}>
+                  <strong className="text-p4 text-text-primary">
+                    {copy.output.answerKey.questionLabel}
+                    {number}.
+                  </strong>{' '}
+                  <span
+                    data-testid={`answer-question-${String(number)}`}
+                    className="text-p4 text-text-secondary"
+                  >
+                    {text}
+                  </span>
+                  <p
+                    data-testid={`answer-text-${String(number)}`}
+                    className="text-p4 text-text-primary mt-1 ml-6"
+                  >
+                    {answer}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          )}
         </section>
       )}
 
-      {/* Download as PDF */}
-      <button
-        type="button"
-        onClick={() => window.print()}
-        data-testid="download-pdf-button"
-      >
-        {copy.output.downloadPdf}
-      </button>
+      {/* Download as PDF — T6 will wire @react-pdf/renderer export */}
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={() => window.print()}
+          data-testid="download-pdf-button"
+          className="bg-btn-dark text-white rounded-full px-6 py-3 text-p3 font-medium"
+        >
+          {copy.output.downloadPdf}
+        </button>
+      </div>
     </article>
   );
 }
