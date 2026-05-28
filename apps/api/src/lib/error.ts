@@ -11,6 +11,7 @@ export class HttpError extends Error {
   constructor(
     public readonly status: number,
     message: string,
+    public readonly issues?: unknown[],
   ) {
     super(message);
     this.name = 'HttpError';
@@ -39,12 +40,21 @@ export interface ErrorHandlerOptions {
 export function errorHandler(logger: Logger, { isProduction }: ErrorHandlerOptions): ErrorRequestHandler {
   // Express identifies error middleware by its four-arg signature.
   return (err, req, res, _next) => {
-    const status = err instanceof HttpError ? err.status : 500;
+    const status =
+      err instanceof HttpError ? err.status : err instanceof NotFoundError ? 404 : 500;
     (req.log ?? logger).error({ err, requestId: req.id }, 'request failed');
 
     const message =
       status < 500 ? (err as Error).message : isProduction ? 'Internal Server Error' : (err as Error).message;
 
-    res.status(status).json({ error: { status, message, requestId: req.id } });
+    const issues = err instanceof HttpError ? err.issues : undefined;
+    res.status(status).json({
+      error: {
+        status,
+        message,
+        requestId: req.id,
+        ...(issues !== undefined ? { issues } : {}),
+      },
+    });
   };
 }

@@ -1,33 +1,37 @@
-import { Router, type Request, type Response, type NextFunction } from 'express';
-import mongoose from 'mongoose';
+import { Router } from 'express';
+import { z } from 'zod';
 import type { Logger } from 'pino';
-import { AssignmentInputSchema } from '@vedaai/shared';
+import {
+  AssignmentInputSchema,
+  AssignmentSummarySchema,
+  AssignmentStatusSchema,
+  QuestionPaperSchema,
+  type AssignmentInput,
+} from '@vedaai/shared';
 import type { AssignmentService } from '../services/assignment.service';
-import { HttpError, NotFoundError } from '../lib/error';
-
-/**
- * Assignment router.
- *
- * GET    /api/assignments       → AssignmentSummary[] (newest first)
- * POST   /api/assignments       → validate → persist queued → enqueue → 201 { assignmentId }
- * GET    /api/assignments/:id   → full assignment record; 404 if missing
- * DELETE /api/assignments/:id   → delete; 204 on success; 404 if missing
- *
- * Validation failures return a structured Zod error envelope so the frontend
- * can surface field-level messages without additional parsing.
- */
+import { validateBody } from '../middleware/validate-body';
+import { sanitizeBody } from '../middleware/sanitize';
+import { validateOutput } from '../middleware/validate-output';
+import { requireObjectId } from '../middleware/validate-params';
+import { asyncHandler } from '../lib/async-handler';
 
 export interface AssignmentRouterDeps {
   assignmentService: AssignmentService;
   logger: Logger;
 }
 
-/** Guard: rejects non-ObjectId ids before hitting Mongoose. */
-function assertObjectId(id: string): void {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw new HttpError(400, 'Invalid assignment id format');
-  }
-}
+const CreateResponseSchema = z.object({ assignmentId: z.string() });
+
+const AssignmentDetailSchema = z.object({
+  assignmentId: z.string(),
+  status: AssignmentStatusSchema,
+  title: z.string().nullable(),
+  input: AssignmentInputSchema,
+  paper: QuestionPaperSchema.nullable(),
+  error: z.string().nullable(),
+  createdAt: z.date(),
+  updatedAt: z.date(),
+});
 
 export function createAssignmentRouter({
   assignmentService,
@@ -35,105 +39,48 @@ export function createAssignmentRouter({
 }: AssignmentRouterDeps): Router {
   const router = Router();
 
-  // GET /api/assignments — list
-  const listHandler = async (
-    _req: Request,
-    res: Response,
-    next: NextFunction,
-  ): Promise<void> => {
-    try {
-      const summaries = await assignmentService.listAll();
-      logger.info({ count: summaries.length }, 'route: listed assignments');
-      res.status(200).json(summaries);
-    } catch (err) {
-      next(err);
+  const listHandler = asyncHandler(async (_req, res) => {
+    const summaries = await assignmentService.listAll();
+    logger.info({ count: summaries.length }, 'route: listed assignments');
+    res.status(200).json(summaries);
+  });
+
+  const createHandler = asyncHandler(async (req, res) => {
+    const { assignmentId } = await assignmentService.create(req.validBody as AssignmentInput);
+    logger.info({ assignmentId }, 'route: assignment created');
+    res.status(201).json({ assignmentId });
+  });
+
+  const getByIdHandler = asyncHandler(async (req, res) => {
+    const id = req.params['id'] as string;
+    const assignment = await assignmentService.findById(id);
+    if (!assignment) {
+      res.status(404).json({ error: { status: 404, message: `Assignment ${id} not found` } });
+      return;
     }
-  };
+    res.status(200).json({
+      assignmentId: assignment.id,
+      status: assignment.status,
+      title: assignment.title ?? null,
+      input: assignment.input,
+      paper: assignment.paper ?? null,
+      error: assignment.error ?? null,
+      createdAt: assignment.createdAt,
+      updatedAt: assignment.updatedAt,
+    });
+  });
 
-  // POST /api/assignments — create
-  const createHandler = async (
-    req: Request,
-    res: Response,
-    next: NextFunction,
-  ): Promise<void> => {
-    try {
-      const parsed = AssignmentInputSchema.safeParse(req.body);
-      if (!parsed.success) {
-        logger.warn({ issues: parsed.error.issues }, 'route: assignment input validation failed');
-        res.status(400).json({
-          error: {
-            status: 400,
-            message: 'Validation failed',
-            issues: parsed.error.issues,
-          },
-        });
-        return;
-      }
+  const deleteHandler = asyncHandler(async (req, res) => {
+    const id = req.params['id'] as string;
+    await assignmentService.deleteById(id);
+    logger.info({ id }, 'route: assignment deleted');
+    res.status(204).send();
+  });
 
-      const { assignmentId } = await assignmentService.create(parsed.data);
-      logger.info({ assignmentId }, 'route: assignment created');
-      res.status(201).json({ assignmentId });
-    } catch (err) {
-      next(err);
-    }
-  };
-
-  // GET /api/assignments/:id — get by id
-  const getByIdHandler = async (
-    req: Request<{ id: string }>,
-    res: Response,
-    next: NextFunction,
-  ): Promise<void> => {
-    try {
-      const { id } = req.params;
-      assertObjectId(id);
-
-      const assignment = await assignmentService.findById(id);
-      if (!assignment) {
-        throw new HttpError(404, `Assignment ${id} not found`);
-      }
-
-      res.status(200).json({
-        assignmentId: assignment.id,
-        status: assignment.status,
-        title: assignment.title ?? null,
-        input: assignment.input,
-        paper: assignment.paper ?? null,
-        error: assignment.error ?? null,
-        createdAt: assignment.createdAt,
-        updatedAt: assignment.updatedAt,
-      });
-    } catch (err) {
-      next(err);
-    }
-  };
-
-  // DELETE /api/assignments/:id
-  const deleteHandler = async (
-    req: Request<{ id: string }>,
-    res: Response,
-    next: NextFunction,
-  ): Promise<void> => {
-    try {
-      const { id } = req.params;
-      assertObjectId(id);
-
-      await assignmentService.deleteById(id);
-      logger.info({ id }, 'route: assignment deleted');
-      res.status(204).send();
-    } catch (err) {
-      if (err instanceof NotFoundError) {
-        next(new HttpError(404, err.message));
-        return;
-      }
-      next(err);
-    }
-  };
-
-  router.get('/', listHandler);
-  router.post('/', createHandler);
-  router.get('/:id', getByIdHandler);
-  router.delete('/:id', deleteHandler);
+  router.get('/', validateOutput(z.array(AssignmentSummarySchema)), listHandler);
+  router.post('/', sanitizeBody(), validateBody(AssignmentInputSchema), validateOutput(CreateResponseSchema), createHandler);
+  router.get('/:id', requireObjectId('id'), validateOutput(AssignmentDetailSchema), getByIdHandler);
+  router.delete('/:id', requireObjectId('id'), deleteHandler);
 
   return router;
 }

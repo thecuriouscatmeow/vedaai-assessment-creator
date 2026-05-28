@@ -10,6 +10,8 @@ import { createPingRouter } from './routes/ping';
 import { createAssignmentRouter } from './routes/assignment';
 import { createUploadRouter } from './routes/upload';
 import type { StorageAdapter } from './adapters/storage/index';
+import { securityHeaders } from './middleware/security';
+import { rateLimitMiddleware } from './middleware/rate-limit';
 
 /**
  * Express application factory.
@@ -38,7 +40,9 @@ export interface CreateAppOptions {
 
 export function createApp({ config, logger, deps, mountTestRoutes }: CreateAppOptions): Express {
   const app = express();
-  app.disable('x-powered-by');
+
+  app.use(securityHeaders);
+  app.use(rateLimitMiddleware);
 
   app.use(
     cors({
