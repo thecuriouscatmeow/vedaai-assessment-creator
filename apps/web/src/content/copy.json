@@ -146,6 +146,11 @@
     "name": "Delhi Public School",
     "location": "Bokaro Steel City"
   },
+  "regenerate": {
+    "prompt": "Not satisfied? Regenerate.",
+    "buttonLabel": "Regenerate",
+    "generating": "Generating…"
+  },
   "output": {
     "loading": "Loading assignment…",
     "failed": "Could not load assignment.",

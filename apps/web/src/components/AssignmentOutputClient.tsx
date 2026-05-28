@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import type { QuestionPaper } from '@vedaai/shared';
 import { QuestionPaperView } from './QuestionPaperView';
+import { RegenerateBar } from './RegenerateBar';
 import { API_URL } from '@/lib/config';
 import copy from '@/content/copy.json';
 
@@ -53,7 +54,13 @@ export function AssignmentOutputClient({ assignmentId }: Props) {
   }
 
   if (state.phase === 'done') {
-    return <QuestionPaperView paper={state.paper} />;
+    return (
+      <>
+        {/* Regenerate bar — only shown when form values are available */}
+        <RegenerateBar />
+        <QuestionPaperView paper={state.paper} />
+      </>
+    );
   }
 
   return (
