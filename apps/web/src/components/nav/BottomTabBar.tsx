@@ -36,7 +36,7 @@ export function BottomTabBar() {
     >
       <ul className="bg-dark-grey rounded-[28px] px-4 py-2 flex items-center justify-around w-full max-w-sm list-none m-0 p-0">
         {TABS.map((tab) => {
-          const isActive = tab.href !== '#' && pathname.startsWith(tab.href);
+          const isActive = !tab.disabled && tab.href !== '#' && pathname.startsWith(tab.href);
           return (
             <li key={tab.label}>
               <Link
