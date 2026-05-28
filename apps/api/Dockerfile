@@ -38,8 +38,9 @@ WORKDIR /app
 # symlinks.  Docker multi-stage COPY preserves symlinks; the relative symlink
 # chain api/node_modules/.bin/tsx → ../../node_modules/.pnpm/... resolves
 # correctly because the virtual store is also copied.
-COPY --from=deps /app/node_modules          ./node_modules
-COPY --from=deps /app/apps/api/node_modules ./apps/api/node_modules
+COPY --from=deps /app/node_modules                    ./node_modules
+COPY --from=deps /app/apps/api/node_modules           ./apps/api/node_modules
+COPY --from=deps /app/packages/shared/node_modules    ./packages/shared/node_modules
 
 # Workspace manifest + base TS config (tsx needs neither to run, but pnpm
 # workspace resolution uses the manifests if pnpm exec is called).
