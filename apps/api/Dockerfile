@@ -3,12 +3,8 @@
 #
 # Build context: monorepo root (.)
 #
-# ARG ENTRY — entry point filename stem (without .ts):
-#   server  (default) → src/server.ts   — Express + Socket.IO API
-#   worker             → src/worker.ts   — BullMQ generation worker
-#
-# Example:
-#   docker build --build-arg ENTRY=worker -f apps/api/Dockerfile .
+# ENTRY env var selects the entry point at runtime (default: server).
+# Set ENTRY=worker on the Railway worker service to run src/worker.ts.
 # =============================================================================
 
 # ── Base: Node 20 + pnpm ──────────────────────────────────────────────────────
@@ -53,15 +49,8 @@ COPY tsconfig.base.json pnpm-workspace.yaml package.json ./
 COPY packages/shared ./packages/shared
 COPY apps/api        ./apps/api
 
-# Configurable entry point (ARG → ENV so sh -c expands it at runtime).
-ARG  ENTRY=server
-ENV  VEDA_ENTRY=${ENTRY}
-
 USER nodejs
 
 EXPOSE 4000
 
-# tsx runs TypeScript directly — no compilation step required.
-# @vedaai/shared TS source in packages/shared/ is reachable via the workspace
-# symlink in node_modules/@vedaai/shared → packages/shared.
-CMD ["sh", "-c", "exec apps/api/node_modules/.bin/tsx apps/api/src/${VEDA_ENTRY}.ts"]
+CMD ["sh", "-c", "exec apps/api/node_modules/.bin/tsx apps/api/src/${ENTRY:-server}.ts"]

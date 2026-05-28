@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import type { LlmAdapter, LlmCompletionRequest } from '../index';
 
-const MODEL_NAME = 'gemini-2.0-flash' as const;
+const MODEL_NAME = 'gemini-3.1-flash-lite' as const;
 
 /**
  * Gemini LLM adapter — the default (committed) provider.
