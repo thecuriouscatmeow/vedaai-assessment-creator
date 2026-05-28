@@ -36,6 +36,7 @@ export function AssignmentForm() {
   const { upload } = useCloudinaryUpload();
   const subscribeToAssignment = useAssignmentSocket();
   const [fileError, setFileError] = useState<string | null>(null);
+  const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
 
   const {
     register,
@@ -73,6 +74,7 @@ export function AssignmentForm() {
     }
 
     setFileError(null);
+    setSelectedFileName(file.name);
     const url = await upload(file);
     if (url) {
       setValue('fileUrl', url);
@@ -121,9 +123,17 @@ export function AssignmentForm() {
   if (currentStep === 2) {
     return (
       <section aria-label={copy.assignmentForm.step2.sectionTitle}>
-        <nav aria-label={copy.assignmentForm.progress.step1Label}>
-          <span aria-current="false">{copy.assignmentForm.progress.step1Label}</span>
-          <span aria-current="step">{copy.assignmentForm.progress.step2Label}</span>
+        <nav
+          aria-label={copy.assignmentForm.progress.step1Label}
+          className="flex items-center gap-3 max-w-[640px] mx-auto mt-4 px-4"
+        >
+          <span aria-current="false" className="text-p4 text-text-secondary">
+            {copy.assignmentForm.progress.step1Label}
+          </span>
+          <span className="text-text-disabled text-p5">›</span>
+          <span aria-current="step" className="text-p4 font-semibold text-text-primary">
+            {copy.assignmentForm.progress.step2Label}
+          </span>
         </nav>
         <GenerationStatus onPrevious={handlePrevious} />
       </section>
@@ -132,226 +142,390 @@ export function AssignmentForm() {
 
   return (
     <section aria-label={copy.assignmentForm.step1.sectionTitle}>
-      <nav aria-label={copy.assignmentForm.progress.step1Label}>
-        <span aria-current="step">{copy.assignmentForm.progress.step1Label}</span>
-        <span aria-current="false">{copy.assignmentForm.progress.step2Label}</span>
+      {/* Progress indicator */}
+      <nav
+        aria-label={copy.assignmentForm.progress.step1Label}
+        className="flex items-center gap-3 max-w-[640px] mx-auto mt-4 px-4"
+      >
+        <span aria-current="step" className="text-p4 font-semibold text-text-primary">
+          {copy.assignmentForm.progress.step1Label}
+        </span>
+        <span className="text-text-disabled text-p5">›</span>
+        <span aria-current="false" className="text-p4 text-text-secondary">
+          {copy.assignmentForm.progress.step2Label}
+        </span>
       </nav>
 
-      <header>
-        <h2>{copy.assignmentForm.step1.sectionTitle}</h2>
-        <p>{copy.assignmentForm.step1.sectionSubtitle}</p>
-      </header>
-
-      <form
-        onSubmit={(e) => void handleSubmit(onSubmit)(e)}
-        aria-label={copy.assignmentForm.headingCreate}
-        noValidate
+      {/* Main card */}
+      <div
+        className="
+          bg-surface rounded-[24px] shadow-[var(--shadow-modal)]
+          max-w-[640px] mx-auto
+          mt-[clamp(2rem,5dvh,4rem)]
+          p-8 sm:p-10
+          flex flex-col gap-6
+        "
       >
-        {/* File upload — optional */}
-        <div>
-          <label htmlFor="file">{copy.assignmentForm.fields.file.label}</label>
-          <div>
-            <p>{copy.assignmentForm.fields.file.dragDrop}</p>
-            <p>{copy.assignmentForm.fields.file.subHint}</p>
+        {/* Card header */}
+        <header>
+          <h1 className="font-bold text-p2 text-text-primary">
+            {copy.assignmentForm.headingCreate}
+          </h1>
+          <p className="text-p4 text-text-secondary mt-1">
+            {copy.assignmentForm.subtitle}
+          </p>
+        </header>
+
+        {/* Section sub-heading (a11y landmark + test hook) */}
+        <h2 className="sr-only">{copy.assignmentForm.step1.sectionTitle}</h2>
+
+        <form
+          onSubmit={(e) => void handleSubmit(onSubmit)(e)}
+          aria-label={copy.assignmentForm.headingCreate}
+          noValidate
+          className="flex flex-col gap-6"
+        >
+          {/* ── File upload — optional ─────────────────────────────────────── */}
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="file"
+              className="font-semibold text-p4 text-text-primary"
+            >
+              {copy.assignmentForm.fields.file.label}
+            </label>
+
+            {/* Drop zone */}
+            <label
+              htmlFor="file"
+              className="
+                border-2 border-dashed border-grey-3 rounded-[12px]
+                p-8 flex flex-col items-center gap-3
+                cursor-pointer hover:bg-surface-hover transition-colors
+              "
+            >
+              <span className="text-[2rem] leading-none" aria-hidden="true">
+                ☁
+              </span>
+              <span className="text-p3 font-medium text-text-primary">
+                {copy.assignmentForm.fields.file.dragDrop}
+              </span>
+              <span className="text-p4 text-text-secondary underline cursor-pointer">
+                {copy.assignmentForm.fields.file.browseButton}
+              </span>
+
+              {selectedFileName && (
+                <span
+                  className="
+                    bg-surface-hover rounded-full px-3 py-1
+                    text-p4 text-text-primary truncate max-w-xs
+                  "
+                >
+                  {selectedFileName}
+                </span>
+              )}
+
+              <input
+                id="file"
+                type="file"
+                accept=".pdf,image/jpeg,image/png"
+                onChange={(e) => void handleFileChange(e)}
+                aria-describedby="file-hint"
+                disabled={uploading}
+                className="sr-only"
+              />
+            </label>
+
+            <span id="file-hint" className="text-p5 text-text-secondary">
+              {copy.assignmentForm.fields.file.uploadImages}
+            </span>
+            {uploading && (
+              <span aria-live="polite" className="text-p5 text-text-secondary">
+                {copy.assignmentForm.uploading}
+              </span>
+            )}
+            {fileError && (
+              <span role="alert" aria-live="assertive" className="text-p5 text-error">
+                {fileError}
+              </span>
+            )}
+          </div>
+
+          {/* ── Due date — required ────────────────────────────────────────── */}
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="dueDate"
+              className="font-semibold text-p4 text-text-primary"
+            >
+              {copy.assignmentForm.fields.dueDate.label}
+            </label>
             <input
-              id="file"
-              type="file"
-              accept=".pdf,image/jpeg,image/png"
-              onChange={(e) => void handleFileChange(e)}
-              aria-describedby="file-hint"
-              disabled={uploading}
+              id="dueDate"
+              type="date"
+              placeholder={copy.assignmentForm.fields.dueDate.placeholder}
+              aria-invalid={errors.dueDate ? 'true' : undefined}
+              aria-describedby={errors.dueDate ? 'dueDate-error' : undefined}
+              className="
+                border border-grey-2 rounded-[8px] px-3 py-2
+                text-p3 text-text-primary w-full bg-surface
+                focus:outline-none focus:ring-2 focus:ring-btn-dark/20
+              "
+              {...register('dueDate')}
+            />
+            {errors.dueDate && (
+              <span id="dueDate-error" role="alert" className="text-p5 text-error">
+                {copy.assignmentForm.errors.dueDate}
+              </span>
+            )}
+          </div>
+
+          {/* ── Question types table ──────────────────────────────────────── */}
+          <fieldset className="flex flex-col gap-2 border-0 p-0 m-0">
+            <legend className="font-semibold text-p4 text-text-primary mb-2">
+              {copy.assignmentForm.fields.questions.label}
+            </legend>
+
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-surface-hover rounded-[8px]">
+                    <th
+                      scope="col"
+                      className="text-left px-3 py-2 text-p5 font-semibold text-text-secondary rounded-l-[8px]"
+                    >
+                      {copy.assignmentForm.fields.questions.columnType}
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-center px-3 py-2 text-p5 font-semibold text-text-secondary"
+                    >
+                      {copy.assignmentForm.fields.questions.columnCount}
+                    </th>
+                    <th
+                      scope="col"
+                      className="text-center px-3 py-2 text-p5 font-semibold text-text-secondary"
+                    >
+                      {copy.assignmentForm.fields.questions.columnMarks}
+                    </th>
+                    <th scope="col" className="px-2 py-2 rounded-r-[8px]">
+                      <span className="sr-only">Actions</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {fields.map((field, index) => (
+                    <tr
+                      key={field.id}
+                      data-testid={`question-row-${String(index)}`}
+                      className="border-b border-grey-2 last:border-0"
+                    >
+                      {/* Type select */}
+                      <td className="py-2 pr-2">
+                        <label
+                          htmlFor={`questions-${String(index)}-type`}
+                          className="sr-only"
+                        >
+                          {copy.assignmentForm.fields.questions.columnType} {index + 1}
+                        </label>
+                        <select
+                          id={`questions-${String(index)}-type`}
+                          className="
+                            border border-grey-2 rounded-[8px] px-2 py-1.5
+                            text-p4 bg-surface text-text-primary w-full
+                          "
+                          {...register(`questions.${index}.type`)}
+                        >
+                          {QUESTION_TYPE_OPTIONS.map(({ value, label }) => (
+                            <option key={value} value={value}>
+                              {label}
+                            </option>
+                          ))}
+                        </select>
+                      </td>
+
+                      {/* Count stepper */}
+                      <td className="py-2 px-2">
+                        <label
+                          htmlFor={`questions-${String(index)}-count`}
+                          className="sr-only"
+                        >
+                          {copy.assignmentForm.fields.questions.columnCount} {index + 1}
+                        </label>
+                        <div className="flex items-center justify-center gap-1">
+                          <button
+                            type="button"
+                            aria-label={`Decrease count for row ${String(index + 1)}`}
+                            className="w-6 h-6 flex items-center justify-center rounded border border-grey-2 text-text-secondary hover:bg-surface-hover transition-colors text-p4"
+                            onClick={() => {
+                              const current = watchedQuestions[index]?.count ?? 1;
+                              if (current > 1) setValue(`questions.${index}.count`, current - 1);
+                            }}
+                          >
+                            −
+                          </button>
+                          <input
+                            id={`questions-${String(index)}-count`}
+                            type="number"
+                            min={1}
+                            aria-label={`${copy.assignmentForm.fields.questions.columnCount} row ${String(index + 1)}`}
+                            aria-invalid={errors.questions?.[index]?.count ? 'true' : undefined}
+                            className="
+                              border border-grey-2 rounded-[8px] px-2 py-1.5
+                              text-p4 bg-surface text-text-primary w-16 text-center
+                            "
+                            {...register(`questions.${index}.count`, { valueAsNumber: true })}
+                          />
+                          <button
+                            type="button"
+                            aria-label={`Increase count for row ${String(index + 1)}`}
+                            className="w-6 h-6 flex items-center justify-center rounded border border-grey-2 text-text-secondary hover:bg-surface-hover transition-colors text-p4"
+                            onClick={() => {
+                              const current = watchedQuestions[index]?.count ?? 1;
+                              setValue(`questions.${index}.count`, current + 1);
+                            }}
+                          >
+                            +
+                          </button>
+                        </div>
+                        {errors.questions?.[index]?.count && (
+                          <span role="alert" className="text-p5 text-error block mt-1 text-center">
+                            {copy.assignmentForm.errors.countPositive}
+                          </span>
+                        )}
+                      </td>
+
+                      {/* Marks stepper */}
+                      <td className="py-2 px-2">
+                        <label
+                          htmlFor={`questions-${String(index)}-marks`}
+                          className="sr-only"
+                        >
+                          {copy.assignmentForm.fields.questions.columnMarks} {index + 1}
+                        </label>
+                        <div className="flex items-center justify-center gap-1">
+                          <button
+                            type="button"
+                            aria-label={`Decrease marks for row ${String(index + 1)}`}
+                            className="w-6 h-6 flex items-center justify-center rounded border border-grey-2 text-text-secondary hover:bg-surface-hover transition-colors text-p4"
+                            onClick={() => {
+                              const current = watchedQuestions[index]?.marks ?? 1;
+                              if (current > 1) setValue(`questions.${index}.marks`, current - 1);
+                            }}
+                          >
+                            −
+                          </button>
+                          <input
+                            id={`questions-${String(index)}-marks`}
+                            type="number"
+                            min={1}
+                            aria-label={`${copy.assignmentForm.fields.questions.columnMarks} row ${String(index + 1)}`}
+                            aria-invalid={errors.questions?.[index]?.marks ? 'true' : undefined}
+                            className="
+                              border border-grey-2 rounded-[8px] px-2 py-1.5
+                              text-p4 bg-surface text-text-primary w-16 text-center
+                            "
+                            {...register(`questions.${index}.marks`, { valueAsNumber: true })}
+                          />
+                          <button
+                            type="button"
+                            aria-label={`Increase marks for row ${String(index + 1)}`}
+                            className="w-6 h-6 flex items-center justify-center rounded border border-grey-2 text-text-secondary hover:bg-surface-hover transition-colors text-p4"
+                            onClick={() => {
+                              const current = watchedQuestions[index]?.marks ?? 1;
+                              setValue(`questions.${index}.marks`, current + 1);
+                            }}
+                          >
+                            +
+                          </button>
+                        </div>
+                        {errors.questions?.[index]?.marks && (
+                          <span role="alert" className="text-p5 text-error block mt-1 text-center">
+                            {copy.assignmentForm.errors.marksPositive}
+                          </span>
+                        )}
+                      </td>
+
+                      {/* Remove */}
+                      <td className="py-2 pl-1">
+                        {fields.length > 1 && (
+                          <button
+                            type="button"
+                            aria-label={`${copy.assignmentForm.fields.questions.removeRow} row ${String(index + 1)}`}
+                            className="text-text-secondary hover:text-error transition-colors p-1 text-p4"
+                            onClick={() => remove(index)}
+                          >
+                            ×
+                          </button>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {errors.questions && !Array.isArray(errors.questions) && (
+              <span role="alert" className="text-p5 text-error">
+                {copy.assignmentForm.errors.questions}
+              </span>
+            )}
+
+            <button
+              type="button"
+              className="text-p4 text-text-secondary underline mt-1 flex items-center gap-1 self-start"
+              onClick={() => append({ type: 'mcq', count: 1, marks: 1 })}
+            >
+              + {copy.assignmentForm.fields.questions.addRow}
+            </button>
+
+            <div
+              aria-live="polite"
+              data-testid="question-totals"
+              className="flex gap-4 text-p5 text-text-secondary mt-1"
+            >
+              <span>
+                {copy.assignmentForm.fields.questions.totalQuestions} {totalQuestions}
+              </span>
+              <span>
+                {copy.assignmentForm.fields.questions.totalMarks} {totalMarks}
+              </span>
+            </div>
+          </fieldset>
+
+          {/* ── Additional information — optional ─────────────────────────── */}
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="additionalInfo"
+              className="font-semibold text-p4 text-text-primary"
+            >
+              {copy.assignmentForm.fields.additionalInfo.label}
+            </label>
+            <textarea
+              id="additionalInfo"
+              placeholder={copy.assignmentForm.fields.additionalInfo.placeholder}
+              className="
+                border border-grey-2 rounded-[8px] px-3 py-2
+                text-p3 text-text-primary w-full bg-surface
+                focus:outline-none focus:ring-2 focus:ring-btn-dark/20
+                min-h-[5rem] resize-y
+              "
+              {...register('additionalInfo')}
             />
           </div>
-          <span id="file-hint">{copy.assignmentForm.fields.file.uploadImages}</span>
-          {uploading && <span aria-live="polite">{copy.assignmentForm.uploading}</span>}
-          {fileError && (
-            <span role="alert" aria-live="assertive">
-              {fileError}
-            </span>
-          )}
-        </div>
 
-        {/* Due date — required */}
-        <div>
-          <label htmlFor="dueDate">{copy.assignmentForm.fields.dueDate.label}</label>
-          <input
-            id="dueDate"
-            type="date"
-            placeholder={copy.assignmentForm.fields.dueDate.placeholder}
-            aria-invalid={errors.dueDate ? 'true' : undefined}
-            aria-describedby={errors.dueDate ? 'dueDate-error' : undefined}
-            {...register('dueDate')}
-          />
-          {errors.dueDate && (
-            <span id="dueDate-error" role="alert">
-              {copy.assignmentForm.errors.dueDate}
-            </span>
-          )}
-        </div>
-
-        {/* Questions table — type + count + marks per row */}
-        <fieldset>
-          <legend>{copy.assignmentForm.fields.questions.label}</legend>
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">{copy.assignmentForm.fields.questions.columnType}</th>
-                <th scope="col">{copy.assignmentForm.fields.questions.columnCount}</th>
-                <th scope="col">{copy.assignmentForm.fields.questions.columnMarks}</th>
-                <th scope="col">
-                  <span className="sr-only">Actions</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {fields.map((field, index) => (
-                <tr key={field.id} data-testid={`question-row-${String(index)}`}>
-                  <td>
-                    <label htmlFor={`questions-${String(index)}-type`} className="sr-only">
-                      {copy.assignmentForm.fields.questions.columnType} {index + 1}
-                    </label>
-                    <select
-                      id={`questions-${String(index)}-type`}
-                      {...register(`questions.${index}.type`)}
-                    >
-                      {QUESTION_TYPE_OPTIONS.map(({ value, label }) => (
-                        <option key={value} value={value}>
-                          {label}
-                        </option>
-                      ))}
-                    </select>
-                  </td>
-                  <td>
-                    <label
-                      htmlFor={`questions-${String(index)}-count`}
-                      className="sr-only"
-                    >
-                      {copy.assignmentForm.fields.questions.columnCount} {index + 1}
-                    </label>
-                    <button
-                      type="button"
-                      aria-label={`Decrease count for row ${String(index + 1)}`}
-                      onClick={() => {
-                        const current = watchedQuestions[index]?.count ?? 1;
-                        if (current > 1) setValue(`questions.${index}.count`, current - 1);
-                      }}
-                    >
-                      −
-                    </button>
-                    <input
-                      id={`questions-${String(index)}-count`}
-                      type="number"
-                      min={1}
-                      aria-label={`${copy.assignmentForm.fields.questions.columnCount} row ${String(index + 1)}`}
-                      aria-invalid={errors.questions?.[index]?.count ? 'true' : undefined}
-                      {...register(`questions.${index}.count`, { valueAsNumber: true })}
-                    />
-                    <button
-                      type="button"
-                      aria-label={`Increase count for row ${String(index + 1)}`}
-                      onClick={() => {
-                        const current = watchedQuestions[index]?.count ?? 1;
-                        setValue(`questions.${index}.count`, current + 1);
-                      }}
-                    >
-                      +
-                    </button>
-                    {errors.questions?.[index]?.count && (
-                      <span role="alert">{copy.assignmentForm.errors.countPositive}</span>
-                    )}
-                  </td>
-                  <td>
-                    <label
-                      htmlFor={`questions-${String(index)}-marks`}
-                      className="sr-only"
-                    >
-                      {copy.assignmentForm.fields.questions.columnMarks} {index + 1}
-                    </label>
-                    <button
-                      type="button"
-                      aria-label={`Decrease marks for row ${String(index + 1)}`}
-                      onClick={() => {
-                        const current = watchedQuestions[index]?.marks ?? 1;
-                        if (current > 1) setValue(`questions.${index}.marks`, current - 1);
-                      }}
-                    >
-                      −
-                    </button>
-                    <input
-                      id={`questions-${String(index)}-marks`}
-                      type="number"
-                      min={1}
-                      aria-label={`${copy.assignmentForm.fields.questions.columnMarks} row ${String(index + 1)}`}
-                      aria-invalid={errors.questions?.[index]?.marks ? 'true' : undefined}
-                      {...register(`questions.${index}.marks`, { valueAsNumber: true })}
-                    />
-                    <button
-                      type="button"
-                      aria-label={`Increase marks for row ${String(index + 1)}`}
-                      onClick={() => {
-                        const current = watchedQuestions[index]?.marks ?? 1;
-                        setValue(`questions.${index}.marks`, current + 1);
-                      }}
-                    >
-                      +
-                    </button>
-                    {errors.questions?.[index]?.marks && (
-                      <span role="alert">{copy.assignmentForm.errors.marksPositive}</span>
-                    )}
-                  </td>
-                  <td>
-                    {fields.length > 1 && (
-                      <button
-                        type="button"
-                        aria-label={`${copy.assignmentForm.fields.questions.removeRow} row ${String(index + 1)}`}
-                        onClick={() => remove(index)}
-                      >
-                        {copy.assignmentForm.fields.questions.removeRow}
-                      </button>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          {errors.questions && !Array.isArray(errors.questions) && (
-            <span role="alert">{copy.assignmentForm.errors.questions}</span>
-          )}
-
+          {/* ── Submit ────────────────────────────────────────────────────── */}
           <button
-            type="button"
-            onClick={() => append({ type: 'mcq', count: 1, marks: 1 })}
+            type="submit"
+            disabled={isPending}
+            className="
+              bg-btn-dark text-white rounded-full px-6 py-3 w-full
+              text-p3 font-medium transition-opacity
+              disabled:opacity-50 disabled:cursor-not-allowed
+            "
           >
-            {copy.assignmentForm.fields.questions.addRow}
+            {isPending ? copy.assignmentForm.uploading : copy.assignmentForm.submit}
           </button>
-
-          <div aria-live="polite" data-testid="question-totals">
-            <span>
-              {copy.assignmentForm.fields.questions.totalQuestions} {totalQuestions}
-            </span>
-            <span>
-              {copy.assignmentForm.fields.questions.totalMarks} {totalMarks}
-            </span>
-          </div>
-        </fieldset>
-
-        {/* Additional information — optional */}
-        <div>
-          <label htmlFor="additionalInfo">
-            {copy.assignmentForm.fields.additionalInfo.label}
-          </label>
-          <textarea
-            id="additionalInfo"
-            placeholder={copy.assignmentForm.fields.additionalInfo.placeholder}
-            {...register('additionalInfo')}
-          />
-        </div>
-
-        <button type="submit" disabled={isPending}>
-          {copy.assignmentForm.submit}
-        </button>
-      </form>
+        </form>
+      </div>
     </section>
   );
 }

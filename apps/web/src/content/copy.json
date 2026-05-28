@@ -73,6 +73,7 @@
   },
   "assignmentForm": {
     "headingCreate": "Create Assignment",
+    "subtitle": "Fill in the details to generate a question paper",
     "subheadingCreate": "Set up a new assignment for your students",
     "step1": {
       "sectionTitle": "Assignment Details",
