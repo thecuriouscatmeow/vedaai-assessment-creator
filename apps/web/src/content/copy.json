@@ -175,6 +175,18 @@
     },
     "duration": "Duration:",
     "downloadPdf": "Download as PDF",
-    "downloadPdfPreparing": "Preparing PDF…"
+    "downloadPdfPreparing": "Preparing PDF…",
+    "pdf": {
+      "subject": "Subject:",
+      "class": "Class:",
+      "duration": "Duration:",
+      "durationUnit": "min",
+      "totalMarks": "Total Marks:",
+      "studentName": "Name:",
+      "studentRoll": "Roll No:",
+      "studentSection": "Section:",
+      "marks": "marks",
+      "answerKey": "Answer Key"
+    }
   }
 }

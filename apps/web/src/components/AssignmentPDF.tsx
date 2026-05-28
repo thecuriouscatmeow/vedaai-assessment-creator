@@ -7,14 +7,11 @@
  * Color tokens match globals.css: #303030 (text-primary), #5E5E5E (text-secondary),
  * #F6F6F6 (bg-page), #D4D4D4 (grey-2), #F0F0F0 (surface-hover).
  */
-import { Document, Page, View, Text, StyleSheet, Font } from '@react-pdf/renderer';
+import { Document, Page, View, Text, StyleSheet } from '@react-pdf/renderer';
 import type { QuestionPaper } from '@vedaai/shared';
+import copy from '@/content/copy.json';
 
-Font.register({
-  family: 'Helvetica',
-  // Helvetica is a built-in PDF font — no external URL needed; listed for clarity
-  src: undefined as unknown as string,
-});
+const c = copy.output.pdf;
 
 const styles = StyleSheet.create({
   page: {
@@ -138,6 +135,26 @@ function difficultyLabel(d: 'easy' | 'moderate' | 'challenging'): string {
   return d.charAt(0).toUpperCase() + d.slice(1);
 }
 
+/** Flat list of every question with its global sequential number, pre-computed to
+ *  avoid mutating a counter inside JSX map callbacks (fragile under React StrictMode). */
+interface FlatQuestion {
+  sIdx: number;
+  qIdx: number;
+  globalNum: number;
+}
+
+function buildFlatQuestions(paper: QuestionPaper): FlatQuestion[] {
+  const flat: FlatQuestion[] = [];
+  let n = 0;
+  for (const [s, section] of paper.sections.entries()) {
+    for (let q = 0; q < section.questions.length; q++) {
+      n++;
+      flat.push({ sIdx: s, qIdx: q, globalNum: n });
+    }
+  }
+  return flat;
+}
+
 export function AssignmentPDF({ paper }: { paper: QuestionPaper }) {
   const allAnswers = paper.sections.flatMap((s, si) =>
     s.questions
@@ -145,7 +162,13 @@ export function AssignmentPDF({ paper }: { paper: QuestionPaper }) {
       .filter((a): a is { n: string; answer: string } => a.answer !== undefined),
   );
 
-  let questionCounter = 0;
+  // Pre-compute global question numbers once, outside JSX, to avoid counter
+  // mutation inside map callbacks (unsafe under React concurrent/StrictMode).
+  const flatQuestions = buildFlatQuestions(paper);
+  // Group back by section index for the nested render
+  const questionsBySectionIdx = paper.sections.map((_, sIdx) =>
+    flatQuestions.filter((fq) => fq.sIdx === sIdx),
+  );
 
   return (
     <Document>
@@ -159,22 +182,22 @@ export function AssignmentPDF({ paper }: { paper: QuestionPaper }) {
 
         {/* Exam info row */}
         <View style={styles.infoRow}>
-          <Text style={styles.infoText}>Subject: {paper.subject}</Text>
-          <Text style={styles.infoText}>Class: {paper.className}</Text>
+          <Text style={styles.infoText}>{c.subject} {paper.subject}</Text>
+          <Text style={styles.infoText}>{c.class} {paper.className}</Text>
           {paper.durationMinutes !== undefined && (
-            <Text style={styles.infoText}>Duration: {paper.durationMinutes} min</Text>
+            <Text style={styles.infoText}>{c.duration} {paper.durationMinutes} {c.durationUnit}</Text>
           )}
-          <Text style={styles.infoText}>Total Marks: {paper.totalMarks}</Text>
+          <Text style={styles.infoText}>{c.totalMarks} {paper.totalMarks}</Text>
         </View>
 
         {/* Student info fill-in */}
         <View style={styles.studentInfoSection}>
           <View style={styles.studentInfoRow}>
-            <Text style={styles.studentInfoLabel}>Name: </Text>
+            <Text style={styles.studentInfoLabel}>{c.studentName} </Text>
             <Text style={styles.studentInfoValue}>{paper.studentInfo.name ?? ''}</Text>
-            <Text style={styles.studentInfoLabel}>Roll No: </Text>
+            <Text style={styles.studentInfoLabel}>{c.studentRoll} </Text>
             <Text style={styles.studentInfoValue}>{paper.studentInfo.rollNumber ?? ''}</Text>
-            <Text style={styles.studentInfoLabel}>Section: </Text>
+            <Text style={styles.studentInfoLabel}>{c.studentSection} </Text>
             <Text style={styles.studentInfoValue}>{paper.studentInfo.section ?? ''}</Text>
           </View>
         </View>
@@ -186,16 +209,17 @@ export function AssignmentPDF({ paper }: { paper: QuestionPaper }) {
             {section.instruction !== undefined && (
               <Text style={styles.sectionInstruction}>{section.instruction}</Text>
             )}
-            {section.questions.map((q, qIdx) => {
-              questionCounter++;
-              const num = questionCounter;
+            {/* questionsBySectionIdx[sIdx] is guaranteed non-undefined: built from paper.sections */}
+            {questionsBySectionIdx[sIdx]!.map(({ qIdx, globalNum }) => {
+              // q is guaranteed: qIdx comes from buildFlatQuestions which iterated section.questions
+              const q = section.questions[qIdx]!;
               return (
                 <View key={`q-${sIdx}-${qIdx}`} style={styles.questionRow}>
                   <Text style={styles.questionText}>
-                    {num}. {q.text}
+                    {globalNum}. {q.text}
                   </Text>
                   <Text style={styles.questionMeta}>
-                    [{difficultyLabel(q.difficulty)}] {q.marks} marks
+                    [{difficultyLabel(q.difficulty)}] {q.marks} {c.marks}
                   </Text>
                 </View>
               );
@@ -206,7 +230,7 @@ export function AssignmentPDF({ paper }: { paper: QuestionPaper }) {
         {/* Answer Key — only when answers exist */}
         {allAnswers.length > 0 && (
           <View break>
-            <Text style={styles.answerKeyTitle}>Answer Key</Text>
+            <Text style={styles.answerKeyTitle}>{c.answerKey}</Text>
             {allAnswers.map((a) => (
               <View key={`ans-${a.n}`} style={styles.answerRow}>
                 <Text style={styles.answerLabel}>{a.n}.</Text>
