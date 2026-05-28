@@ -199,7 +199,6 @@ function AssignmentCard({
 
   return (
     <article
-      key={assignment.id}
       data-testid={`assignment-card-${assignment.id}`}
       className="bg-surface rounded-[16px] shadow-[var(--shadow-card)] p-4 flex flex-col gap-3 hover:bg-surface-hover transition-colors"
     >

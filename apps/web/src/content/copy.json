@@ -61,10 +61,7 @@
       "due": "Due :",
       "menuLabel": "Assignment options",
       "viewAssignment": "View Assignment",
-      "viewLabel": "View",
-      "deleteLabel": "Delete",
-      "delete": "Delete",
-      "dueDateLabel": "Due"
+      "delete": "Delete"
     },
     "status": {
       "done": "Done",
