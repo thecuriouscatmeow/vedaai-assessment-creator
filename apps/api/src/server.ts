@@ -59,17 +59,22 @@ const queueEvents = attachGenerateQueueEvents(io, {
   logger,
 });
 
-// Connect to MongoDB before listening
-dbAdapter.connect()
-  .then(() => {
-    httpServer.listen(config.port, () => {
-      logger.info({ port: config.port, env: config.nodeEnv }, 'vedaai-api listening');
-    });
-  })
-  .catch((err: unknown) => {
-    logger.error({ err }, 'Failed to connect to database');
-    process.exit(1);
-  });
+// Start listening immediately so the Railway healthcheck passes, then connect
+// to MongoDB with retries. DB-dependent routes return 503 until connected.
+httpServer.listen(config.port, () => {
+  logger.info({ port: config.port, env: config.nodeEnv }, 'vedaai-api listening');
+});
+
+async function connectWithRetry(attempt = 1): Promise<void> {
+  try {
+    await dbAdapter.connect();
+  } catch (err: unknown) {
+    logger.error({ err, attempt }, 'Failed to connect to database — retrying in 5s');
+    setTimeout(() => void connectWithRetry(attempt + 1), 5_000);
+  }
+}
+
+void connectWithRetry();
 
 function shutdown(): void {
   logger.info('shutdown: signal received');
