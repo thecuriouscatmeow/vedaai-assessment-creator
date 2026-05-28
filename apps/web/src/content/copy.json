@@ -133,6 +133,10 @@
     "retry": "Try Again",
     "retryLabel": "Retry generation"
   },
+  "profile": {
+    "name": "Delhi Public School",
+    "location": "Bokaro Steel City"
+  },
   "output": {
     "loading": "Loading assignment…",
     "failed": "Could not load assignment.",
