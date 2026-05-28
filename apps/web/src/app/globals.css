@@ -1,14 +1,59 @@
 @import 'tailwindcss';
 
-/*
- * Semantic design tokens (Tailwind v4 CSS-first @theme).
- * Components reference these by semantic name (e.g. `text-heading`,
- * `bg-body`) — never raw hex. Real palette is finalized in Phase 5.
- */
 @theme {
-  --color-body: #0b0f1a;
-  --color-surface: #131a2a;
-  --color-heading: #f8fafc;
-  --color-muted: #94a3b8;
-  --color-accent: #6366f1;
+  /* ── Figma color tokens ─────────────────────────────────────────────── */
+  --color-bg-page:           #F6F6F6;
+  --color-surface:           #FFFFFF;
+  --color-surface-hover:     #F0F0F0;
+  --color-surface-mid:       #DADADA;
+  --color-text-primary:      #303030;
+  --color-text-secondary:    #5E5E5E;
+  --color-text-disabled:     #A9A9A9;
+  --color-btn-dark:          #181818;
+  --color-btn-orange:        #FF5623;
+  --color-navy:              #011625;
+  --color-navy-light:        #417BA4;
+  --color-red:               #FF4040;
+  --color-error:             #C53535;
+  --color-grey-2:            #D4D4D4;
+  --color-grey-3:            #E1DCEB;
+  --color-grey-4:            #CCC6D9;
+  --color-dark-grey:         #2B2B2B;
+
+  /* ── backward-compat aliases (used by existing MVP components) ───────── */
+  --color-body:              #F6F6F6;
+  --color-surface-dark:      #2B2B2B;
+  --color-heading:           #303030;
+  --color-muted:             #5E5E5E;
+  --color-accent:            #FF5623;
+
+  /* ── Typography ─────────────────────────────────────────────────────── */
+  --font-sans:               'Bricolage Grotesque', sans-serif;
+  --text-p1:                 1.25rem;
+  --text-p2:                 1.125rem;
+  --text-p3:                 1rem;
+  --text-p4:                 0.875rem;
+  --text-p5:                 0.75rem;
+
+  /* ── DEC-0001 fluid type scale ──────────────────────────────────────── */
+  --text-fluid-sm:    clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
+  --text-fluid-base:  clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-fluid-lg:    clamp(1.25rem,  1.15rem + 0.5vw,  1.5rem);
+  --text-fluid-xl:    clamp(1.75rem,  1.5rem  + 1.25vw, 2.5rem);
+
+  /* ── Shadows ─────────────────────────────────────────────────────────── */
+  --shadow-card:    0px 20px 30px rgba(146,146,146,0.19);
+  --shadow-modal:   0px 32px 48px rgba(0,0,0,0.2);
+  --shadow-sidebar: 0px 16px 24px rgba(0,0,0,0.12), 0px 32px 24px rgba(0,0,0,0.2);
+}
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+  body {
+    background-color: theme(--color-bg-page);
+    color: theme(--color-text-primary);
+    font-family: var(--font-sans);
+  }
 }
