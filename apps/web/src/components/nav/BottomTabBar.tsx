@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import type { NavItem } from '@vedaai/shared';
 
 /**
  * Mobile bottom tab bar.
@@ -11,15 +12,7 @@ import { usePathname } from 'next/navigation';
  * /assignments/create.
  */
 
-interface Tab {
-  label: string;
-  href: string;
-  icon: string;
-  /** Tabs not yet built — non-interactive */
-  disabled?: boolean;
-}
-
-const TABS: Tab[] = [
+const TABS: NavItem[] = [
   { label: 'Home', href: '/', icon: '⊞', disabled: true },
   { label: 'Assignments', href: '/assignments', icon: '📋', disabled: false },
   { label: 'Library', href: '#', icon: '📚', disabled: true },

@@ -10,3 +10,4 @@ export const SHARED_PACKAGE = '@vedaai/shared' as const;
 export * from './schemas/assignment';
 export * from './schemas/question-paper';
 export * from './schemas/socket';
+export * from './schemas/nav-item';

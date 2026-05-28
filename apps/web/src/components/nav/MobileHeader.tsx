@@ -58,10 +58,10 @@ export function MobileHeader() {
           </button>
 
           {/* User avatar */}
-          <div
+          <button
+            type="button"
             className="size-8 rounded-full bg-grey-2"
             aria-label={copy.layout.topbar.userMenuLabel}
-            role="img"
           />
 
           {/* Hamburger */}

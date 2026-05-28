@@ -3,18 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import copy from '@/content/copy.json';
+import type { NavItem } from '@vedaai/shared';
 
 /**
  * Desktop sidebar — fixed left panel, visible on md+ screens.
  * Hidden on mobile (parent wraps with `hidden md:block`).
  */
-
-interface NavItem {
-  label: string;
-  href: string;
-  icon: string;
-  disabled?: boolean;
-}
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/', icon: '⊞', disabled: true },
