@@ -217,6 +217,10 @@ export function createAssignmentRepository(): AssignmentRepository {
     },
 
     async setDone(id, paper, title) {
+      // Fail fast before writing any paper/question documents
+      const exists = await AssignmentModel.exists({ _id: id });
+      if (!exists) throw new NotFoundError(`Assignment ${id} not found`);
+
       const assignmentOid = new mongoose.Types.ObjectId(id);
 
       // 1. Create paper metadata (sections without questions)
