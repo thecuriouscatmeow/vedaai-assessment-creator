@@ -49,9 +49,11 @@
     "filterBy": "Filter By",
     "searchPlaceholder": "Search Assignment",
     "createButton": "Create Assignment",
+    "newButton": "New Assignment",
     "empty": {
       "heading": "No assignments yet",
       "description": "Create your first assignment to start collecting and grading student submissions. You can set up rubrics, define marking criteria, and let AI assist with grading.",
+      "subtext": "Create your first assignment to start collecting and grading student submissions.",
       "cta": "Create Your First Assignment"
     },
     "card": {
@@ -59,7 +61,16 @@
       "due": "Due :",
       "menuLabel": "Assignment options",
       "viewAssignment": "View Assignment",
-      "delete": "Delete"
+      "viewLabel": "View",
+      "deleteLabel": "Delete",
+      "delete": "Delete",
+      "dueDateLabel": "Due"
+    },
+    "status": {
+      "done": "Done",
+      "failed": "Failed",
+      "queued": "Queued",
+      "processing": "Processing"
     },
     "deleteError": "Failed to delete assignment."
   },
