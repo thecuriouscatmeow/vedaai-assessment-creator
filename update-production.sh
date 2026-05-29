@@ -112,7 +112,7 @@ deploy_vercel() {
     OUTPUT=$(vercel --prod 2>&1)
 
     if echo "$OUTPUT" | grep -q "READY"; then
-        VERCEL_URL=$(echo "$OUTPUT" | grep "Production" | grep -oP 'https://[^\s]+' | head -1)
+        VERCEL_URL=$(echo "$OUTPUT" | grep "Production" | grep -o 'https://[^ ]*' | head -1)
         log_success "Vercel deployment complete: $VERCEL_URL"
         echo "$VERCEL_URL"
     else
