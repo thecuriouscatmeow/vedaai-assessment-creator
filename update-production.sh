@@ -134,14 +134,15 @@ deploy_railway_api() {
     # Link to the correct project
     railway link --project "$RAILWAY_PROJECT" --environment "$RAILWAY_ENV" --service "$API_SERVICE" 2>/dev/null || true
 
-    # Trigger deployment using railway deploy
-    DEPLOY_OUTPUT=$(railway deploy --detach 2>&1)
-
-    if echo "$DEPLOY_OUTPUT" | grep -q "Deployment"; then
+    # Upload the current directory and deploy (`railway up`; `railway deploy` is
+    # for provisioning templates). `if cmd; then` keeps a failure from aborting
+    # the whole script via `set -e` so the worker still gets a chance to deploy.
+    if DEPLOY_OUTPUT=$(railway up --detach --service "$API_SERVICE" 2>&1); then
         log_success "Railway API deployment triggered"
-        echo "$DEPLOY_OUTPUT" | grep -i "deployment\|ready\|error" || true
+        echo "$DEPLOY_OUTPUT" | grep -iE "build logs|deployment|https://" || true
     else
-        log_warning "Could not verify Railway API deployment: $DEPLOY_OUTPUT"
+        log_error "Railway API deployment failed:"
+        echo "$DEPLOY_OUTPUT"
     fi
 }
 
@@ -157,14 +158,15 @@ deploy_railway_worker() {
     # Link to worker service
     railway link --project "$RAILWAY_PROJECT" --environment "$RAILWAY_ENV" --service "$WORKER_SERVICE" 2>/dev/null || true
 
-    # Trigger deployment
-    DEPLOY_OUTPUT=$(railway deploy --detach 2>&1)
-
-    if echo "$DEPLOY_OUTPUT" | grep -q "Deployment"; then
+    # Upload the current directory and deploy (`railway up`; `railway deploy` is
+    # for provisioning templates). `if cmd; then` keeps a failure from aborting
+    # the whole script via `set -e`.
+    if DEPLOY_OUTPUT=$(railway up --detach --service "$WORKER_SERVICE" 2>&1); then
         log_success "Railway Worker deployment triggered"
-        echo "$DEPLOY_OUTPUT" | grep -i "deployment\|ready\|error" || true
+        echo "$DEPLOY_OUTPUT" | grep -iE "build logs|deployment|https://" || true
     else
-        log_warning "Could not verify Railway Worker deployment: $DEPLOY_OUTPUT"
+        log_error "Railway Worker deployment failed:"
+        echo "$DEPLOY_OUTPUT"
     fi
 }
 
