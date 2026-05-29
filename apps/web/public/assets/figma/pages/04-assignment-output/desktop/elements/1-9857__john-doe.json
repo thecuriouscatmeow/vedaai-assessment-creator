@@ -1,0 +1,40 @@
+{
+  "id": "1:9857",
+  "name": "John Doe",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9856",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 2,
+    "width": 65,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:SemiBold",
+      "size": 16,
+      "weight": 600,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9857\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[normal] overflow-hidden text-ellipsis\">John Doe</p>\n            </div>"
+  }
+}

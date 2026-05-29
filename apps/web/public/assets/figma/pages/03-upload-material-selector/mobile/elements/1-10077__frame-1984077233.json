@@ -1,0 +1,35 @@
+{
+  "id": "1:10077",
+  "name": "Frame 1984077233",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10076",
+  "children": [
+    "1:10078",
+    "1:10079"
+  ],
+  "layout": {
+    "x": -4,
+    "y": 5,
+    "width": 60,
+    "height": 41,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 4,
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0\" data-node-id=\"1:10077\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10078\" data-name=\"icon_filled/Calendar\">\n                <div className=\"absolute inset-[8.33%]\" data-node-id=\"I1:10078;3309:9418\" data-name=\"Union\">\n                  <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion2} />\n                </div>\n              </div>\n              <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-center text-white tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10079\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                My Groups\n              </p>\n            </div>"
+  }
+}

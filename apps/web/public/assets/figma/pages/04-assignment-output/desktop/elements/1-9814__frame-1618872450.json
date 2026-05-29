@@ -1,0 +1,46 @@
+{
+  "id": "1:9814",
+  "name": "Frame 1618872450",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9813",
+  "children": [
+    "1:9815"
+  ],
+  "layout": {
+    "x": 20,
+    "y": 20,
+    "width": 1060,
+    "height": 164,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "padding": [
+        24,
+        32,
+        24,
+        32
+      ],
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[rgba(24,24,24,0.8)] content-stretch flex flex-col items-center justify-center px-[32px] py-[24px] relative rounded-[32px] shrink-0 w-full; style:",
+    "borderRadius": 32,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(24,24,24,0.8)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[rgba(24,24,24,0.8)] content-stretch flex flex-col items-center justify-center px-[32px] py-[24px] relative rounded-[32px] shrink-0 w-full\" data-node-id=\"1:9814\">\n          <div className=\"content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full\" data-node-id=\"1:9815\">\n            <div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:9816\">\n              <div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:9817\">\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[20px] text-white tracking-[-0.8px] w-full\" data-node-id=\"1:9818\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Certainly, Lakshya! Here are customized Question Paper for your CBSE Grade 8 Science classes on the NCERT chapters:</p>\n                </div>\n              </div>\n            </div>\n            <div className=\"content-stretch flex items-start justify-center relative shrink-0\" data-node-id=\"1:9819\">\n              <div className=\"bg-white content-stretch flex h-[44px] items-center justify-center px-[24px] relative rounded-[100px] shrink-0\" data-node-id=\"1:9820\">\n                <div className=\"content-stretch flex gap-[4px] items-center relative shrink-0\" data-node-id=\"1:9821\">\n                  <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9822\" data-name=\"Frame\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame} />\n                  </div>\n                  <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9824\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[22px]\">Download as PDF</p>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "1:9816",
+  "name": "Frame 1618872452",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9815",
+  "children": [
+    "1:9817"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 996,
+    "height": 56,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col items-start relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:9816\">\n              <div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:9817\">\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[20px] text-white tracking-[-0.8px] w-full\" data-node-id=\"1:9818\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Certainly, Lakshya! Here are customized Question Paper for your CBSE Grade 8 Science classes on the NCERT chapters:</p>\n                </div>\n              </div>\n            </div>"
+  }
+}

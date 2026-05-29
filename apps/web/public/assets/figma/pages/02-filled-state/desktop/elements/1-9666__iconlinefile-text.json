@@ -1,0 +1,32 @@
+{
+  "id": "1:9666",
+  "name": "icon_line/file-text",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9665",
+  "children": [
+    "I1:9666;3309:5708",
+    "I1:9666;3309:5709",
+    "I1:9666;3309:5710",
+    "I1:9666;3309:5711",
+    "I1:9666;3309:5712"
+  ],
+  "layout": {
+    "x": 12,
+    "y": 9,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[20px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9666\" data-name=\"icon_line/file-text\">\n                <div className=\"absolute inset-[70.83%_37.5%_29.17%_37.5%]\" data-node-id=\"I1:9666;3309:5708\">\n                  <div className=\"absolute inset-[-1px_-20%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector5} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[54.17%_37.5%_45.83%_37.5%]\" data-node-id=\"I1:9666;3309:5709\">\n                  <div className=\"absolute inset-[-1px_-20%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector5} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[37.5%_58.33%_62.5%_37.5%]\" data-node-id=\"I1:9666;3309:5710\">\n                  <div className=\"absolute inset-[-1px_-120%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector6} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[12.5%_20.83%]\" data-node-id=\"I1:9666;3309:5711\">\n                  <div className=\"absolute inset-[-6.67%_-8.57%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgRectangle14} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[12.5%_20.83%_62.5%_54.17%]\" data-node-id=\"I1:9666;3309:5712\">\n                  <div className=\"absolute inset-[0_0_-20%_-20%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgRectangle15} />\n                  </div>\n                </div>\n              </div>"
+  }
+}

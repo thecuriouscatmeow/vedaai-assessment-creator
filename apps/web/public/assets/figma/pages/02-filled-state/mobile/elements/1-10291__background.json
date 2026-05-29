@@ -1,0 +1,35 @@
+{
+  "id": "1:10291",
+  "name": "Background",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10290",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 105,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: absolute backdrop-blur-[13.591px] bg-[#353739] inset-0; style:",
+    "tokenRefs": [
+      "color-ios-chrome-bars-background-dark"
+    ],
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#353739"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute backdrop-blur-[13.591px] bg-[#353739] inset-0\" data-node-id=\"1:10291\" data-name=\"Background\" />"
+  }
+}

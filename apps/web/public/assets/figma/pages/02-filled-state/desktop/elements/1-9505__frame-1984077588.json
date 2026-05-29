@@ -1,0 +1,33 @@
+{
+  "id": "1:9505",
+  "name": "Frame 1984077588",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9504",
+  "children": [
+    "1:9506"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 542,
+    "height": 162,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col h-[162px] items-start justify-center relative shrink-0 w-[542px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col h-[162px] items-start justify-center relative shrink-0 w-[542px]\" data-node-id=\"1:9505\">\n                <div className=\"bg-white content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-h-px p-[24px] relative rounded-[24px] w-full\" data-node-id=\"1:9506\">\n                  <div className=\"content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px relative w-full\" data-node-id=\"1:9507\">\n                    <div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:9508\">\n                      <div className=\"content-stretch flex items-center justify-between relative shrink-0 w-full\" data-node-id=\"1:9509\">\n                        <div className=\"content-stretch flex items-center relative shrink-0 w-[418px]\" data-node-id=\"1:9510\">\n                          <div className=\"content-stretch flex flex-col items-start justify-center relative shrink-0 w-[199px]\" data-node-id=\"1:9511\">\n                            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#303030] text-[24px] tracking-[-0.96px] w-full\" data-node-id=\"1:9512\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                              <p className=\"leading-[1.2]\">Quiz on Electricity</p>\n                            </div>\n                          </div>\n                        </div>\n                        <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9513\" data-name=\"icon_line/More-vertical\">\n                          <div className=\"absolute flex inset-[41.67%] items-center justify-center\" style={{ containerType: \"size\" }}>\n                            <div className=\"flex-none h-[100cqw] rotate-90 w-[100cqh]\">\n                              <div className=\"relative size-full\" data-node-id=\"I1:9513;3309:8568\" data-name=\"Vector (Stroke)\">\n                                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke} />\n                              </div>\n                            </div>\n                          </div>\n                          <div className=\"absolute flex inset-[70.83%_41.67%_12.5%_41.67%] items-center justify-center\" style={{ containerType: \"size\" }}>\n                            <div className=\"flex-none h-[100cqw] rotate-90 w-[100cqh]\">\n                              <div className=\"relative size-full\" data-node-id=\"I1:9513;3309:8569\" data-name=\"Vector (Stroke)\">\n                                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke} />\n                              </div>\n                            </div>\n                          </div>\n                          <div className=\"absolute flex inset-[12.5%_41.67%_70.83%_41.67%] items-center justify-center\" style={{ containerType: \"size\" }}>\n                            <div className=\"flex-none h-[100cqw] rotate-90 w-[100cqh]\">\n                              <div className=\"relative size-full\" data-node-id=\"I1:9513;3309:8570\" data-name=\"Vector (Stroke)\">\n                                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke} />\n                              </div>\n                            </div>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                    <div className=\"content-stretch flex items-center justify-center relative shrink-0 w-full\" data-node-id=\"1:9514\">\n                      <div className=\"content-stretch flex flex-[1_0_0] items-center justify-between min-w-px relative\" data-node-id=\"1:9515\">\n                        <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:9516\">\n                          <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9517\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                            <p>\n                              <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                                Assigned on\n                              </span>\n                              <span className=\"leading-[1.2]\">{` : 20-06-2025`}</span>\n                            </p>\n                          </div>\n                        </div>\n                        <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:9518\">\n                          <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9519\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                            <p>\n                              <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                                Due\n                              </span>\n                              <span className=\"leading-[1.2]\">{` : 21-06-2025`}</span>\n                            </p>\n                          </div>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "1:9847",
+  "name": "Frame 1984077625",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9846",
+  "children": [
+    "1:9848",
+    "1:9850"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 111,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 8,
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex gap-[8px] items-center relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex gap-[8px] items-center relative shrink-0\" data-node-id=\"1:9847\">\n            <div className=\"h-[17.316px] relative shrink-0 w-[18.316px]\" data-node-id=\"1:9848\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame1618872410} />\n            </div>\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#a9a9a9] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9850\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[normal] overflow-hidden text-ellipsis\">Create New</p>\n            </div>\n          </div>"
+  }
+}

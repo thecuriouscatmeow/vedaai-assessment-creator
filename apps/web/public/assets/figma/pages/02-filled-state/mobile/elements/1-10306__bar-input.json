@@ -1,0 +1,36 @@
+{
+  "id": "1:10306",
+  "name": "bar-input",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10305",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 373,
+    "height": 40,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: absolute bg-[#5e6268] inset-0 rounded-[30px]; style:",
+    "tokenRefs": [
+      "color-ios-chrome-address-field-background"
+    ],
+    "borderRadius": 30,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#5E6268"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute bg-[#5e6268] inset-0 rounded-[30px]\" data-node-id=\"1:10306\" data-name=\"bar-input\" />"
+  }
+}

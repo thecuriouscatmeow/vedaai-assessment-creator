@@ -1,0 +1,36 @@
+{
+  "id": "1:9494",
+  "name": "Quiz on Electricity",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9493",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 199,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#303030] text-[24px] tracking-[-0.96px] w-full; style: {{",
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:ExtraBold",
+      "size": 24,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.96
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#303030] text-[24px] tracking-[-0.96px] w-full\" data-node-id=\"1:9494\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.2]\">Quiz on Electricity</p>\n                        </div>"
+  }
+}

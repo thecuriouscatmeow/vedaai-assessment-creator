@@ -1,0 +1,38 @@
+{
+  "id": "1:9668",
+  "name": "Frame 41",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9665",
+  "children": [
+    "1:9669"
+  ],
+  "layout": {
+    "x": 208,
+    "y": 9,
+    "width": 34,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "padding": [
+        0,
+        10,
+        0,
+        10
+      ],
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col items-start px-[10px] relative rounded-[var(--number,48px)] shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col items-start px-[10px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9668\">\n                <div aria-hidden=\"true\" className=\"absolute bg-[#ff5623] inset-0 pointer-events-none rounded-[var(--number,48px)]\" />\n                <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[14px] text-white tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9669\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  10\n                </p>\n                <div className=\"absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_32.3px_0px_rgba(255,161,10,0.25)]\" />\n              </div>"
+  }
+}

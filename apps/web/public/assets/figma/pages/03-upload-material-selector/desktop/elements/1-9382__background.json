@@ -1,0 +1,33 @@
+{
+  "id": "1:9382",
+  "name": "background",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9381",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 40,
+    "height": 40,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: absolute inset-0 rounded-[10px]; style:",
+    "borderRadius": 10
+  },
+  "assets": [
+    {
+      "kind": "png",
+      "path": "assets/1-9382-background.png",
+      "role": "background"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"absolute inset-0 rounded-[10px]\" data-node-id=\"1:9382\" data-name=\"background\">\n                  <div aria-hidden=\"true\" className=\"absolute inset-0 pointer-events-none rounded-[10px]\">\n                    <div className=\"absolute bg-gradient-to-b from-[#e56820] inset-0 rounded-[10px] to-[#d45e3e]\" />\n                    <div className=\"absolute inset-0 overflow-hidden rounded-[10px]\">\n                      <img alt=\"\" className=\"absolute h-[162.5%] left-[-21.2%] max-w-none top-[-33.02%] w-[290.14%]\" src={imgBackground} />\n                    </div>\n                  </div>\n                </div>"
+  }
+}

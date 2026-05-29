@@ -1,0 +1,39 @@
+{
+  "id": "1:10346",
+  "name": "AI Toolkit",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10343",
+  "children": [],
+  "layout": {
+    "x": 1,
+    "y": 29,
+    "width": 49,
+    "height": 17,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-semibold-600-p5"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:SemiBold",
+      "size": 12,
+      "weight": 600,
+      "lineHeight": 1.4,
+      "letterSpacing": -0.48
+    }
+  },
+  "assets": [],
+  "content": {
+    "characters": "AI Toolkit"
+  },
+  "code": {
+    "react": "<p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10346\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                AI Toolkit\n              </p>"
+  }
+}

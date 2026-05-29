@@ -1,0 +1,23 @@
+{
+  "id": "1:10180",
+  "name": "More Menu",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10163",
+  "children": [],
+  "layout": {
+    "x": 332,
+    "y": 3,
+    "width": 34,
+    "height": 34,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

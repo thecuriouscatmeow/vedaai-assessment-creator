@@ -1,0 +1,54 @@
+{
+  "id": "1:9783",
+  "name": "Frame 17",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9782",
+  "children": [
+    "1:9784",
+    "1:9786"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 251,
+    "height": 42,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 10,
+      "padding": [
+        8,
+        43,
+        8,
+        43
+      ],
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: border-4 border-[#ff7950] border-solid content-stretch drop-shadow-[0px_16px_24px_rgba(255,255,255,0.12),0px_32px_24px_rgba(255,255,255,0.2)] flex flex-[1_0_0] gap-[10px] h-[42px] items-center justify-center min-w-px px-[43px] py-[8px] relative rounded-[100px]; style:",
+    "borderRadius": 100,
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": "#FF7950"
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "value": "0px_16px_24px_rgba(255,255,255,0.12),0px_32px_24px_rgba(255,255,255,0.2)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"border-4 border-[#ff7950] border-solid content-stretch drop-shadow-[0px_16px_24px_rgba(255,255,255,0.12),0px_32px_24px_rgba(255,255,255,0.2)] flex flex-[1_0_0] gap-[10px] h-[42px] items-center justify-center min-w-px px-[43px] py-[8px] relative rounded-[100px]\" data-node-id=\"1:9783\">\n              <div aria-hidden=\"true\" className=\"absolute bg-[#272727] inset-0 pointer-events-none rounded-[100px]\" />\n              <div className=\"h-[17.316px] relative shrink-0 w-[18.316px]\" data-node-id=\"1:9784\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame1618872409} />\n              </div>\n              <div className=\"[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9786\">\n                <p className=\"leading-[28px]\">AI Teacher\u2019s Toolkit</p>\n              </div>\n              <div className=\"absolute inset-[-4px] pointer-events-none rounded-[inherit] shadow-[inset_0px_-1px_3.5px_0px_rgba(177,177,177,0.6),inset_0px_0px_34.5px_0px_rgba(255,255,255,0.25)]\" />\n            </div>"
+  }
+}

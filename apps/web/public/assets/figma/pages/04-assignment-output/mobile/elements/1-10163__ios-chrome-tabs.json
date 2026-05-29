@@ -1,0 +1,29 @@
+{
+  "id": "1:10163",
+  "name": "iOS / Chrome / Tabs",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10158",
+  "children": [
+    "1-10164",
+    "1-10167",
+    "1-10170",
+    "1-10175",
+    "1-10180"
+  ],
+  "layout": {
+    "x": 14,
+    "y": 2,
+    "width": 366,
+    "height": 40,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

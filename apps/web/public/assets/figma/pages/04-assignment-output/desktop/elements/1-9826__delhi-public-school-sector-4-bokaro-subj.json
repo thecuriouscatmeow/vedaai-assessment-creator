@@ -1,0 +1,37 @@
+{
+  "id": "1:9826",
+  "name": "Delhi Public School, Sector-4, Bokaro\u2028Subject: English\u2028Class: 5th",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9825",
+  "children": [],
+  "layout": {
+    "x": 32,
+    "y": 32,
+    "width": 996,
+    "height": 124,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#303030] text-[0px] text-center tracking-[-0.96px] w-full; style:",
+    "typography": {
+      "fontFamily": "Inter:Semi_Bold",
+      "size": 0,
+      "weight": 600,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.96
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#303030] text-[0px] text-center tracking-[-0.96px] w-full\" data-node-id=\"1:9826\">\n            <p>\n              <span className=\"[word-break:break-word] font-['Inter:Bold',sans-serif] font-bold leading-[1.6] not-italic text-[32px]\">Delhi Public School, Sector-4, Bokaro</span>\n              <span className=\"leading-[1.6] text-[24px]\">\n                <br aria-hidden=\"true\" />\n                Subject: English\n                <br aria-hidden=\"true\" />\n                Class: 5th\n              </span>\n            </p>\n          </div>"
+  }
+}

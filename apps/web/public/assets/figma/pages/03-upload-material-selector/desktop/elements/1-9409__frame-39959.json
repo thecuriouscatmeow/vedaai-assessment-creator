@@ -1,0 +1,42 @@
+{
+  "id": "1:9409",
+  "name": "Frame 39959",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9405",
+  "children": [
+    "1:9410"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 46,
+    "width": 256,
+    "height": 80,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#f0f0f0] content-stretch flex flex-col items-start p-[12px] relative rounded-[16px] shrink-0 w-full; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-20"
+    ],
+    "borderRadius": 16,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#F0F0F0"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#f0f0f0] content-stretch flex flex-col items-start p-[12px] relative rounded-[16px] shrink-0 w-full\" data-node-id=\"1:9409\">\n            <div className=\"content-stretch flex gap-[8px] items-center relative shrink-0 w-full\" data-node-id=\"1:9410\">\n              <div className=\"h-[56px] relative shrink-0 w-[59px]\" data-node-id=\"1:9411\" data-name=\"Avatar\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" height=\"56\" src={imgAvatar} width=\"59\" />\n              </div>\n              <div className=\"[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col items-start leading-[0] min-w-px relative whitespace-nowrap\" data-node-id=\"1:9412\" data-name=\"Content\">\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold h-[22px] justify-center overflow-hidden relative shrink-0 text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] w-full\" data-node-id=\"1:9413\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Delhi Public School</p>\n                </div>\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center overflow-hidden relative shrink-0 text-[#5e5e5e] text-[14px] text-ellipsis tracking-[-0.56px] w-full\" data-node-id=\"1:9414\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Bokaro Steel City</p>\n                </div>\n              </div>\n            </div>\n          </div>"
+  }
+}

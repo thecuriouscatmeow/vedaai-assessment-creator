@@ -1,0 +1,40 @@
+{
+  "id": "1:9469",
+  "name": "View Assignment",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9468",
+  "children": [],
+  "layout": {
+    "x": 8,
+    "y": 6,
+    "width": 108,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Medium",
+      "size": 14,
+      "weight": 500,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9469\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">View Assignment</p>\n                  </div>"
+  }
+}

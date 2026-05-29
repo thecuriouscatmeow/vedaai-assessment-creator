@@ -1,0 +1,40 @@
+{
+  "id": "1:9517",
+  "name": "Assigned on : 20-06-2025",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9516",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 183,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Regular",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9517\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                            <p>\n                              <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                                Assigned on\n                              </span>\n                              <span className=\"leading-[1.2]\">{` : 20-06-2025`}</span>\n                            </p>\n                          </div>"
+  }
+}

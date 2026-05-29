@@ -1,0 +1,28 @@
+{
+  "id": "1:9702",
+  "name": "Chevron down",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9700",
+  "children": [
+    "I1:9702;7758:11219"
+  ],
+  "layout": {
+    "x": 69,
+    "y": 0,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: overflow-clip relative shrink-0 size-[24px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:9702\" data-name=\"Chevron down\">\n              <div className=\"absolute bottom-[37.5%] left-1/4 right-1/4 top-[37.5%]\" data-node-id=\"I1:9702;7758:11219\" data-name=\"Icon\">\n                <div className=\"absolute inset-[-12.5%_-6.25%]\">\n                  <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon1} />\n                </div>\n              </div>\n            </div>"
+  }
+}

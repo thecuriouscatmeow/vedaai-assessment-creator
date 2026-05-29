@@ -1,0 +1,32 @@
+{
+  "id": "1:9430",
+  "name": "Ellipse 16",
+  "type": "ELLIPSE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9429",
+  "children": [],
+  "layout": {
+    "x": 327,
+    "y": 560,
+    "width": 1113,
+    "height": 428,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: -translate-x-1/2 absolute h-[428px] left-[calc(50%+163.5px)] top-[560px] w-[1113px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-9430-asset.svg",
+      "role": "asset"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"-translate-x-1/2 absolute h-[428px] left-[calc(50%+163.5px)] top-[560px] w-[1113px]\" data-node-id=\"1:9430\">\n        <div className=\"absolute inset-[-93.46%_-35.94%]\">\n          <img alt=\"\" className=\"block max-w-none size-full\" src={imgEllipse16} />\n        </div>\n      </div>"
+  }
+}

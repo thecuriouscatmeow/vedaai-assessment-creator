@@ -16,6 +16,11 @@ vi.mock('@/lib/useCloudinaryUpload', () => ({
 vi.mock('@/lib/useAssignmentSocket', () => ({
   useAssignmentSocket: () => vi.fn(),
 }));
+vi.mock('next/navigation', () => ({
+  useRouter: () => ({
+    push: vi.fn(),
+  }),
+}));
 
 const FAKE_ASSIGNMENT_ID = 'test-assign-001';
 

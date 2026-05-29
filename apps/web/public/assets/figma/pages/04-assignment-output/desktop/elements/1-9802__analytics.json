@@ -1,0 +1,23 @@
+{
+  "id": "1:9802",
+  "name": "Analytics",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9800",
+  "children": [],
+  "layout": {
+    "x": 40,
+    "y": 8,
+    "width": 199,
+    "height": 22,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

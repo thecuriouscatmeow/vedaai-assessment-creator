@@ -1,0 +1,23 @@
+{
+  "id": "1:10253",
+  "name": "icon_line/More-vertical",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10249",
+  "children": [],
+  "layout": {
+    "x": 309,
+    "y": 0,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1:9371",
+  "name": "icon_filled/Mic",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9370",
+  "children": [
+    "I1:9371;3309:8803",
+    "I1:9371;3309:8807"
+  ],
+  "layout": {
+    "x": 9,
+    "y": 9,
+    "width": 16,
+    "height": 16,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: drop-shadow-[0px_10.909px_16.364px_rgba(0,0,0,0.12),0px_21.818px_16.364px_rgba(0,0,0,0.2)] relative shrink-0 size-[16.364px]; style:",
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "value": "0px_10.909px_16.364px_rgba(0,0,0,0.12),0px_21.818px_16.364px_rgba(0,0,0,0.2)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"drop-shadow-[0px_10.909px_16.364px_rgba(0,0,0,0.12),0px_21.818px_16.364px_rgba(0,0,0,0.2)] relative shrink-0 size-[16.364px]\" data-node-id=\"1:9371\" data-name=\"icon_filled/Mic\">\n                    <div className=\"absolute contents inset-0\" data-node-id=\"I1:9371;3309:8803\" data-name=\"Icons 24/@ Icon Grid / Circle\">\n                      <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIcons24IconGridCircle} />\n                    </div>\n                    <div className=\"absolute inset-[8.33%_16.67%]\" data-node-id=\"I1:9371;3309:8807\" data-name=\"Union\">\n                      <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion} />\n                    </div>\n                  </div>"
+  }
+}

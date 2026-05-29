@@ -1,0 +1,28 @@
+{
+  "id": "1:9348",
+  "name": "icon_line/Minus",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9347",
+  "children": [
+    "I1:9348;3309:8335"
+  ],
+  "layout": {
+    "x": 8,
+    "y": 14,
+    "width": 16,
+    "height": 16,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[16px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[16px]\" data-node-id=\"1:9348\" data-name=\"icon_line/Minus\">\n                        <div className=\"absolute inset-[45.83%_12.5%]\" data-node-id=\"I1:9348;3309:8335\" data-name=\"Vector 5 (Stroke)\">\n                          <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVector5Stroke} />\n                        </div>\n                      </div>"
+  }
+}

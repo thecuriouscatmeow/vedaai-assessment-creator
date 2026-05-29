@@ -1,0 +1,41 @@
+{
+  "id": "1:9323",
+  "name": "Primary Button - White",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9322",
+  "children": [
+    "1:9324"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 36,
+    "height": 36,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#2b2b2b] content-stretch flex items-center p-[8px] relative rounded-[var(--number,48px)] shrink-0; style:",
+    "tokenRefs": [
+      "color-background-darkgrey"
+    ],
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#2B2B2B"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#2b2b2b] content-stretch flex items-center p-[8px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9323\" data-name=\"Primary Button - White\">\n                      <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9324\" data-name=\"icon_line/Plus\">\n                        <div className=\"absolute inset-[12.5%]\" data-node-id=\"I1:9324;3309:8340\">\n                          <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgGroup33489} />\n                        </div>\n                      </div>\n                    </div>"
+  }
+}

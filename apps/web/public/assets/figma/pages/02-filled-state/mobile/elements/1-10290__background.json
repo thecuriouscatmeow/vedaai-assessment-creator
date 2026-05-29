@@ -1,0 +1,26 @@
+{
+  "id": "1:10290",
+  "name": "Background",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10289",
+  "children": [
+    "1-10291",
+    "1-10292"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 105,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

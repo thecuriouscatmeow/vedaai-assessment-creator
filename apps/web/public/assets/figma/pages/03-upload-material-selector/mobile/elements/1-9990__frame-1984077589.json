@@ -1,0 +1,44 @@
+{
+  "id": "1:9990",
+  "name": "Frame 1984077589",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9984",
+  "children": [
+    "1:9991",
+    "1:9997"
+  ],
+  "layout": {
+    "x": 12,
+    "y": 44,
+    "width": 293,
+    "height": 82,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 12,
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#f0f0f0] content-stretch flex gap-[12px] items-start p-[8px] relative rounded-[24px] shrink-0 w-full; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-20"
+    ],
+    "borderRadius": 24,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#F0F0F0"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#f0f0f0] content-stretch flex gap-[12px] items-start p-[8px] relative rounded-[24px] shrink-0 w-full\" data-node-id=\"1:9990\">\n                      <div className=\"content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-center min-w-px relative\" data-node-id=\"1:9991\">\n                        <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] text-center tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9992\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.4]\">No. of Questions</p>\n                        </div>\n                        <div className=\"bg-white content-stretch flex items-center justify-between p-[8px] relative rounded-[100px] shrink-0 w-full\" data-node-id=\"1:9993\">\n                          <div className=\"relative shrink-0 size-[16px]\" data-node-id=\"1:9994\" data-name=\"icon_line/Minus\">\n                            <div className=\"absolute inset-[45.83%_12.5%]\" data-node-id=\"I1:9994;3309:8335\" data-name=\"Vector 5 (Stroke)\">\n                              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVector5Stroke} />\n                            </div>\n                          </div>\n                          <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9995\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                            <p className=\"leading-[1.4]\">4</p>\n                          </div>\n                          <div className=\"overflow-clip relative shrink-0 size-[16px]\" data-node-id=\"1:9996\" data-name=\"Plus\">\n                            <div className=\"absolute inset-[20.83%]\" data-node-id=\"I1:9996;7758:12109\" data-name=\"Icon\">\n                              <div className=\"absolute inset-[-8.04%]\">\n                                <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon5} />\n                              </div>\n                            </div>\n                          </div>\n                        </div>\n                      </div>\n                      <div className=\"content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-center min-w-px relative\" data-node-id=\"1:9997\">\n                        <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] text-center tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9998\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.4]\">Marks</p>\n                        </div>\n                        <div className=\"bg-white content-stretch flex items-center justify-between p-[8px] relative rounded-[100px] shrink-0 w-full\" data-node-id=\"1:9999\">\n                          <div className=\"relative shrink-0 size-[16px]\" data-node-id=\"1:10000\" data-name=\"icon_line/Minus\">\n                            <div className=\"absolute inset-[45.83%_12.5%]\" data-node-id=\"I1:10000;3309:8335\" data-name=\"Vector 5 (Stroke)\">\n                              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVector5Stroke} />\n                            </div>\n                          </div>\n                          <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10001\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                            <p className=\"leading-[1.4]\">4</p>\n                          </div>\n                          <div className=\"overflow-clip relative shrink-0 size-[16px]\" data-node-id=\"1:10002\" data-name=\"Plus\">\n                            <div className=\"absolute inset-[20.83%]\" data-node-id=\"I1:10002;7758:12109\" data-name=\"Icon\">\n                              <div className=\"absolute inset-[-8.04%]\">\n                                <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon5} />\n                              </div>\n                            </div>\n                          </div>\n                        </div>\n                      </div>\n                    </div>"
+  }
+}

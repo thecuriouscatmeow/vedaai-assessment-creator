@@ -1,0 +1,41 @@
+{
+  "id": "1:9467",
+  "name": "Classes Dropdown",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9451",
+  "children": [
+    "1:9468",
+    "1:9470"
+  ],
+  "layout": {
+    "x": 346,
+    "y": 54,
+    "width": 140,
+    "height": 84,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 4,
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: absolute bg-white content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.2),0px_32px_24px_rgba(0,0,0,0.05)] flex flex-col gap-[4px] items-center justify-center left-[346px] p-[8px] rounded-[var(--number,16px)] top-[54px] w-[140px]; style:",
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "value": "0px_16px_24px_rgba(0,0,0,0.2),0px_32px_24px_rgba(0,0,0,0.05)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute bg-white content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.2),0px_32px_24px_rgba(0,0,0,0.05)] flex flex-col gap-[4px] items-center justify-center left-[346px] p-[8px] rounded-[var(--number,16px)] top-[54px] w-[140px]\" data-node-id=\"1:9467\" data-name=\"Classes Dropdown\">\n                <div className=\"content-stretch flex h-[32px] items-center px-[8px] relative rounded-[8px] shrink-0 w-full\" data-node-id=\"1:9468\">\n                  <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9469\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">View Assignment</p>\n                  </div>\n                </div>\n                <div className=\"bg-[#f6f6f6] content-stretch flex h-[32px] items-center px-[8px] relative rounded-[8px] shrink-0 w-full\" data-node-id=\"1:9470\">\n                  <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#c53535] text-[14px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9471\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">Delete</p>\n                  </div>\n                </div>\n              </div>"
+  }
+}

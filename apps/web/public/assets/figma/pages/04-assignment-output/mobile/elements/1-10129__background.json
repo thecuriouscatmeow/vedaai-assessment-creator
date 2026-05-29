@@ -1,0 +1,26 @@
+{
+  "id": "1:10129",
+  "name": "Background",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10128",
+  "children": [
+    "1-10130",
+    "1-10131"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 105,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

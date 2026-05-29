@@ -1,0 +1,27 @@
+{
+  "id": "1:10158",
+  "name": "Tab Bar iOS / X Chrome",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10103",
+  "children": [
+    "1-10159",
+    "1-10163",
+    "1-10183"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 2743,
+    "width": 393,
+    "height": 78,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

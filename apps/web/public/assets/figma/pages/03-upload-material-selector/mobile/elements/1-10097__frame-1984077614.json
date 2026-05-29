@@ -1,0 +1,36 @@
+{
+  "id": "1:10097",
+  "name": "Frame 1984077614",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10089",
+  "children": [
+    "1:10098",
+    "1:10101",
+    "1:10102"
+  ],
+  "layout": {
+    "x": 241,
+    "y": 10,
+    "width": 116,
+    "height": 36,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 12,
+      "align": "center",
+      "justify": "end"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex gap-[12px] items-center justify-end relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex gap-[12px] items-center justify-end relative shrink-0\" data-node-id=\"1:10097\">\n            <div className=\"bg-[#f6f6f6] content-stretch flex gap-[10px] items-center justify-center relative rounded-[100px] shrink-0 size-[36px]\" data-node-id=\"1:10098\">\n              <div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:10099\" data-name=\".Icon\">\n                <div className=\"absolute inset-[8.33%_12.5%_29.17%_12.5%]\" data-node-id=\"I1:10099;1:719\" data-name=\"Vector\">\n                  <div className=\"absolute inset-[-6.67%_-5.56%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[87.5%_42.79%_8.35%_42.79%]\" data-node-id=\"I1:10099;1:720\" data-name=\"Vector\">\n                  <div className=\"absolute inset-[-100.37%_-28.91%_-100.36%_-28.91%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector1} />\n                  </div>\n                </div>\n              </div>\n              <div className=\"absolute left-[27px] size-[8px] top-px\" data-node-id=\"1:10100\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgEllipse9} />\n              </div>\n            </div>\n            <div className=\"relative rounded-[100px] shrink-0 size-[32px]\" data-node-id=\"1:10101\">\n              <div aria-hidden=\"true\" className=\"absolute inset-0 pointer-events-none rounded-[100px]\">\n                <div className=\"absolute bg-[#f6f6f6] inset-0 rounded-[100px]\" />\n                <img alt=\"\" className=\"absolute max-w-none object-cover rounded-[100px] size-full\" src={imgFrame1618872412} />\n              </div>\n            </div>\n            <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:10102\" data-name=\"menu\">\n              <div className=\"absolute bottom-1/4 left-[12.5%] right-[12.5%] top-1/4\" data-node-id=\"I1:10102;54616:25398\" data-name=\"icon\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIcon6} />\n              </div>\n            </div>\n          </div>"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "1:10081",
+  "name": "icon_filled/file-text_plus",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10080",
+  "children": [
+    "I1:10081;3309:8686"
+  ],
+  "layout": {
+    "x": 16,
+    "y": 5,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[20px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10081\" data-name=\"icon_filled/file-text_plus\">\n              <div className=\"absolute inset-[8.33%_16.67%]\" data-node-id=\"I1:10081;3309:8686\" data-name=\"Exclude\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgExclude} />\n              </div>\n            </div>"
+  }
+}

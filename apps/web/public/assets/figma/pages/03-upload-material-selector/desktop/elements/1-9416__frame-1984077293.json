@@ -1,0 +1,32 @@
+{
+  "id": "1:9416",
+  "name": "Frame 1984077293",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9415",
+  "children": [
+    "1:9417"
+  ],
+  "layout": {
+    "x": 24,
+    "y": 8,
+    "width": 40,
+    "height": 40,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center relative shrink-0 w-[40px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center relative shrink-0 w-[40px]\" data-node-id=\"1:9416\">\n          <div className=\"bg-white content-stretch flex items-center justify-center relative rounded-[100px] shrink-0 size-[40px]\" data-node-id=\"1:9417\">\n            <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9418\" data-name=\"icon_line/Arrow_Left\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:9418;3309:8536\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke4} />\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

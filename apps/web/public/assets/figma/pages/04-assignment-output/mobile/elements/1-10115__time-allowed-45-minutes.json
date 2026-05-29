@@ -1,0 +1,30 @@
+{
+  "id": "1:10115",
+  "name": "Time Allowed: 45 minutes",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10114",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 163,
+    "height": 22,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col justify-center relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col justify-center relative shrink-0\" data-node-id=\"1:10115\">\n              <p className=\"leading-[1.6]\">Time Allowed: 45 minutes</p>\n            </div>"
+  }
+}

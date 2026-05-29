@@ -1,0 +1,13 @@
+{
+  "n": "04",
+  "slug": "assignment-output",
+  "path": "pages/04-assignment-output/page.json",
+  "platforms": {
+    "desktop": {
+      "frameId": "1:9771"
+    },
+    "mobile": {
+      "frameId": "1:10103"
+    }
+  }
+}

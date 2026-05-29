@@ -1,0 +1,28 @@
+{
+  "id": "1:10134",
+  "name": "Action",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10133",
+  "children": [
+    "1:10135"
+  ],
+  "layout": {
+    "x": 20,
+    "y": 19,
+    "width": 56,
+    "height": 18,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: absolute inset-[43.18%_80.37%_15.91%_5.3%] overflow-clip; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute inset-[43.18%_80.37%_15.91%_5.3%] overflow-clip\" data-node-id=\"1:10134\" data-name=\"Action\">\n            <p className=\"-translate-x-1/2 [word-break:break-word] absolute font-['SF_Pro_Text:Semibold',sans-serif] leading-[normal] left-[27px] not-italic text-[15px] text-center text-white top-[calc(50%-9px)] tracking-[-0.165px] w-[54px]\" data-node-id=\"1:10135\">\n              9:41\n            </p>\n          </div>"
+  }
+}

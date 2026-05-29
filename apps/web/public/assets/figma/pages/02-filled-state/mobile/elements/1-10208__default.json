@@ -1,0 +1,40 @@
+{
+  "id": "1:10208",
+  "name": "Default",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10207",
+  "children": [
+    "1:10209",
+    "1:10213"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 373,
+    "height": 64,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "padding": [
+        0,
+        16,
+        0,
+        16
+      ],
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex h-[64px] items-center justify-between px-[16px] relative rounded-[var(--number,16px)] shrink-0 w-[373px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex h-[64px] items-center justify-between px-[16px] relative rounded-[var(--number,16px)] shrink-0 w-[373px]\" data-node-id=\"1:10208\" data-name=\"Default\">\n            <div className=\"content-stretch flex items-center relative shrink-0\" data-node-id=\"1:10209\">\n              <div className=\"content-stretch flex gap-[4px] items-center relative shrink-0\" data-node-id=\"1:10210\">\n                <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10211\" data-name=\"icon_line/Filter\">\n                  <div className=\"absolute inset-[12.5%]\" data-node-id=\"I1:10211;3309:8184\" data-name=\"Vector 28 (Stroke)\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVector28Stroke} />\n                  </div>\n                </div>\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#a9a9a9] text-[14px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:10212\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Filter</p>\n                </div>\n              </div>\n            </div>\n            <div className=\"border border-[rgba(0,0,0,0.2)] border-solid content-stretch flex h-[44px] items-center px-[16px] py-[11px] relative rounded-[100px] shrink-0 w-[228px]\" data-node-id=\"1:10213\">\n              <div className=\"content-stretch flex gap-[12px] items-center relative shrink-0\" data-node-id=\"1:10214\">\n                <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10215\" data-name=\"icon_line/Search\">\n                  <div className=\"absolute inset-[8.33%]\" data-node-id=\"I1:10215;3309:8164\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgGroup33509} />\n                  </div>\n                </div>\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#a9a9a9] text-[14px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:10216\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Search Name</p>\n                </div>\n              </div>\n            </div>\n          </div>"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "1:9966",
+  "name": "Frame 1618872469",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9965",
+  "children": [
+    "1:9967",
+    "1:9969",
+    "1:9972"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 317,
+    "height": 202,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 16,
+      "padding": [
+        24,
+        32,
+        24,
+        32
+      ],
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#f6f6f6] border-[1.75px] border-[rgba(0,0,0,0.2)] border-dashed content-stretch flex flex-col gap-[16px] items-center justify-center px-[32px] py-[24px] relative rounded-[var(--number,24px)] shrink-0 w-full; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-primary"
+    ],
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#F6F6F6"
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": "1.75PX"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#f6f6f6] border-[1.75px] border-[rgba(0,0,0,0.2)] border-dashed content-stretch flex flex-col gap-[16px] items-center justify-center px-[32px] py-[24px] relative rounded-[var(--number,24px)] shrink-0 w-full\" data-node-id=\"1:9966\">\n                <div className=\"bg-white content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[40px]\" data-node-id=\"1:9967\">\n                  <UploadCloud className=\"overflow-clip relative shrink-0 size-[24px]\" size=\"24\" />\n                </div>\n                <div className=\"[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start leading-[0] relative shrink-0 text-center w-full\" data-node-id=\"1:9969\">\n                  <div className=\"flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] w-full\" data-node-id=\"1:9970\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">{`Choose a file or drag & drop it here`}</p>\n                  </div>\n                  <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[#a9a9a9] text-[14px] tracking-[-0.56px] w-full\" data-node-id=\"1:9971\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">JPEG, PNG, upto 10MB</p>\n                  </div>\n                </div>\n                <div className=\"bg-white content-stretch flex gap-[4px] items-center px-[24px] py-[8px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9972\" data-name=\"Primary Button - White\">\n                  <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] text-center tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"I1:9972;9841:2531\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">Browse Files</p>\n                  </div>\n                </div>\n              </div>"
+  }
+}

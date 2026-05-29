@@ -1,0 +1,28 @@
+{
+  "id": "1:9845",
+  "name": "icon_line/Arrow_Left",
+  "type": "INSTANCE",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9844",
+  "children": [
+    "I1:9845;3309:8536"
+  ],
+  "layout": {
+    "x": 8,
+    "y": 8,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[24px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9845\" data-name=\"icon_line/Arrow_Left\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:9845;3309:8536\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke1} />\n              </div>\n            </div>"
+  }
+}

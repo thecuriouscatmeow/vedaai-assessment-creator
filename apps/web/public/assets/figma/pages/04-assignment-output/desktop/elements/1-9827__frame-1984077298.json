@@ -1,0 +1,44 @@
+{
+  "id": "1:9827",
+  "name": "Frame 1984077298",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9825",
+  "children": [
+    "1:9828",
+    "1:9829"
+  ],
+  "layout": {
+    "x": 32,
+    "y": 180,
+    "width": 996,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] content-stretch flex font-['Inter:Semi_Bold',sans-serif] font-semibold items-center justify-between leading-[0] not-italic relative shrink-0 text-[#303030] text-[18px] text-center tracking-[-0.72px] w-full whitespace-nowrap; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-bold-700-p2"
+    ],
+    "typography": {
+      "fontFamily": "Inter:Semi_Bold",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.72
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] content-stretch flex font-['Inter:Semi_Bold',sans-serif] font-semibold items-center justify-between leading-[0] not-italic relative shrink-0 text-[#303030] text-[18px] text-center tracking-[-0.72px] w-full whitespace-nowrap\" data-node-id=\"1:9827\">\n            <div className=\"flex flex-col justify-center relative shrink-0\" data-node-id=\"1:9828\">\n              <p className=\"leading-[1.6]\">Time Allowed: 45 minutes</p>\n            </div>\n            <div className=\"flex flex-col justify-center relative shrink-0\" data-node-id=\"1:9829\">\n              <p className=\"leading-[1.6]\">Maximum Marks: 20</p>\n            </div>\n          </div>"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1:9953",
+  "name": "Create Assignment",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9952",
+  "children": [],
+  "layout": {
+    "x": 104,
+    "y": 0,
+    "width": 140,
+    "height": 22,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] text-center tracking-[-0.64px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Bold",
+      "size": 16,
+      "weight": 700,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] text-center tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9953\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Create Assignment</p>\n            </div>"
+  }
+}

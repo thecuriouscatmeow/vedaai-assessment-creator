@@ -1,0 +1,50 @@
+{
+  "id": "1:9368",
+  "name": "Frame 1984077611",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9366",
+  "children": [
+    "1:9369",
+    "1:9370"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 30,
+    "width": 746,
+    "height": 102,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "end",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: bg-[rgba(255,255,255,0.25)] border-[#dadada] border-[1.25px] border-dashed content-stretch flex flex-col h-[102px] items-end justify-between overflow-clip p-[16px] relative rounded-[16px] shrink-0 w-full; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-40"
+    ],
+    "borderRadius": 16,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.25)"
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": "#DADADA"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[rgba(255,255,255,0.25)] border-[#dadada] border-[1.25px] border-dashed content-stretch flex flex-col h-[102px] items-end justify-between overflow-clip p-[16px] relative rounded-[16px] shrink-0 w-full\" data-node-id=\"1:9368\">\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[14px] text-[rgba(48,48,48,0.6)] tracking-[-0.56px] w-[min-content]\" data-node-id=\"1:9369\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">e.g Generate a question paper for 3 hour exam duration...</p>\n                </div>\n                <div className=\"bg-[#f0f0f0] content-stretch flex items-center justify-center px-[0.818px] relative rounded-[18px] shrink-0 size-[36px]\" data-node-id=\"1:9370\">\n                  <div className=\"drop-shadow-[0px_10.909px_16.364px_rgba(0,0,0,0.12),0px_21.818px_16.364px_rgba(0,0,0,0.2)] relative shrink-0 size-[16.364px]\" data-node-id=\"1:9371\" data-name=\"icon_filled/Mic\">\n                    <div className=\"absolute contents inset-0\" data-node-id=\"I1:9371;3309:8803\" data-name=\"Icons 24/@ Icon Grid / Circle\">\n                      <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIcons24IconGridCircle} />\n                    </div>\n                    <div className=\"absolute inset-[8.33%_16.67%]\" data-node-id=\"I1:9371;3309:8807\" data-name=\"Union\">\n                      <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion} />\n                    </div>\n                  </div>\n                </div>\n              </div>"
+  }
+}

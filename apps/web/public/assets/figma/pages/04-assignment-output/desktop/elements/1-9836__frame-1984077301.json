@@ -1,0 +1,33 @@
+{
+  "id": "1:9836",
+  "name": "Frame 1984077301",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9825",
+  "children": [
+    "1:9837"
+  ],
+  "layout": {
+    "x": 32,
+    "y": 397,
+    "width": 996,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center justify-center relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center justify-center relative shrink-0 w-full\" data-node-id=\"1:9836\">\n            <div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] min-w-px not-italic relative text-[#303030] text-[24px] text-center tracking-[-0.96px]\" data-node-id=\"1:9837\">\n              <p className=\"leading-[1.6]\">Section A</p>\n            </div>\n          </div>"
+  }
+}

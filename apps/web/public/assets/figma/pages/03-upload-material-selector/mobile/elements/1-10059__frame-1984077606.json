@@ -1,0 +1,48 @@
+{
+  "id": "1:10059",
+  "name": "Frame 1984077606",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9947",
+  "children": [
+    "1:10060",
+    "1:10065",
+    "1:10087"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 1239,
+    "width": 393,
+    "height": 158,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 12,
+      "padding": [
+        8,
+        10,
+        8,
+        10
+      ],
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: absolute backdrop-blur-[12px] bg-[rgba(255,255,255,0.01)] bottom-0 content-stretch flex flex-col gap-[12px] items-center justify-center left-0 px-[10px] py-[8px] w-[393px]; style:",
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.01)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute backdrop-blur-[12px] bg-[rgba(255,255,255,0.01)] bottom-0 content-stretch flex flex-col gap-[12px] items-center justify-center left-0 px-[10px] py-[8px] w-[393px]\" data-node-id=\"1:10059\">\n        <div className=\"content-stretch flex gap-[13px] items-start relative shrink-0\" data-node-id=\"1:10060\">\n          <div className=\"bg-white content-stretch flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:10061\" data-name=\"Primary Button - White\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10062\" data-name=\"icon_line/Arrow_Left\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:10062;3309:8536\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke1} />\n              </div>\n            </div>\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] text-center tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10063\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Previous</p>\n            </div>\n          </div>\n          <div className=\"bg-[#181818] border-[1.5px] border-[rgba(255,255,255,0.5)] border-solid content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:10064\" data-name=\"Primary Button - Dark\">\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"I1:10064;9847:2536\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Next</p>\n            </div>\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"I1:10064;9847:2537\" data-name=\"icon_line/Arrow_Right\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:10064;9847:2537;3309:8538\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke2} />\n              </div>\n            </div>\n          </div>\n        </div>\n        <div className=\"bg-[#181818] content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex h-[72px] items-center justify-between px-[24px] py-[8px] relative rounded-[24px] shrink-0 w-full\" data-node-id=\"1:10065\">\n          <div className=\"content-stretch flex flex-col items-center justify-center relative shrink-0 size-[52px]\" data-node-id=\"1:10066\">\n            <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0\" data-node-id=\"1:10067\">\n              <div className=\"content-stretch flex flex-col gap-[1.019px] items-start relative shrink-0 size-[18px]\" data-node-id=\"1:10068\">\n                <div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10069\">\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10070\" />\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10071\" />\n                </div>\n                <div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10072\">\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10073\" />\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10074\" />\n                </div>\n              </div>\n              <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10075\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                Home\n              </p>\n            </div>\n          </div>\n          <div className=\"content-stretch flex items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10076\">\n            <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0\" data-node-id=\"1:10077\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10078\" data-name=\"icon_filled/Calendar\">\n                <div className=\"absolute inset-[8.33%]\" data-node-id=\"I1:10078;3309:9418\" data-name=\"Union\">\n                  <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion2} />\n                </div>\n              </div>\n              <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-center text-white tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10079\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                My Groups\n              </p>\n            </div>\n          </div>\n          <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10080\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10081\" data-name=\"icon_filled/file-text_plus\">\n              <div className=\"absolute inset-[8.33%_16.67%]\" data-node-id=\"I1:10081;3309:8686\" data-name=\"Exclude\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgExclude} />\n              </div>\n            </div>\n            <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10082\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              Library\n            </p>\n          </div>\n          <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10083\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10084\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame1618872409} />\n            </div>\n            <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10086\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              AI Toolkit\n            </p>\n          </div>\n        </div>\n        <div className=\"h-0 relative shrink-0 w-[128px]\" data-node-id=\"1:10087\">\n          <div className=\"absolute inset-[-2.5px_-1.95%]\">\n            <img alt=\"\" className=\"block max-w-none size-full\" src={imgLine1} />\n          </div>\n        </div>\n      </div>"
+  }
+}

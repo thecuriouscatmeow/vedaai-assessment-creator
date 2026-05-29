@@ -1,0 +1,33 @@
+{
+  "id": "1:10137",
+  "name": "icon battery",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10136",
+  "children": [],
+  "layout": {
+    "x": 41,
+    "y": -3,
+    "width": 29,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[41px] not-italic text-[17px] text-white top-[-3px] whitespace-nowrap; style:",
+    "typography": {
+      "fontFamily": "SF_Pro_Text:Regular",
+      "size": 17
+    }
+  },
+  "assets": [],
+  "content": {
+    "characters": "{`\\u{1006E8}`}"
+  },
+  "code": {
+    "react": "<p className=\"[word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[41px] not-italic text-[17px] text-white top-[-3px] whitespace-nowrap\" data-node-id=\"1:10137\">{`\\u{1006E8}`}</p>"
+  }
+}

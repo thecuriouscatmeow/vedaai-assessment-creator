@@ -1,0 +1,32 @@
+{
+  "id": "1:9809",
+  "name": "image 3",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9808",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 59,
+    "height": 60,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: h-[60px] relative shrink-0 w-[59px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "png",
+      "path": "assets/1-9809-image-3.png",
+      "role": "image-3"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"h-[60px] relative shrink-0 w-[59px]\" data-node-id=\"1:9809\" data-name=\"image 3\">\n                <div className=\"absolute inset-0 overflow-hidden pointer-events-none\">\n                  <img alt=\"\" className=\"absolute h-[106.67%] left-[0.38%] max-w-none top-[-2.18%] w-[538.54%]\" src={imgImage3} />\n                </div>\n              </div>"
+  }
+}

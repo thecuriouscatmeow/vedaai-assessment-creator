@@ -1,0 +1,25 @@
+{
+  "id": "1:10183",
+  "name": "Home Indicator",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10158",
+  "children": [
+    "1-10184"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 44,
+    "width": 393,
+    "height": 34,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

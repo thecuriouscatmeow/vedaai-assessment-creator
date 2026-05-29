@@ -1,0 +1,30 @@
+{
+  "id": "1:9364",
+  "name": "Total Questions : 25",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9363",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 150,
+    "height": 18,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col justify-center relative shrink-0 w-[150px]; style: {{"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col justify-center relative shrink-0 w-[150px]\" data-node-id=\"1:9364\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.1] whitespace-pre-wrap\">{`Total Questions :  25`}</p>\n                </div>"
+  }
+}

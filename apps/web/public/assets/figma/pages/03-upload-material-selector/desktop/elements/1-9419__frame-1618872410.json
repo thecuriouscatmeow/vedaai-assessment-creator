@@ -1,0 +1,32 @@
+{
+  "id": "1:9419",
+  "name": "Frame 1618872410",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9415",
+  "children": [
+    "1:9420"
+  ],
+  "layout": {
+    "x": 74,
+    "y": 18,
+    "width": 801,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-[1_0_0] items-center min-w-px relative; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-[1_0_0] items-center min-w-px relative\" data-node-id=\"1:9419\">\n          <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#a9a9a9] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9420\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n            <p className=\"leading-[normal] overflow-hidden text-ellipsis\">Assignment</p>\n          </div>\n        </div>"
+  }
+}

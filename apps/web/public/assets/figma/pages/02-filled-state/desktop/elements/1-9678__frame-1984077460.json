@@ -1,0 +1,34 @@
+{
+  "id": "1:9678",
+  "name": "Frame 1984077460",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9646",
+  "children": [
+    "1:9679",
+    "1:9682"
+  ],
+  "layout": {
+    "x": 24,
+    "y": 670,
+    "width": 256,
+    "height": 126,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 8,
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full\" data-node-id=\"1:9678\">\n          <div className=\"content-stretch flex gap-[8px] items-center px-[12px] py-[8px] relative shrink-0 w-full\" data-node-id=\"1:9679\" data-name=\"Settings\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9680\" data-name=\"icon_line/Setting\">\n              <div className=\"absolute inset-[33.33%]\" data-node-id=\"I1:9680;3309:8117\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke1} />\n              </div>\n              <div className=\"absolute inset-[8.33%_10.72%]\" data-node-id=\"I1:9680;3309:8118\" data-name=\"Union (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnionStroke} />\n              </div>\n            </div>\n            <div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center leading-[0] min-w-px overflow-hidden relative text-[16px] text-[rgba(94,94,94,0.8)] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9681\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Settings</p>\n            </div>\n          </div>\n          <div className=\"bg-[#f0f0f0] content-stretch flex flex-col items-start p-[12px] relative rounded-[16px] shrink-0 w-full\" data-node-id=\"1:9682\">\n            <div className=\"content-stretch flex gap-[8px] items-center relative shrink-0 w-full\" data-node-id=\"1:9683\">\n              <div className=\"h-[56px] relative shrink-0 w-[59px]\" data-node-id=\"1:9684\" data-name=\"Avatar\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" height=\"56\" src={imgAvatar} width=\"59\" />\n              </div>\n              <div className=\"[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col items-start leading-[0] min-w-px relative whitespace-nowrap\" data-node-id=\"1:9685\" data-name=\"Content\">\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold h-[22px] justify-center overflow-hidden relative shrink-0 text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] w-full\" data-node-id=\"1:9686\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Delhi Public School</p>\n                </div>\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center overflow-hidden relative shrink-0 text-[#5e5e5e] text-[14px] text-ellipsis tracking-[-0.56px] w-full\" data-node-id=\"1:9687\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Bokaro Steel City</p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

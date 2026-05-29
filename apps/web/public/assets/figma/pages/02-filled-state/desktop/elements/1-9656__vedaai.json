@@ -1,0 +1,37 @@
+{
+  "id": "1:9656",
+  "name": "VedaAI",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9649",
+  "children": [],
+  "layout": {
+    "x": 48,
+    "y": 10,
+    "width": 88,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[28px] tracking-[-1.68px] whitespace-nowrap; style: {{",
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Bold",
+      "size": 28,
+      "weight": 700,
+      "lineHeight": 0.0,
+      "letterSpacing": -1.68
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[28px] tracking-[-1.68px] whitespace-nowrap\" data-node-id=\"1:9656\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                <p className=\"leading-[var(--font-size\\/20,20px)]\">VedaAI</p>\n              </div>"
+  }
+}

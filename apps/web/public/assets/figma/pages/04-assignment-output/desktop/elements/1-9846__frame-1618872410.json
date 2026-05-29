@@ -1,0 +1,32 @@
+{
+  "id": "1:9846",
+  "name": "Frame 1618872410",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9842",
+  "children": [
+    "1:9847"
+  ],
+  "layout": {
+    "x": 74,
+    "y": 18,
+    "width": 801,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-[1_0_0] items-center min-w-px relative; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-[1_0_0] items-center min-w-px relative\" data-node-id=\"1:9846\">\n          <div className=\"content-stretch flex gap-[8px] items-center relative shrink-0\" data-node-id=\"1:9847\">\n            <div className=\"h-[17.316px] relative shrink-0 w-[18.316px]\" data-node-id=\"1:9848\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame1618872410} />\n            </div>\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#a9a9a9] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9850\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[normal] overflow-hidden text-ellipsis\">Create New</p>\n            </div>\n          </div>\n        </div>"
+  }
+}

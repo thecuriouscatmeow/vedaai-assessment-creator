@@ -1,0 +1,39 @@
+{
+  "id": "1:9794",
+  "name": "32",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9793",
+  "children": [],
+  "layout": {
+    "x": 10,
+    "y": 0,
+    "width": 17,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[14px] text-white tracking-[-0.56px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:SemiBold",
+      "size": 14,
+      "weight": 600,
+      "lineHeight": 1.4,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "content": {
+    "characters": "32"
+  },
+  "code": {
+    "react": "<p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[14px] text-white tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9794\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  32\n                </p>"
+  }
+}

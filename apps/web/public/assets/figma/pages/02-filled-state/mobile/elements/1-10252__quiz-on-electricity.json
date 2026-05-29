@@ -1,0 +1,40 @@
+{
+  "id": "1:10252",
+  "name": "Quiz on Electricity",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10251",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 147,
+    "height": 25,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[18px] tracking-[-0.72px] w-full; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-bold-700-p2"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Bold",
+      "size": 18,
+      "weight": 700,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.72
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[18px] tracking-[-0.72px] w-full\" data-node-id=\"1:10252\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.4]\">Quiz on Electricity</p>\n                        </div>"
+  }
+}

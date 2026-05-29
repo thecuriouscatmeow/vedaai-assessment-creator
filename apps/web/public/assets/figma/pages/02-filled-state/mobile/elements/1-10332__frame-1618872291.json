@@ -1,0 +1,33 @@
+{
+  "id": "1:10332",
+  "name": "Frame 1618872291",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10328",
+  "children": [
+    "1:10333",
+    "1:10334"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 9,
+    "width": 18,
+    "height": 8,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10332\">\n                    <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10333\" />\n                    <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10334\" />\n                  </div>"
+  }
+}

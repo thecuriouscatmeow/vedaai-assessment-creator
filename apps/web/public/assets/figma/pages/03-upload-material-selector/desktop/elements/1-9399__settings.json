@@ -1,0 +1,26 @@
+{
+  "id": "1:9399",
+  "name": "Settings",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9393",
+  "children": [
+    "1-9400",
+    "1-9401"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 140,
+    "width": 251,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

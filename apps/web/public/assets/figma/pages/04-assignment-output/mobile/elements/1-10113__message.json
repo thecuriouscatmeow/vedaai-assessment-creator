@@ -1,0 +1,33 @@
+{
+  "id": "1:10113",
+  "name": "Message",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10112",
+  "children": [],
+  "layout": {
+    "x": 16,
+    "y": 24,
+    "width": 323,
+    "height": 124,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] font-['Manrope:Medium',sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#303030] text-[0px] text-center tracking-[-0.32px] w-full whitespace-pre-wrap; style:",
+    "typography": {
+      "fontFamily": "Manrope:Medium",
+      "size": 0,
+      "weight": 500,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.32
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] font-['Manrope:Medium',sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#303030] text-[0px] text-center tracking-[-0.32px] w-full whitespace-pre-wrap\" data-node-id=\"1:10113\">\n            <p className=\"font-['Inter:Bold',sans-serif] font-bold leading-[1.3] mb-0 text-[20px] tracking-[-0.8px]\">Delhi Public School, Sector-4, Bokaro</p>\n            <p className=\"font-['Inter:Semi_Bold',sans-serif] font-semibold\">\n              <span className=\"leading-[1.3] text-[24px] tracking-[-0.96px]\">\n                <br aria-hidden=\"true\" />\n              </span>\n              <span className=\"leading-[1.3] text-[16px] tracking-[-0.64px]\">\n                Subject: English\n                <br aria-hidden=\"true\" />\n                Class: 5th\n              </span>\n            </p>\n          </div>"
+  }
+}

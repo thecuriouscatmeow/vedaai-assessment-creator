@@ -1,0 +1,23 @@
+{
+  "id": "1:9664",
+  "name": "Menu",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9662",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 48,
+    "width": 251,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

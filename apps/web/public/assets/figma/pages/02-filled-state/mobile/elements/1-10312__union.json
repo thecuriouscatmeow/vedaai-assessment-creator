@@ -1,0 +1,32 @@
+{
+  "id": "1:10312",
+  "name": "Union",
+  "type": "BOOLEAN-OPERATION",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10305",
+  "children": [],
+  "layout": {
+    "x": 342,
+    "y": 11,
+    "width": 14,
+    "height": 18,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: -translate-y-1/2 absolute h-[18px] right-[17px] top-1/2 w-[14px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-10312-union.svg",
+      "role": "union"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"-translate-y-1/2 absolute h-[18px] right-[17px] top-1/2 w-[14px]\" data-node-id=\"1:10312\" data-name=\"Union\">\n            <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion1} />\n          </div>"
+  }
+}

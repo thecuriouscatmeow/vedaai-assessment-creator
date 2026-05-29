@@ -1,0 +1,28 @@
+{
+  "id": "1:9705",
+  "name": "icon_line/Plus",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9704",
+  "children": [
+    "I1:9705;3309:8340"
+  ],
+  "layout": {
+    "x": 24,
+    "y": 13,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[20px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9705\" data-name=\"icon_line/Plus\">\n            <div className=\"absolute inset-[12.5%]\" data-node-id=\"I1:9705;3309:8340\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgGroup33489} />\n            </div>\n          </div>"
+  }
+}

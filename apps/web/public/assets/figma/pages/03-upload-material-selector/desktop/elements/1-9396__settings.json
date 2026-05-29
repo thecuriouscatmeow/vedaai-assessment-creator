@@ -1,0 +1,23 @@
+{
+  "id": "1:9396",
+  "name": "Settings",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9393",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 94,
+    "width": 254,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "1:9822",
+  "name": "Frame",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9821",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[24px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-9822-frame.svg",
+      "role": "frame"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9822\" data-name=\"Frame\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame} />\n                  </div>"
+  }
+}

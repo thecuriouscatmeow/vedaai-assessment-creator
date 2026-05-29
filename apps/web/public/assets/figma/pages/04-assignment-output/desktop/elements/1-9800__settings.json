@@ -1,0 +1,26 @@
+{
+  "id": "1:9800",
+  "name": "Settings",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9787",
+  "children": [
+    "1-9801",
+    "1-9802"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 186,
+    "width": 251,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

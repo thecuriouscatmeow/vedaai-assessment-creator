@@ -1,0 +1,33 @@
+{
+  "id": "1:9954",
+  "name": "Frame 1984077364",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9948",
+  "children": [
+    "1:9955"
+  ],
+  "layout": {
+    "x": 12,
+    "y": 72,
+    "width": 349,
+    "height": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col items-center justify-center relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col items-center justify-center relative shrink-0 w-full\" data-node-id=\"1:9954\">\n          <div className=\"content-stretch flex gap-[12px] items-center relative shrink-0 w-full\" data-node-id=\"1:9955\">\n            <div className=\"flex-[1_0_0] h-0 min-w-px relative\" data-node-id=\"1:9956\">\n              <div className=\"absolute inset-[-2.5px_-1.48%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgFrame1984077353} />\n              </div>\n            </div>\n            <div className=\"flex-[1_0_0] h-0 min-w-px relative\" data-node-id=\"1:9958\">\n              <div className=\"absolute inset-[-2.5px_-1.48%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgFrame1984077354} />\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

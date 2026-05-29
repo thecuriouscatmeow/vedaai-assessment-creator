@@ -1,0 +1,61 @@
+{
+  "id": "1:10064",
+  "name": "Primary Button - Dark",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10060",
+  "children": [
+    "I1:10064;9847:2536",
+    "I1:10064;9847:2537"
+  ],
+  "layout": {
+    "x": 147,
+    "y": 0,
+    "width": 106,
+    "height": 46,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 4,
+      "padding": [
+        12,
+        24,
+        12,
+        24
+      ],
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#181818] border-[1.5px] border-[rgba(255,255,255,0.5)] border-solid content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0; style:",
+    "tokenRefs": [
+      "color-buttons-buttons-primary"
+    ],
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#181818"
+      }
+    ],
+    "strokes": [
+      {
+        "type": "SOLID",
+        "color": "1.5PX"
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "value": "0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#181818] border-[1.5px] border-[rgba(255,255,255,0.5)] border-solid content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:10064\" data-name=\"Primary Button - Dark\">\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"I1:10064;9847:2536\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Next</p>\n            </div>\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"I1:10064;9847:2537\" data-name=\"icon_line/Arrow_Right\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:10064;9847:2537;3309:8538\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke2} />\n              </div>\n            </div>\n          </div>"
+  }
+}

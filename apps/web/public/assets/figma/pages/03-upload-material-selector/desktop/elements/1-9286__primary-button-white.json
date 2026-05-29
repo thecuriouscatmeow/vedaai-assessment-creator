@@ -1,0 +1,48 @@
+{
+  "id": "1:9286",
+  "name": "Primary Button - White",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9280",
+  "children": [
+    "I1:9286;9841:2531"
+  ],
+  "layout": {
+    "x": 309,
+    "y": 142,
+    "width": 127,
+    "height": 36,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 4,
+      "padding": [
+        8,
+        24,
+        8,
+        24
+      ],
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#f6f6f6] content-stretch flex gap-[4px] items-center px-[24px] py-[8px] relative rounded-[var(--number,48px)] shrink-0; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-primary"
+    ],
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#F6F6F6"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#f6f6f6] content-stretch flex gap-[4px] items-center px-[24px] py-[8px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9286\" data-name=\"Primary Button - White\">\n                  <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] text-center tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"I1:9286;9841:2531\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">Browse Files</p>\n                  </div>\n                </div>"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "1:9411",
+  "name": "Avatar",
+  "type": "ELLIPSE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9410",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 59,
+    "height": 56,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: h-[56px] relative shrink-0 w-[59px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "png",
+      "path": "assets/1-9411-avatar.png",
+      "role": "avatar"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"h-[56px] relative shrink-0 w-[59px]\" data-node-id=\"1:9411\" data-name=\"Avatar\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" height=\"56\" src={imgAvatar} width=\"59\" />\n              </div>"
+  }
+}

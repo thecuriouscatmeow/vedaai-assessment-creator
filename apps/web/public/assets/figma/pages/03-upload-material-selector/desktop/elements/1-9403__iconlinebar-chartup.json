@@ -1,0 +1,23 @@
+{
+  "id": "1:9403",
+  "name": "icon_line/Bar-chart_up",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9402",
+  "children": [],
+  "layout": {
+    "x": 12,
+    "y": 9,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

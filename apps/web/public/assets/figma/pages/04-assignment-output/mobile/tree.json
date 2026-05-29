@@ -1,0 +1,628 @@
+{
+  "frameId": "1:10103",
+  "platform": "mobile",
+  "root": "1:10103",
+  "nodes": [
+    {
+      "id": "1:10103",
+      "name": "Dashboard",
+      "type": "FRAME",
+      "parent": null,
+      "depth": 0,
+      "order": 0,
+      "file": null
+    },
+    {
+      "id": "1:10104",
+      "name": "Frame 1618872221",
+      "type": "FRAME",
+      "parent": "1:10103",
+      "depth": 1,
+      "order": 0,
+      "file": "elements/1-10104__frame-1618872221.json"
+    },
+    {
+      "id": "1:10105",
+      "name": "Frame 1618872450",
+      "type": "FRAME",
+      "parent": "1:10104",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10105__frame-1618872450.json"
+    },
+    {
+      "id": "1:10106",
+      "name": "Frame 1618872453",
+      "type": "FRAME",
+      "parent": "1:10105",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10106__frame-1618872453.json"
+    },
+    {
+      "id": "1:10107",
+      "name": "Frame 1984077288",
+      "type": "FRAME",
+      "parent": "1:10106",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10107__frame-1984077288.json"
+    },
+    {
+      "id": "1:10108",
+      "name": "Certainly, Lakshya! Here are customized Question Paper for your CBSE Grade 8 Science classes on the NCERT chapters:",
+      "type": "TEXT",
+      "parent": "1:10107",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-10108__certainly-lakshya-here-are-customized-qu.json"
+    },
+    {
+      "id": "1:10109",
+      "name": "Frame 1984077321",
+      "type": "FRAME",
+      "parent": "1:10105",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10109__frame-1984077321.json"
+    },
+    {
+      "id": "1:10110",
+      "name": "Frame 1618872454",
+      "type": "FRAME",
+      "parent": "1:10109",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10110__frame-1618872454.json"
+    },
+    {
+      "id": "1:10111",
+      "name": "download",
+      "type": "INSTANCE",
+      "parent": "1:10110",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-10111__download.json"
+    },
+    {
+      "id": "1:10112",
+      "name": "Frame 1984077318",
+      "type": "FRAME",
+      "parent": "1:10104",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-10112__frame-1984077318.json"
+    },
+    {
+      "id": "1:10113",
+      "name": "Message",
+      "type": "TEXT",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10113__message.json"
+    },
+    {
+      "id": "1:10114",
+      "name": "Frame 1984077298",
+      "type": "FRAME",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10114__frame-1984077298.json"
+    },
+    {
+      "id": "1:10115",
+      "name": "Time Allowed: 45 minutes",
+      "type": "TEXT",
+      "parent": "1:10114",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10115__time-allowed-45-minutes.json"
+    },
+    {
+      "id": "1:10116",
+      "name": "Maximum Marks: 20",
+      "type": "TEXT",
+      "parent": "1:10114",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10116__maximum-marks-20.json"
+    },
+    {
+      "id": "1:10117",
+      "name": "Frame 1984077299",
+      "type": "FRAME",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-10117__frame-1984077299.json"
+    },
+    {
+      "id": "1:10118",
+      "name": "All questions are compulsory unless stated otherwise.",
+      "type": "TEXT",
+      "parent": "1:10117",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10118__all-questions-are-compulsory-unless-stat.json"
+    },
+    {
+      "id": "1:10119",
+      "name": "Frame 1984077300",
+      "type": "FRAME",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 3,
+      "file": "elements/1-10119__frame-1984077300.json"
+    },
+    {
+      "id": "1:10120",
+      "name": "Name: ______________________",
+      "type": "TEXT",
+      "parent": "1:10119",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10120__name.json"
+    },
+    {
+      "id": "1:10121",
+      "name": "Roll Number: ________________",
+      "type": "TEXT",
+      "parent": "1:10119",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10121__roll-number.json"
+    },
+    {
+      "id": "1:10122",
+      "name": "Class: 5th Section: __________",
+      "type": "TEXT",
+      "parent": "1:10119",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-10122__class-5th-section.json"
+    },
+    {
+      "id": "1:10123",
+      "name": "Frame 1984077301",
+      "type": "FRAME",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 4,
+      "file": "elements/1-10123__frame-1984077301.json"
+    },
+    {
+      "id": "1:10124",
+      "name": "Section A",
+      "type": "TEXT",
+      "parent": "1:10123",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10124__section-a.json"
+    },
+    {
+      "id": "1:10125",
+      "name": "Frame 1984077302",
+      "type": "FRAME",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 5,
+      "file": "elements/1-10125__frame-1984077302.json"
+    },
+    {
+      "id": "1:10126",
+      "name": "Short Answer Questions Attempt all questions. Each question carries 2 marks",
+      "type": "TEXT",
+      "parent": "1:10125",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10126__short-answer-questions-attempt-all-quest.json"
+    },
+    {
+      "id": "1:10127",
+      "name": "[Easy] Define electroplating. Explain its purpose. [2 Marks] [Moderate] What is the role of a conductor in the process of electrolysis? [2 Marks] [Easy] Why does a solution of copper sulfate conduct electricity? [2 Marks] [Moderate] Describe one example of the chemical effect of electric current in daily life. [2 Marks] [Moderate] Explain why electric current is said to have chemical effects. [2 Marks] [Challenging] How is sodium hydroxide prepared during the electrolysis of brine? Write the chemical reaction involved. [2 Marks] [Challenging] What happens at the cathode and anode during the electrolysis of water? Name the gases evolved. [2 Marks] [Easy] Mention the type of current used in electroplating and justify why it is used. [2 Marks] [Moderate] What is the importance of electric current in the field of metallurgy? [2 Marks] [Challenging] Explain with a chemical equation how copper is deposited during the electroplating of an object. [2 Marks] End of Question Paper Answer Key: Electroplating is the process of depositing a thin layer of metal on the surface of another metal using electric current. Its purpose is to prevent corrosion, improve appearance, or increase thickness. A conductor allows the flow of electric current, causing ions in the electrolyte to move and enabling chemical changes at electrodes. Copper sulfate solution contains free copper and sulfate ions which carry electric charge, thus conducting electricity. An example is the electroplating of silver on jewelry to prevent tarnishing. Electric current causes the movement of ions leading to chemical changes at the electrodes, hence it shows chemical effects. Sodium hydroxide is formed at the cathode during brine electrolysis as water gains electrons:\u20282H2O + 2e- \u2192 H2 + 2OH-\u2028Na+ + OH- \u2192 NaOH (in solution) At the cathode: water is reduced to hydrogen gas and hydroxide ions.\u2028At the anode: water is oxidized to oxygen gas and hydrogen ions. Direct current (DC) is used because it produces a consistent flow of electrons necessary for controlled deposition of metals. Electric current helps extract metals from their ores and purify metals by electrolysis in metallurgy. During copper electroplating, copper ions in solution gain electrons at the cathode and deposit as copper metal:\u2028Cu\u00b2\u207a + 2e\u207b \u2192 Cu (solid)",
+      "type": "TEXT",
+      "parent": "1:10112",
+      "depth": 3,
+      "order": 6,
+      "file": "elements/1-10127__easy-define-electroplating-explain-its-p.json"
+    },
+    {
+      "id": "1:10128",
+      "name": "Address Bar iOS / X Chrome",
+      "type": "FRAME",
+      "parent": "1:10103",
+      "depth": 1,
+      "order": 1,
+      "file": "elements/1-10128__address-bar-ios-x-chrome.json"
+    },
+    {
+      "id": "1:10129",
+      "name": "Background",
+      "type": "FRAME",
+      "parent": "1:10128",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10129__background.json"
+    },
+    {
+      "id": "1:10130",
+      "name": "Background",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10129",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10130__background.json"
+    },
+    {
+      "id": "1:10131",
+      "name": "iOS / Separator",
+      "type": "FRAME",
+      "parent": "1:10129",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10131__ios-separator.json"
+    },
+    {
+      "id": "1:10132",
+      "name": "Line",
+      "type": "LINE",
+      "parent": "1:10131",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10132__line.json"
+    },
+    {
+      "id": "1:10133",
+      "name": "iOS / Status Bar / X / Default",
+      "type": "FRAME",
+      "parent": "1:10128",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-10133__ios-status-bar-x-default.json"
+    },
+    {
+      "id": "1:10134",
+      "name": "Action",
+      "type": "FRAME",
+      "parent": "1:10133",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10134__action.json"
+    },
+    {
+      "id": "1:10135",
+      "name": "Time",
+      "type": "TEXT",
+      "parent": "1:10134",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10135__time.json"
+    },
+    {
+      "id": "1:10136",
+      "name": "Container",
+      "type": "FRAME",
+      "parent": "1:10133",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10136__container.json"
+    },
+    {
+      "id": "1:10137",
+      "name": "icon battery",
+      "type": "TEXT",
+      "parent": "1:10136",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10137__icon-battery.json"
+    },
+    {
+      "id": "1:10138",
+      "name": "Combined Shape",
+      "type": "BOOLEAN-OPERATION",
+      "parent": "1:10136",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10138__combined-shape.json"
+    },
+    {
+      "id": "1:10143",
+      "name": "icon wi-fi",
+      "type": "TEXT",
+      "parent": "1:10136",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-10143__icon-wi-fi.json"
+    },
+    {
+      "id": "1:10144",
+      "name": "iOS / Chrome / Address Bar",
+      "type": "FRAME",
+      "parent": "1:10128",
+      "depth": 2,
+      "order": 2,
+      "file": "elements/1-10144__ios-chrome-address-bar.json"
+    },
+    {
+      "id": "1:10145",
+      "name": "bar-input",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10144",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10145__bar-input.json"
+    },
+    {
+      "id": "1:10146",
+      "name": "iOS / Chrome / Address",
+      "type": "FRAME",
+      "parent": "1:10144",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10146__ios-chrome-address.json"
+    },
+    {
+      "id": "1:10147",
+      "name": "Union",
+      "type": "BOOLEAN-OPERATION",
+      "parent": "1:10146",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10147__union.json"
+    },
+    {
+      "id": "1:10150",
+      "name": "domain",
+      "type": "TEXT",
+      "parent": "1:10146",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10150__domain.json"
+    },
+    {
+      "id": "1:10151",
+      "name": "Union",
+      "type": "BOOLEAN-OPERATION",
+      "parent": "1:10144",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-10151__union.json"
+    },
+    {
+      "id": "1:10158",
+      "name": "Tab Bar iOS / X Chrome",
+      "type": "FRAME",
+      "parent": "1:10103",
+      "depth": 1,
+      "order": 2,
+      "file": "elements/1-10158__tab-bar-ios-x-chrome.json"
+    },
+    {
+      "id": "1:10159",
+      "name": "Background",
+      "type": "FRAME",
+      "parent": "1:10158",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10159__background.json"
+    },
+    {
+      "id": "1:10160",
+      "name": "Background",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10159",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10160__background.json"
+    },
+    {
+      "id": "1:10161",
+      "name": "iOS / Separator Top",
+      "type": "FRAME",
+      "parent": "1:10159",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10161__ios-separator-top.json"
+    },
+    {
+      "id": "1:10162",
+      "name": "Line",
+      "type": "LINE",
+      "parent": "1:10161",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10162__line.json"
+    },
+    {
+      "id": "1:10163",
+      "name": "iOS / Chrome / Tabs",
+      "type": "FRAME",
+      "parent": "1:10158",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-10163__ios-chrome-tabs.json"
+    },
+    {
+      "id": "1:10164",
+      "name": "Go Back",
+      "type": "FRAME",
+      "parent": "1:10163",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10164__go-back.json"
+    },
+    {
+      "id": "1:10167",
+      "name": "Go Forward",
+      "type": "FRAME",
+      "parent": "1:10163",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10167__go-forward.json"
+    },
+    {
+      "id": "1:10170",
+      "name": "Add New Tab",
+      "type": "FRAME",
+      "parent": "1:10163",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-10170__add-new-tab.json"
+    },
+    {
+      "id": "1:10171",
+      "name": "Ellipse 1",
+      "type": "ELLIPSE",
+      "parent": "1:10170",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10171__ellipse-1.json"
+    },
+    {
+      "id": "1:10172",
+      "name": "rounded/content/add",
+      "type": "FRAME",
+      "parent": "1:10170",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10172__roundedcontentadd.json"
+    },
+    {
+      "id": "1:10175",
+      "name": "Chrome Tabs",
+      "type": "FRAME",
+      "parent": "1:10163",
+      "depth": 3,
+      "order": 3,
+      "file": "elements/1-10175__chrome-tabs.json"
+    },
+    {
+      "id": "1:10180",
+      "name": "More Menu",
+      "type": "FRAME",
+      "parent": "1:10163",
+      "depth": 3,
+      "order": 4,
+      "file": "elements/1-10180__more-menu.json"
+    },
+    {
+      "id": "1:10183",
+      "name": "Home Indicator",
+      "type": "FRAME",
+      "parent": "1:10158",
+      "depth": 2,
+      "order": 2,
+      "file": "elements/1-10183__home-indicator.json"
+    },
+    {
+      "id": "1:10184",
+      "name": "Line",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10183",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10184__line.json"
+    },
+    {
+      "id": "1:10185",
+      "name": "Frame 1984077205",
+      "type": "FRAME",
+      "parent": "1:10103",
+      "depth": 1,
+      "order": 3,
+      "file": "elements/1-10185__frame-1984077205.json"
+    },
+    {
+      "id": "1:10186",
+      "name": "Frame 1618872397",
+      "type": "FRAME",
+      "parent": "1:10185",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10186__frame-1618872397.json"
+    },
+    {
+      "id": "1:10187",
+      "name": "Frame 1984077294",
+      "type": "FRAME",
+      "parent": "1:10186",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10187__frame-1984077294.json"
+    },
+    {
+      "id": "1:10188",
+      "name": "Component 1",
+      "type": "FRAME",
+      "parent": "1:10187",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10188__component-1.json"
+    },
+    {
+      "id": "1:10193",
+      "name": "VedaAI",
+      "type": "TEXT",
+      "parent": "1:10187",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10193__vedaai.json"
+    },
+    {
+      "id": "1:10194",
+      "name": "Frame 1984077614",
+      "type": "FRAME",
+      "parent": "1:10186",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10194__frame-1984077614.json"
+    },
+    {
+      "id": "1:10195",
+      "name": "Frame 1618872411",
+      "type": "FRAME",
+      "parent": "1:10194",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10195__frame-1618872411.json"
+    },
+    {
+      "id": "1:10196",
+      "name": ".Icon",
+      "type": "INSTANCE",
+      "parent": "1:10195",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-10196__icon.json"
+    },
+    {
+      "id": "1:10197",
+      "name": "Ellipse 9",
+      "type": "ELLIPSE",
+      "parent": "1:10195",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-10197__ellipse-9.json"
+    },
+    {
+      "id": "1:10198",
+      "name": "Frame 1618872412",
+      "type": "FRAME",
+      "parent": "1:10194",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10198__frame-1618872412.json"
+    },
+    {
+      "id": "1:10199",
+      "name": "menu",
+      "type": "INSTANCE",
+      "parent": "1:10194",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-10199__menu.json"
+    }
+  ]
+}

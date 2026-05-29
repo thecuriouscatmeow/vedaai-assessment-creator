@@ -1,0 +1,40 @@
+{
+  "id": "1:10323",
+  "name": "Frame 1984077380",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10322",
+  "children": [
+    "1:10324"
+  ],
+  "layout": {
+    "x": 325,
+    "y": 0,
+    "width": 48,
+    "height": 48,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex items-center justify-center relative rounded-[100px] shrink-0 size-[48px]; style:",
+    "borderRadius": 100,
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "value": "0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex items-center justify-center relative rounded-[100px] shrink-0 size-[48px]\" data-node-id=\"1:10323\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10324\" data-name=\"icon_line/Plus\">\n                <div className=\"absolute inset-[12.5%]\" data-node-id=\"I1:10324;3309:8340\">\n                  <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgGroup33489} />\n                </div>\n              </div>\n            </div>"
+  }
+}

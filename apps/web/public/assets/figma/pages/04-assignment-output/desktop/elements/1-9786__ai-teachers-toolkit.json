@@ -1,0 +1,40 @@
+{
+  "id": "1:9786",
+  "name": "AI Teacher\u2019s Toolkit",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9783",
+  "children": [],
+  "layout": {
+    "x": 71,
+    "y": 7,
+    "width": 136,
+    "height": 28,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white tracking-[-0.64px] whitespace-nowrap; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Inter:Medium",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9786\">\n                <p className=\"leading-[28px]\">AI Teacher\u2019s Toolkit</p>\n              </div>"
+  }
+}

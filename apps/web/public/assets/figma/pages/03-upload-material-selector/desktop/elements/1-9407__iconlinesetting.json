@@ -1,0 +1,29 @@
+{
+  "id": "1:9407",
+  "name": "icon_line/Setting",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9406",
+  "children": [
+    "I1:9407;3309:8117",
+    "I1:9407;3309:8118"
+  ],
+  "layout": {
+    "x": 12,
+    "y": 9,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[20px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9407\" data-name=\"icon_line/Setting\">\n              <div className=\"absolute inset-[33.33%]\" data-node-id=\"I1:9407;3309:8117\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke3} />\n              </div>\n              <div className=\"absolute inset-[8.33%_10.72%]\" data-node-id=\"I1:9407;3309:8118\" data-name=\"Union (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnionStroke} />\n              </div>\n            </div>"
+  }
+}

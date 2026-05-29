@@ -1,0 +1,30 @@
+{
+  "id": "1:10028",
+  "name": "Total Marks : 60",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10026",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 26,
+    "width": 150,
+    "height": 18,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col justify-center relative shrink-0 w-[150px]; style: {{"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col justify-center relative shrink-0 w-[150px]\" data-node-id=\"1:10028\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.1] whitespace-pre-wrap\">{`Total Marks :  60`}</p>\n                </div>"
+  }
+}

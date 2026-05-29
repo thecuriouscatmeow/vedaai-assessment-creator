@@ -1,0 +1,49 @@
+{
+  "id": "1:9688",
+  "name": "Frame 1618872397",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9429",
+  "children": [
+    "1:9689",
+    "1:9692",
+    "1:9695",
+    "1:9698"
+  ],
+  "layout": {
+    "x": 327,
+    "y": 12,
+    "width": 1100,
+    "height": 56,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 10,
+      "padding": [
+        0,
+        12,
+        0,
+        24
+      ],
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: absolute bg-[rgba(255,255,255,0.75)] content-stretch flex gap-[10px] h-[56px] items-center left-[327px] overflow-clip pl-[24px] pr-[12px] rounded-[16px] top-[12px] w-[1100px]; style:",
+    "borderRadius": 16,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.75)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute bg-[rgba(255,255,255,0.75)] content-stretch flex gap-[10px] h-[56px] items-center left-[327px] overflow-clip pl-[24px] pr-[12px] rounded-[16px] top-[12px] w-[1100px]\" data-node-id=\"1:9688\">\n        <div className=\"content-stretch flex items-center relative shrink-0 w-[40px]\" data-node-id=\"1:9689\">\n          <div className=\"bg-white content-stretch flex items-center justify-center relative rounded-[100px] shrink-0 size-[40px]\" data-node-id=\"1:9690\">\n            <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9691\" data-name=\"icon_line/Arrow_Left\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:9691;3309:8536\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke2} />\n              </div>\n            </div>\n          </div>\n        </div>\n        <div className=\"content-stretch flex flex-[1_0_0] gap-[8px] items-center min-w-px relative\" data-node-id=\"1:9692\">\n          <div className=\"overflow-clip relative shrink-0 size-[20px]\" data-node-id=\"1:9693\" data-name=\".Icon\">\n            <div className=\"absolute inset-[58.33%_12.5%_12.5%_58.33%]\" data-node-id=\"I1:9693;1:1410\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[58.33%_58.33%_12.5%_12.5%]\" data-node-id=\"I1:9693;1:1411\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[12.5%_12.5%_58.33%_58.33%]\" data-node-id=\"I1:9693;1:1412\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[12.5%_58.33%_58.33%_12.5%]\" data-node-id=\"I1:9693;1:1413\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n          </div>\n          <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#a9a9a9] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9694\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n            <p className=\"leading-[normal] overflow-hidden text-ellipsis\">Assignment</p>\n          </div>\n        </div>\n        <div className=\"bg-[#f6f6f6] content-stretch flex gap-[10px] items-center justify-center relative rounded-[100px] shrink-0 size-[36px]\" data-node-id=\"1:9695\">\n          <div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:9696\" data-name=\".Icon\">\n            <div className=\"absolute inset-[8.33%_12.5%_29.17%_12.5%]\" data-node-id=\"I1:9696;1:719\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-6.67%_-5.56%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector7} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[87.5%_42.79%_8.35%_42.79%]\" data-node-id=\"I1:9696;1:720\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-100.37%_-28.91%_-100.36%_-28.91%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector8} />\n              </div>\n            </div>\n          </div>\n          <div className=\"absolute left-[27px] size-[8px] top-px\" data-node-id=\"1:9697\">\n            <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgEllipse9} />\n          </div>\n        </div>\n        <div className=\"content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex gap-[8px] items-center px-[12px] py-[6px] relative rounded-[12px] shrink-0\" data-node-id=\"1:9698\">\n          <div className=\"relative rounded-[100px] shrink-0 size-[32px]\" data-node-id=\"1:9699\">\n            <div aria-hidden=\"true\" className=\"absolute inset-0 pointer-events-none rounded-[100px]\">\n              <div className=\"absolute bg-[#f6f6f6] inset-0 rounded-[100px]\" />\n              <img alt=\"\" className=\"absolute max-w-none object-cover rounded-[100px] size-full\" src={imgFrame1618872412} />\n            </div>\n          </div>\n          <div className=\"content-stretch flex gap-[4px] items-center relative shrink-0\" data-node-id=\"1:9700\">\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9701\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[normal] overflow-hidden text-ellipsis\">John Doe</p>\n            </div>\n            <div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:9702\" data-name=\"Chevron down\">\n              <div className=\"absolute bottom-[37.5%] left-1/4 right-1/4 top-[37.5%]\" data-node-id=\"I1:9702;7758:11219\" data-name=\"Icon\">\n                <div className=\"absolute inset-[-12.5%_-6.25%]\">\n                  <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon1} />\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>"
+  }
+}

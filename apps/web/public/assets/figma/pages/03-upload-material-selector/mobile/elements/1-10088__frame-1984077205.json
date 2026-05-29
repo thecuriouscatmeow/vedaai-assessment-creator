@@ -1,0 +1,45 @@
+{
+  "id": "1:10088",
+  "name": "Frame 1984077205",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9947",
+  "children": [
+    "1:10089"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 105,
+    "width": 393,
+    "height": 81,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "padding": [
+        18,
+        20,
+        18,
+        20
+      ],
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: absolute backdrop-blur-[0px] bg-[rgba(255,255,255,0.01)] content-stretch flex flex-col h-[81px] items-center justify-center left-0 px-[20px] py-[18px] top-[105px] w-[393px]; style:",
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.01)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute backdrop-blur-[0px] bg-[rgba(255,255,255,0.01)] content-stretch flex flex-col h-[81px] items-center justify-center left-0 px-[20px] py-[18px] top-[105px] w-[393px]\" data-node-id=\"1:10088\">\n        <div className=\"bg-white content-stretch flex h-[56px] items-center justify-between pl-[12px] pr-[16px] relative rounded-[16px] shrink-0 w-[373px]\" data-node-id=\"1:10089\">\n          <div className=\"content-stretch flex gap-[8px] items-center relative shrink-0\" data-node-id=\"1:10090\">\n            <div className=\"relative shrink-0 size-[28px]\" data-node-id=\"1:10091\" data-name=\"Component 1\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgComponent1} />\n            </div>\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[20px] tracking-[-1.2px] whitespace-nowrap\" data-node-id=\"1:10096\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">VedaAI</p>\n            </div>\n          </div>\n          <div className=\"content-stretch flex gap-[12px] items-center justify-end relative shrink-0\" data-node-id=\"1:10097\">\n            <div className=\"bg-[#f6f6f6] content-stretch flex gap-[10px] items-center justify-center relative rounded-[100px] shrink-0 size-[36px]\" data-node-id=\"1:10098\">\n              <div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:10099\" data-name=\".Icon\">\n                <div className=\"absolute inset-[8.33%_12.5%_29.17%_12.5%]\" data-node-id=\"I1:10099;1:719\" data-name=\"Vector\">\n                  <div className=\"absolute inset-[-6.67%_-5.56%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[87.5%_42.79%_8.35%_42.79%]\" data-node-id=\"I1:10099;1:720\" data-name=\"Vector\">\n                  <div className=\"absolute inset-[-100.37%_-28.91%_-100.36%_-28.91%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector1} />\n                  </div>\n                </div>\n              </div>\n              <div className=\"absolute left-[27px] size-[8px] top-px\" data-node-id=\"1:10100\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgEllipse9} />\n              </div>\n            </div>\n            <div className=\"relative rounded-[100px] shrink-0 size-[32px]\" data-node-id=\"1:10101\">\n              <div aria-hidden=\"true\" className=\"absolute inset-0 pointer-events-none rounded-[100px]\">\n                <div className=\"absolute bg-[#f6f6f6] inset-0 rounded-[100px]\" />\n                <img alt=\"\" className=\"absolute max-w-none object-cover rounded-[100px] size-full\" src={imgFrame1618872412} />\n              </div>\n            </div>\n            <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:10102\" data-name=\"menu\">\n              <div className=\"absolute bottom-1/4 left-[12.5%] right-[12.5%] top-1/4\" data-node-id=\"I1:10102;54616:25398\" data-name=\"icon\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIcon6} />\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>"
+  }
+}

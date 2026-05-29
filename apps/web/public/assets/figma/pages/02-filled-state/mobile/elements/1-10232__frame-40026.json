@@ -1,0 +1,40 @@
+{
+  "id": "1:10232",
+  "name": "Frame 40026",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10231",
+  "children": [
+    "1:10233"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 373,
+    "height": 116,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[rgba(255,255,255,0.75)] content-stretch flex flex-col items-start justify-center p-[20px] relative rounded-[24px] shrink-0 w-full; style:",
+    "borderRadius": 24,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.75)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[rgba(255,255,255,0.75)] content-stretch flex flex-col items-start justify-center p-[20px] relative rounded-[24px] shrink-0 w-full\" data-node-id=\"1:10232\">\n              <div className=\"content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full\" data-node-id=\"1:10233\">\n                <div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:10234\">\n                  <div className=\"content-stretch flex items-center justify-between relative shrink-0 w-full\" data-node-id=\"1:10235\">\n                    <div className=\"content-stretch flex items-center relative shrink-0\" data-node-id=\"1:10236\">\n                      <div className=\"content-stretch flex flex-col items-start justify-center relative shrink-0 w-[147px]\" data-node-id=\"1:10237\">\n                        <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[18px] tracking-[-0.72px] w-full\" data-node-id=\"1:10238\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.4]\">Quiz on Electricity</p>\n                        </div>\n                      </div>\n                    </div>\n                    <IconLineMoreVertical className=\"relative shrink-0 size-[24px]\" />\n                  </div>\n                </div>\n                <div className=\"content-stretch flex gap-[10px] items-start relative shrink-0 w-[182px]\" data-node-id=\"1:10240\">\n                  <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:10241\">\n                    <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10242\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p>\n                        <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          Assigned on\n                        </span>\n                        <span className=\"leading-[1.2]\">{` : 20-06-2025`}</span>\n                      </p>\n                    </div>\n                  </div>\n                  <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:10243\">\n                    <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10244\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p>\n                        <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          Due\n                        </span>\n                        <span className=\"leading-[1.2]\">{` : 21-06-2025`}</span>\n                      </p>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>"
+  }
+}

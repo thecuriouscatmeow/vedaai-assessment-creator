@@ -1,0 +1,44 @@
+{
+  "id": "1:9363",
+  "name": "Frame 1984077510",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9294",
+  "children": [
+    "1:9364",
+    "1:9365"
+  ],
+  "layout": {
+    "x": 596,
+    "y": 330,
+    "width": 150,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 8,
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] content-stretch flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium gap-[8px] items-start leading-[0] relative shrink-0 text-[#303030] text-[16px] text-right tracking-[-0.64px]; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Medium",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] content-stretch flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium gap-[8px] items-start leading-[0] relative shrink-0 text-[#303030] text-[16px] text-right tracking-[-0.64px]\" data-node-id=\"1:9363\">\n                <div className=\"flex flex-col justify-center relative shrink-0 w-[150px]\" data-node-id=\"1:9364\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.1] whitespace-pre-wrap\">{`Total Questions :  25`}</p>\n                </div>\n                <div className=\"flex flex-col justify-center relative shrink-0 w-[150px]\" data-node-id=\"1:9365\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.1] whitespace-pre-wrap\">{`Total Marks :  60`}</p>\n                </div>\n              </div>"
+  }
+}

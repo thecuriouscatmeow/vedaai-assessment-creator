@@ -41,6 +41,15 @@ export const figmaAssets = {
   create: {
     uploadCloud: '/assets/figma/pages/03-upload-material-selector/desktop/assets/1-9390-asset.svg',
     uploadBackdrop: '/assets/figma/pages/03-upload-material-selector/desktop/assets/1-9383-asset.svg',
+    deleteRow: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9303-7758-12632-icon.svg',
+    chevronDown: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9302-7758-11219-icon.svg',
+    stepperMinus: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9330-3309-8335-vector-5-stroke.svg',
+    stepperPlus: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9332-7758-12109-icon.svg',
+    addRowPlus: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9324-3309-8340-asset.svg',
+    micIcon: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9371-3309-8807-union.svg',
+    calendarIcon: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9293-3309-8523-vector-stroke.svg',
+    arrowLeft: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9374-3309-8536-vector-stroke.svg',
+    arrowRight: '/assets/figma/pages/03-upload-material-selector/desktop/assets/I1-9376-9847-2537-3309-8538-vector-stroke.svg',
   },
   output: {
     headerArt: '/assets/figma/pages/04-assignment-output/desktop/assets/1-9809-image-3.png',

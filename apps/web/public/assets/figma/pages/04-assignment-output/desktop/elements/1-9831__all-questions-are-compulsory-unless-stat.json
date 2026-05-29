@@ -1,0 +1,40 @@
+{
+  "id": "1:9831",
+  "name": "All questions are compulsory unless stated otherwise.",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9830",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 996,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-[1_0_0] flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] min-w-px not-italic relative text-[#303030] text-[18px] tracking-[-0.72px]; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-bold-700-p2"
+    ],
+    "typography": {
+      "fontFamily": "Inter:Semi_Bold",
+      "size": 18,
+      "weight": 600,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.72
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] min-w-px not-italic relative text-[#303030] text-[18px] tracking-[-0.72px]\" data-node-id=\"1:9831\">\n              <p className=\"leading-[1.6]\">All questions are compulsory unless stated otherwise.</p>\n            </div>"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1:9436",
+  "name": "Assignments",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9435",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 121,
+    "height": 28,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#303030] text-[20px] tracking-[-0.8px]; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-bold-700-p1"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Bold",
+      "size": 20,
+      "weight": 700,
+      "letterSpacing": -0.8
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#303030] text-[20px] tracking-[-0.8px]\" data-node-id=\"1:9436\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Assignments</p>\n                </div>"
+  }
+}

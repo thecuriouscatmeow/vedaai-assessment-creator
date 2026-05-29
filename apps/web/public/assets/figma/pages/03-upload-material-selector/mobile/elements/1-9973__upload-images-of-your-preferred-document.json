@@ -1,0 +1,40 @@
+{
+  "id": "1:9973",
+  "name": "Upload images of your preferred document/image",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9965",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 214,
+    "width": 317,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(48,48,48,0.6)] text-center tracking-[-0.64px] w-full; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Medium",
+      "size": 16,
+      "weight": 500,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(48,48,48,0.6)] text-center tracking-[-0.64px] w-full\" data-node-id=\"1:9973\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                <p className=\"leading-[1.4]\">Upload images of your preferred document/image</p>\n              </div>"
+  }
+}

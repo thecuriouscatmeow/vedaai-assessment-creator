@@ -1,0 +1,23 @@
+{
+  "id": "1:10184",
+  "name": "Line",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10183",
+  "children": [],
+  "layout": {
+    "x": 129,
+    "y": 21,
+    "width": 135,
+    "height": 5,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

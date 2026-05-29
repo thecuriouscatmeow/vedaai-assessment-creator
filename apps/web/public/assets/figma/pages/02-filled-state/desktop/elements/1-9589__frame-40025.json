@@ -1,0 +1,33 @@
+{
+  "id": "1:9589",
+  "name": "Frame 40025",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9588",
+  "children": [
+    "1:9590"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 199,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col items-start justify-center relative shrink-0 w-[199px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col items-start justify-center relative shrink-0 w-[199px]\" data-node-id=\"1:9589\">\n                        <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#303030] text-[24px] tracking-[-0.96px] w-full\" data-node-id=\"1:9590\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.2]\">Quiz on Electricity</p>\n                        </div>\n                      </div>"
+  }
+}

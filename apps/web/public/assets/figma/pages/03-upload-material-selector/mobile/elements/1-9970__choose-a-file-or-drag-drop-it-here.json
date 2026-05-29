@@ -1,0 +1,39 @@
+{
+  "id": "1:9970",
+  "name": "Choose a file or drag & drop it here",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9969",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 253,
+    "height": 22,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] w-full; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Medium",
+      "size": 16,
+      "weight": 500,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] w-full\" data-node-id=\"1:9970\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">{`Choose a file or drag & drop it here`}</p>\n                  </div>"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1:10150",
+  "name": "domain",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10146",
+  "children": [],
+  "layout": {
+    "x": 15,
+    "y": 0,
+    "width": 158,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "SF_Pro_Text:Regular",
+      "size": 16
+    }
+  },
+  "assets": [],
+  "content": {
+    "characters": "web-to-figma.design"
+  },
+  "code": {
+    "react": "<p className=\"[word-break:break-word] font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap\" data-node-id=\"1:10150\">\n              web-to-figma.design\n            </p>"
+  }
+}

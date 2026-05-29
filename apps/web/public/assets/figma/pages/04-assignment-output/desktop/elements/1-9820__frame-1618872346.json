@@ -1,0 +1,40 @@
+{
+  "id": "1:9820",
+  "name": "Frame 1618872346",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9819",
+  "children": [
+    "1:9821"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 200,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "padding": [
+        0,
+        24,
+        0,
+        24
+      ],
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex h-[44px] items-center justify-center px-[24px] relative rounded-[100px] shrink-0; style:",
+    "borderRadius": 100
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex h-[44px] items-center justify-center px-[24px] relative rounded-[100px] shrink-0\" data-node-id=\"1:9820\">\n                <div className=\"content-stretch flex gap-[4px] items-center relative shrink-0\" data-node-id=\"1:9821\">\n                  <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9822\" data-name=\"Frame\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame} />\n                  </div>\n                  <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9824\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[22px]\">Download as PDF</p>\n                  </div>\n                </div>\n              </div>"
+  }
+}

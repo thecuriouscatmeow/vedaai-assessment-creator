@@ -1,0 +1,29 @@
+{
+  "id": "1:10294",
+  "name": "iOS / Status Bar / X / Default",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10289",
+  "children": [
+    "1:10295",
+    "1:10297"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: absolute h-[44px] left-0 right-0 top-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute h-[44px] left-0 right-0 top-0\" data-node-id=\"1:10294\" data-name=\"iOS / Status Bar / X / Default\">\n          <div className=\"absolute inset-[43.18%_80.37%_15.91%_5.3%] overflow-clip\" data-node-id=\"1:10295\" data-name=\"Action\">\n            <p className=\"-translate-x-1/2 [word-break:break-word] absolute font-['SF_Pro_Text:Semibold',sans-serif] leading-[normal] left-[27px] not-italic text-[15px] text-center text-white top-[calc(50%-9px)] tracking-[-0.165px] w-[54px]\" data-node-id=\"1:10296\">\n              9:41\n            </p>\n          </div>\n          <div className=\"-translate-y-1/2 absolute h-[14px] overflow-clip right-[34px] top-[calc(50%+6px)] w-[68px]\" data-node-id=\"1:10297\" data-name=\"Container\">\n            <p className=\"[word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[41px] not-italic text-[17px] text-white top-[-3px] whitespace-nowrap\" data-node-id=\"1:10298\">{`\\u{1006E8}`}</p>\n            <div className=\"absolute inset-[11.43%_74.12%_12.14%_0.74%]\" data-node-id=\"1:10299\" data-name=\"Combined Shape\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgCombinedShape} />\n            </div>\n            <p className=\"[word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[21px] not-italic text-[14px] text-white top-[-1px] whitespace-nowrap\" data-node-id=\"1:10304\">{`\\u{100647}`}</p>\n          </div>\n        </div>"
+  }
+}

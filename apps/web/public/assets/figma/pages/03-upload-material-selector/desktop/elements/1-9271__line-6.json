@@ -1,0 +1,23 @@
+{
+  "id": "1:9271",
+  "name": "Line 6",
+  "type": "VECTOR",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9270",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 401,
+    "height": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

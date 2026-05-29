@@ -1,0 +1,30 @@
+{
+  "id": "1:9829",
+  "name": "Maximum Marks: 20",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9827",
+  "children": [],
+  "layout": {
+    "x": 831,
+    "y": 0,
+    "width": 165,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col justify-center relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col justify-center relative shrink-0\" data-node-id=\"1:9829\">\n              <p className=\"leading-[1.6]\">Maximum Marks: 20</p>\n            </div>"
+  }
+}

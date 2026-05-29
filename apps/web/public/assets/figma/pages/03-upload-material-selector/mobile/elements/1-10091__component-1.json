@@ -1,0 +1,32 @@
+{
+  "id": "1:10091",
+  "name": "Component 1",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10090",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 28,
+    "height": 28,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[28px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-10091-component-1.svg",
+      "role": "component-1"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[28px]\" data-node-id=\"1:10091\" data-name=\"Component 1\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgComponent1} />\n            </div>"
+  }
+}

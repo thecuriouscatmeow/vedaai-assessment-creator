@@ -1,0 +1,36 @@
+{
+  "id": "1:9685",
+  "name": "Content",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9683",
+  "children": [
+    "1:9686",
+    "1:9687"
+  ],
+  "layout": {
+    "x": 67,
+    "y": 6,
+    "width": 165,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] content-stretch flex flex-[1_0_0] flex-col items-start leading-[0] min-w-px relative whitespace-nowrap; style:",
+    "typography": {
+      "lineHeight": 0.0
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col items-start leading-[0] min-w-px relative whitespace-nowrap\" data-node-id=\"1:9685\" data-name=\"Content\">\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold h-[22px] justify-center overflow-hidden relative shrink-0 text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] w-full\" data-node-id=\"1:9686\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Delhi Public School</p>\n                </div>\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center overflow-hidden relative shrink-0 text-[#5e5e5e] text-[14px] text-ellipsis tracking-[-0.56px] w-full\" data-node-id=\"1:9687\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Bokaro Steel City</p>\n                </div>\n              </div>"
+  }
+}

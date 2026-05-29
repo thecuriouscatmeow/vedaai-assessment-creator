@@ -1,0 +1,33 @@
+{
+  "id": "1:9952",
+  "name": "Frame 1618872418",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9949",
+  "children": [
+    "1:9953"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 13,
+    "width": 349,
+    "height": 22,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center justify-center relative shrink-0 w-[349px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center justify-center relative shrink-0 w-[349px]\" data-node-id=\"1:9952\">\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] text-center tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9953\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Create Assignment</p>\n            </div>\n          </div>"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "1:10131",
+  "name": "iOS / Separator",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10129",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 105,
+    "width": 393,
+    "height": 1,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative size-full; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-10131-ios-separator.svg",
+      "role": "ios-separator"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"relative size-full\" data-node-id=\"1:10131\" data-name=\"iOS / Separator\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIOsSeparator} />\n            </div>"
+  }
+}

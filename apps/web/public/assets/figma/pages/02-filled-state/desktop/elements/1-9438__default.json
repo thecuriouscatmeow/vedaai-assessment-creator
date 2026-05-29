@@ -1,0 +1,40 @@
+{
+  "id": "1:9438",
+  "name": "Default",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9431",
+  "children": [
+    "1:9439",
+    "1:9444"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 62,
+    "width": 1100,
+    "height": 64,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "padding": [
+        0,
+        16,
+        0,
+        16
+      ],
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex h-[64px] items-center justify-between overflow-clip px-[16px] relative rounded-[var(--number,20px)] shrink-0 w-full z-[5]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex h-[64px] items-center justify-between overflow-clip px-[16px] relative rounded-[var(--number,20px)] shrink-0 w-full z-[5]\" data-node-id=\"1:9438\" data-name=\"Default\">\n          <div className=\"content-stretch flex items-center relative shrink-0\" data-node-id=\"1:9439\">\n            <div className=\"content-stretch flex items-center relative shrink-0\" data-node-id=\"1:9440\">\n              <div className=\"content-stretch flex gap-[4px] items-center relative shrink-0\" data-node-id=\"1:9441\">\n                <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9442\" data-name=\"icon_line/Filter\">\n                  <div className=\"absolute inset-[12.5%]\" data-node-id=\"I1:9442;3309:8184\" data-name=\"Vector 28 (Stroke)\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVector28Stroke} />\n                  </div>\n                </div>\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#a9a9a9] text-[0px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9443\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"font-['Bricolage_Grotesque:Bold',sans-serif] font-bold leading-[1.4] text-[14px]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    Filter By\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div className=\"content-stretch flex items-center relative shrink-0 w-[380px]\" data-node-id=\"1:9444\">\n            <div className=\"border border-[rgba(0,0,0,0.2)] border-solid content-stretch flex flex-[1_0_0] h-[44px] items-center min-w-px px-[16px] py-[11px] relative rounded-[100px]\" data-node-id=\"1:9445\">\n              <div className=\"content-stretch flex gap-[12px] items-center relative shrink-0\" data-node-id=\"1:9446\">\n                <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9447\" data-name=\"icon_line/Search\">\n                  <div className=\"absolute inset-[8.33%]\" data-node-id=\"I1:9447;3309:8164\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgGroup33509} />\n                  </div>\n                </div>\n                <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#a9a9a9] text-[0px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9448\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"font-['Bricolage_Grotesque:Bold',sans-serif] font-bold leading-[1.4] text-[14px]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    Search Assignment\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

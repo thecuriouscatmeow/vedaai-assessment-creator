@@ -1,0 +1,45 @@
+{
+  "id": "1:9695",
+  "name": "Frame 1618872411",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9688",
+  "children": [
+    "1:9696",
+    "1:9697"
+  ],
+  "layout": {
+    "x": 885,
+    "y": 10,
+    "width": 36,
+    "height": 36,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 10,
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#f6f6f6] content-stretch flex gap-[10px] items-center justify-center relative rounded-[100px] shrink-0 size-[36px]; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-primary"
+    ],
+    "borderRadius": 100,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#F6F6F6"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#f6f6f6] content-stretch flex gap-[10px] items-center justify-center relative rounded-[100px] shrink-0 size-[36px]\" data-node-id=\"1:9695\">\n          <div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:9696\" data-name=\".Icon\">\n            <div className=\"absolute inset-[8.33%_12.5%_29.17%_12.5%]\" data-node-id=\"I1:9696;1:719\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-6.67%_-5.56%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector7} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[87.5%_42.79%_8.35%_42.79%]\" data-node-id=\"I1:9696;1:720\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-100.37%_-28.91%_-100.36%_-28.91%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector8} />\n              </div>\n            </div>\n          </div>\n          <div className=\"absolute left-[27px] size-[8px] top-px\" data-node-id=\"1:9697\">\n            <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgEllipse9} />\n          </div>\n        </div>"
+  }
+}

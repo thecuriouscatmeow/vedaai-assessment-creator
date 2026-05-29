@@ -1,0 +1,1258 @@
+{
+  "frameId": "1:9947",
+  "platform": "mobile",
+  "root": "1:9947",
+  "nodes": [
+    {
+      "id": "1:9947",
+      "name": "Dashboard",
+      "type": "FRAME",
+      "parent": null,
+      "depth": 0,
+      "order": 0,
+      "file": null
+    },
+    {
+      "id": "1:9948",
+      "name": "Frame 1984077582",
+      "type": "FRAME",
+      "parent": "1:9947",
+      "depth": 1,
+      "order": 0,
+      "file": "elements/1-9948__frame-1984077582.json"
+    },
+    {
+      "id": "1:9949",
+      "name": "Frame 1984077583",
+      "type": "FRAME",
+      "parent": "1:9948",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-9949__frame-1984077583.json"
+    },
+    {
+      "id": "1:9950",
+      "name": "Frame 1984077380",
+      "type": "FRAME",
+      "parent": "1:9949",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9950__frame-1984077380.json"
+    },
+    {
+      "id": "1:9951",
+      "name": "Arrow left",
+      "type": "INSTANCE",
+      "parent": "1:9950",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9951__arrow-left.json"
+    },
+    {
+      "id": "1:9952",
+      "name": "Frame 1618872418",
+      "type": "FRAME",
+      "parent": "1:9949",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9952__frame-1618872418.json"
+    },
+    {
+      "id": "1:9953",
+      "name": "Create Assignment",
+      "type": "TEXT",
+      "parent": "1:9952",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9953__create-assignment.json"
+    },
+    {
+      "id": "1:9954",
+      "name": "Frame 1984077364",
+      "type": "FRAME",
+      "parent": "1:9948",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-9954__frame-1984077364.json"
+    },
+    {
+      "id": "1:9955",
+      "name": "Frame 1984077355",
+      "type": "FRAME",
+      "parent": "1:9954",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9955__frame-1984077355.json"
+    },
+    {
+      "id": "1:9956",
+      "name": "Frame 1984077353",
+      "type": "FRAME",
+      "parent": "1:9955",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9956__frame-1984077353.json"
+    },
+    {
+      "id": "1:9957",
+      "name": "Line 6",
+      "type": "VECTOR",
+      "parent": "1:9956",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9957__line-6.json"
+    },
+    {
+      "id": "1:9958",
+      "name": "Frame 1984077354",
+      "type": "FRAME",
+      "parent": "1:9955",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9958__frame-1984077354.json"
+    },
+    {
+      "id": "1:9959",
+      "name": "Line 6",
+      "type": "VECTOR",
+      "parent": "1:9958",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9959__line-6.json"
+    },
+    {
+      "id": "1:9960",
+      "name": "Frame 1984077584",
+      "type": "FRAME",
+      "parent": "1:9948",
+      "depth": 2,
+      "order": 2,
+      "file": "elements/1-9960__frame-1984077584.json"
+    },
+    {
+      "id": "1:9961",
+      "name": "Frame 1984077347",
+      "type": "FRAME",
+      "parent": "1:9960",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9961__frame-1984077347.json"
+    },
+    {
+      "id": "1:9962",
+      "name": "Assignment Details",
+      "type": "TEXT",
+      "parent": "1:9961",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9962__assignment-details.json"
+    },
+    {
+      "id": "1:9963",
+      "name": "Basic information about your assignment",
+      "type": "TEXT",
+      "parent": "1:9961",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9963__basic-information-about-your-assignment.json"
+    },
+    {
+      "id": "1:9964",
+      "name": "Frame 1984077364",
+      "type": "FRAME",
+      "parent": "1:9960",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9964__frame-1984077364.json"
+    },
+    {
+      "id": "1:9965",
+      "name": "Frame 1984077301",
+      "type": "FRAME",
+      "parent": "1:9964",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9965__frame-1984077301.json"
+    },
+    {
+      "id": "1:9966",
+      "name": "Frame 1618872469",
+      "type": "FRAME",
+      "parent": "1:9965",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9966__frame-1618872469.json"
+    },
+    {
+      "id": "1:9967",
+      "name": "Frame 1618872514",
+      "type": "FRAME",
+      "parent": "1:9966",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9967__frame-1618872514.json"
+    },
+    {
+      "id": "1:9968",
+      "name": "Upload cloud",
+      "type": "INSTANCE",
+      "parent": "1:9967",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-9968__upload-cloud.json"
+    },
+    {
+      "id": "1:9969",
+      "name": "Frame 1618872516",
+      "type": "FRAME",
+      "parent": "1:9966",
+      "depth": 6,
+      "order": 1,
+      "file": "elements/1-9969__frame-1618872516.json"
+    },
+    {
+      "id": "1:9970",
+      "name": "Choose a file or drag & drop it here",
+      "type": "TEXT",
+      "parent": "1:9969",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-9970__choose-a-file-or-drag-drop-it-here.json"
+    },
+    {
+      "id": "1:9971",
+      "name": "JPEG, PNG, upto 10MB",
+      "type": "TEXT",
+      "parent": "1:9969",
+      "depth": 7,
+      "order": 1,
+      "file": "elements/1-9971__jpeg-png-upto-10mb.json"
+    },
+    {
+      "id": "1:9972",
+      "name": "Primary Button - White",
+      "type": "INSTANCE",
+      "parent": "1:9966",
+      "depth": 6,
+      "order": 2,
+      "file": "elements/1-9972__primary-button-white.json"
+    },
+    {
+      "id": "1:9973",
+      "name": "Upload images of your preferred document/image",
+      "type": "TEXT",
+      "parent": "1:9965",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9973__upload-images-of-your-preferred-document.json"
+    },
+    {
+      "id": "1:9974",
+      "name": "Frame 1618872464",
+      "type": "FRAME",
+      "parent": "1:9964",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9974__frame-1618872464.json"
+    },
+    {
+      "id": "1:9975",
+      "name": "Frame 1618872457",
+      "type": "FRAME",
+      "parent": "1:9974",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9975__frame-1618872457.json"
+    },
+    {
+      "id": "1:9976",
+      "name": "Due Date",
+      "type": "TEXT",
+      "parent": "1:9975",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9976__due-date.json"
+    },
+    {
+      "id": "1:9977",
+      "name": "Frame 1618872169",
+      "type": "FRAME",
+      "parent": "1:9975",
+      "depth": 6,
+      "order": 1,
+      "file": "elements/1-9977__frame-1618872169.json"
+    },
+    {
+      "id": "1:9978",
+      "name": "DD-MM-YYYY",
+      "type": "TEXT",
+      "parent": "1:9977",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-9978__dd-mm-yyyy.json"
+    },
+    {
+      "id": "1:9979",
+      "name": "icon_line/Calendar_plus",
+      "type": "INSTANCE",
+      "parent": "1:9977",
+      "depth": 7,
+      "order": 1,
+      "file": "elements/1-9979__iconlinecalendarplus.json"
+    },
+    {
+      "id": "1:9980",
+      "name": "Frame 1618872171",
+      "type": "FRAME",
+      "parent": "1:9964",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-9980__frame-1618872171.json"
+    },
+    {
+      "id": "1:9981",
+      "name": "Frame 1984077498",
+      "type": "FRAME",
+      "parent": "1:9980",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9981__frame-1984077498.json"
+    },
+    {
+      "id": "1:9982",
+      "name": "Frame 1618872458",
+      "type": "FRAME",
+      "parent": "1:9981",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9982__frame-1618872458.json"
+    },
+    {
+      "id": "1:9983",
+      "name": "Question Type",
+      "type": "TEXT",
+      "parent": "1:9982",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-9983__question-type.json"
+    },
+    {
+      "id": "1:9984",
+      "name": "Frame 1984077592",
+      "type": "FRAME",
+      "parent": "1:9982",
+      "depth": 7,
+      "order": 1,
+      "file": "elements/1-9984__frame-1984077592.json"
+    },
+    {
+      "id": "1:9985",
+      "name": "Frame 1984077504",
+      "type": "FRAME",
+      "parent": "1:9984",
+      "depth": 8,
+      "order": 0,
+      "file": "elements/1-9985__frame-1984077504.json"
+    },
+    {
+      "id": "1:9986",
+      "name": "Frame 1984077593",
+      "type": "FRAME",
+      "parent": "1:9985",
+      "depth": 9,
+      "order": 0,
+      "file": "elements/1-9986__frame-1984077593.json"
+    },
+    {
+      "id": "1:9987",
+      "name": "Multiple Choice Questions",
+      "type": "TEXT",
+      "parent": "1:9986",
+      "depth": 10,
+      "order": 0,
+      "file": "elements/1-9987__multiple-choice-questions.json"
+    },
+    {
+      "id": "1:9988",
+      "name": "Chevron down",
+      "type": "INSTANCE",
+      "parent": "1:9986",
+      "depth": 10,
+      "order": 1,
+      "file": "elements/1-9988__chevron-down.json"
+    },
+    {
+      "id": "1:9989",
+      "name": "X",
+      "type": "INSTANCE",
+      "parent": "1:9985",
+      "depth": 9,
+      "order": 1,
+      "file": "elements/1-9989__x.json"
+    },
+    {
+      "id": "1:9990",
+      "name": "Frame 1984077589",
+      "type": "FRAME",
+      "parent": "1:9984",
+      "depth": 8,
+      "order": 1,
+      "file": "elements/1-9990__frame-1984077589.json"
+    },
+    {
+      "id": "1:9991",
+      "name": "Frame 1984077590",
+      "type": "FRAME",
+      "parent": "1:9990",
+      "depth": 9,
+      "order": 0,
+      "file": "elements/1-9991__frame-1984077590.json"
+    },
+    {
+      "id": "1:9992",
+      "name": "No. of Questions",
+      "type": "TEXT",
+      "parent": "1:9991",
+      "depth": 10,
+      "order": 0,
+      "file": "elements/1-9992__no-of-questions.json"
+    },
+    {
+      "id": "1:9993",
+      "name": "Frame 1618872169",
+      "type": "FRAME",
+      "parent": "1:9991",
+      "depth": 10,
+      "order": 1,
+      "file": "elements/1-9993__frame-1618872169.json"
+    },
+    {
+      "id": "1:9994",
+      "name": "icon_line/Minus",
+      "type": "INSTANCE",
+      "parent": "1:9993",
+      "depth": 11,
+      "order": 0,
+      "file": "elements/1-9994__iconlineminus.json"
+    },
+    {
+      "id": "1:9995",
+      "name": "4",
+      "type": "TEXT",
+      "parent": "1:9993",
+      "depth": 11,
+      "order": 1,
+      "file": "elements/1-9995__4.json"
+    },
+    {
+      "id": "1:9996",
+      "name": "Plus",
+      "type": "INSTANCE",
+      "parent": "1:9993",
+      "depth": 11,
+      "order": 2,
+      "file": "elements/1-9996__plus.json"
+    },
+    {
+      "id": "1:9997",
+      "name": "Frame 1984077591",
+      "type": "FRAME",
+      "parent": "1:9990",
+      "depth": 9,
+      "order": 1,
+      "file": "elements/1-9997__frame-1984077591.json"
+    },
+    {
+      "id": "1:9998",
+      "name": "Marks",
+      "type": "TEXT",
+      "parent": "1:9997",
+      "depth": 10,
+      "order": 0,
+      "file": "elements/1-9998__marks.json"
+    },
+    {
+      "id": "1:9999",
+      "name": "Frame 1984077510",
+      "type": "FRAME",
+      "parent": "1:9997",
+      "depth": 10,
+      "order": 1,
+      "file": "elements/1-9999__frame-1984077510.json"
+    },
+    {
+      "id": "1:10000",
+      "name": "icon_line/Minus",
+      "type": "INSTANCE",
+      "parent": "1:9999",
+      "depth": 11,
+      "order": 0,
+      "file": "elements/1-10000__iconlineminus.json"
+    },
+    {
+      "id": "1:10001",
+      "name": "4",
+      "type": "TEXT",
+      "parent": "1:9999",
+      "depth": 11,
+      "order": 1,
+      "file": "elements/1-10001__4.json"
+    },
+    {
+      "id": "1:10002",
+      "name": "Plus",
+      "type": "INSTANCE",
+      "parent": "1:9999",
+      "depth": 11,
+      "order": 2,
+      "file": "elements/1-10002__plus.json"
+    },
+    {
+      "id": "1:10003",
+      "name": "Frame 1984077593",
+      "type": "FRAME",
+      "parent": "1:9982",
+      "depth": 7,
+      "order": 2,
+      "file": "elements/1-10003__frame-1984077593.json"
+    },
+    {
+      "id": "1:10004",
+      "name": "Frame 1984077504",
+      "type": "FRAME",
+      "parent": "1:10003",
+      "depth": 8,
+      "order": 0,
+      "file": "elements/1-10004__frame-1984077504.json"
+    },
+    {
+      "id": "1:10005",
+      "name": "Frame 1984077593",
+      "type": "FRAME",
+      "parent": "1:10004",
+      "depth": 9,
+      "order": 0,
+      "file": "elements/1-10005__frame-1984077593.json"
+    },
+    {
+      "id": "1:10006",
+      "name": "Short Questions",
+      "type": "TEXT",
+      "parent": "1:10005",
+      "depth": 10,
+      "order": 0,
+      "file": "elements/1-10006__short-questions.json"
+    },
+    {
+      "id": "1:10007",
+      "name": "Chevron down",
+      "type": "INSTANCE",
+      "parent": "1:10005",
+      "depth": 10,
+      "order": 1,
+      "file": "elements/1-10007__chevron-down.json"
+    },
+    {
+      "id": "1:10008",
+      "name": "X",
+      "type": "INSTANCE",
+      "parent": "1:10004",
+      "depth": 9,
+      "order": 1,
+      "file": "elements/1-10008__x.json"
+    },
+    {
+      "id": "1:10009",
+      "name": "Frame 1984077589",
+      "type": "FRAME",
+      "parent": "1:10003",
+      "depth": 8,
+      "order": 1,
+      "file": "elements/1-10009__frame-1984077589.json"
+    },
+    {
+      "id": "1:10010",
+      "name": "Frame 1984077590",
+      "type": "FRAME",
+      "parent": "1:10009",
+      "depth": 9,
+      "order": 0,
+      "file": "elements/1-10010__frame-1984077590.json"
+    },
+    {
+      "id": "1:10011",
+      "name": "No. of Questions",
+      "type": "TEXT",
+      "parent": "1:10010",
+      "depth": 10,
+      "order": 0,
+      "file": "elements/1-10011__no-of-questions.json"
+    },
+    {
+      "id": "1:10012",
+      "name": "Frame 1618872169",
+      "type": "FRAME",
+      "parent": "1:10010",
+      "depth": 10,
+      "order": 1,
+      "file": "elements/1-10012__frame-1618872169.json"
+    },
+    {
+      "id": "1:10013",
+      "name": "icon_line/Minus",
+      "type": "INSTANCE",
+      "parent": "1:10012",
+      "depth": 11,
+      "order": 0,
+      "file": "elements/1-10013__iconlineminus.json"
+    },
+    {
+      "id": "1:10014",
+      "name": "4",
+      "type": "TEXT",
+      "parent": "1:10012",
+      "depth": 11,
+      "order": 1,
+      "file": "elements/1-10014__4.json"
+    },
+    {
+      "id": "1:10015",
+      "name": "Plus",
+      "type": "INSTANCE",
+      "parent": "1:10012",
+      "depth": 11,
+      "order": 2,
+      "file": "elements/1-10015__plus.json"
+    },
+    {
+      "id": "1:10016",
+      "name": "Frame 1984077591",
+      "type": "FRAME",
+      "parent": "1:10009",
+      "depth": 9,
+      "order": 1,
+      "file": "elements/1-10016__frame-1984077591.json"
+    },
+    {
+      "id": "1:10017",
+      "name": "Marks",
+      "type": "TEXT",
+      "parent": "1:10016",
+      "depth": 10,
+      "order": 0,
+      "file": "elements/1-10017__marks.json"
+    },
+    {
+      "id": "1:10018",
+      "name": "Frame 1984077510",
+      "type": "FRAME",
+      "parent": "1:10016",
+      "depth": 10,
+      "order": 1,
+      "file": "elements/1-10018__frame-1984077510.json"
+    },
+    {
+      "id": "1:10019",
+      "name": "icon_line/Minus",
+      "type": "INSTANCE",
+      "parent": "1:10018",
+      "depth": 11,
+      "order": 0,
+      "file": "elements/1-10019__iconlineminus.json"
+    },
+    {
+      "id": "1:10020",
+      "name": "4",
+      "type": "TEXT",
+      "parent": "1:10018",
+      "depth": 11,
+      "order": 1,
+      "file": "elements/1-10020__4.json"
+    },
+    {
+      "id": "1:10021",
+      "name": "Plus",
+      "type": "INSTANCE",
+      "parent": "1:10018",
+      "depth": 11,
+      "order": 2,
+      "file": "elements/1-10021__plus.json"
+    },
+    {
+      "id": "1:10022",
+      "name": "Frame 1984077500",
+      "type": "FRAME",
+      "parent": "1:9982",
+      "depth": 7,
+      "order": 3,
+      "file": "elements/1-10022__frame-1984077500.json"
+    },
+    {
+      "id": "1:10023",
+      "name": "Primary Button - White",
+      "type": "FRAME",
+      "parent": "1:10022",
+      "depth": 8,
+      "order": 0,
+      "file": "elements/1-10023__primary-button-white.json"
+    },
+    {
+      "id": "1:10024",
+      "name": "icon_line/Plus",
+      "type": "INSTANCE",
+      "parent": "1:10023",
+      "depth": 9,
+      "order": 0,
+      "file": "elements/1-10024__iconlineplus.json"
+    },
+    {
+      "id": "1:10025",
+      "name": "Add Question Type",
+      "type": "TEXT",
+      "parent": "1:10022",
+      "depth": 8,
+      "order": 1,
+      "file": "elements/1-10025__add-question-type.json"
+    },
+    {
+      "id": "1:10026",
+      "name": "Frame 1984077510",
+      "type": "FRAME",
+      "parent": "1:9980",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-10026__frame-1984077510.json"
+    },
+    {
+      "id": "1:10027",
+      "name": "Total Questions : 25",
+      "type": "TEXT",
+      "parent": "1:10026",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-10027__total-questions-25.json"
+    },
+    {
+      "id": "1:10028",
+      "name": "Total Marks : 60",
+      "type": "TEXT",
+      "parent": "1:10026",
+      "depth": 6,
+      "order": 1,
+      "file": "elements/1-10028__total-marks-60.json"
+    },
+    {
+      "id": "1:10029",
+      "name": "Address Bar iOS / X Chrome",
+      "type": "FRAME",
+      "parent": "1:9947",
+      "depth": 1,
+      "order": 1,
+      "file": "elements/1-10029__address-bar-ios-x-chrome.json"
+    },
+    {
+      "id": "1:10030",
+      "name": "Background",
+      "type": "FRAME",
+      "parent": "1:10029",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10030__background.json"
+    },
+    {
+      "id": "1:10031",
+      "name": "Background",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10030",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10031__background.json"
+    },
+    {
+      "id": "1:10032",
+      "name": "iOS / Separator",
+      "type": "FRAME",
+      "parent": "1:10030",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10032__ios-separator.json"
+    },
+    {
+      "id": "1:10033",
+      "name": "Line",
+      "type": "LINE",
+      "parent": "1:10032",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10033__line.json"
+    },
+    {
+      "id": "1:10034",
+      "name": "iOS / Status Bar / X / Default",
+      "type": "FRAME",
+      "parent": "1:10029",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-10034__ios-status-bar-x-default.json"
+    },
+    {
+      "id": "1:10035",
+      "name": "Action",
+      "type": "FRAME",
+      "parent": "1:10034",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10035__action.json"
+    },
+    {
+      "id": "1:10036",
+      "name": "Time",
+      "type": "TEXT",
+      "parent": "1:10035",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10036__time.json"
+    },
+    {
+      "id": "1:10037",
+      "name": "Container",
+      "type": "FRAME",
+      "parent": "1:10034",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10037__container.json"
+    },
+    {
+      "id": "1:10038",
+      "name": "icon battery",
+      "type": "TEXT",
+      "parent": "1:10037",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10038__icon-battery.json"
+    },
+    {
+      "id": "1:10039",
+      "name": "Combined Shape",
+      "type": "BOOLEAN-OPERATION",
+      "parent": "1:10037",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10039__combined-shape.json"
+    },
+    {
+      "id": "1:10044",
+      "name": "icon wi-fi",
+      "type": "TEXT",
+      "parent": "1:10037",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-10044__icon-wi-fi.json"
+    },
+    {
+      "id": "1:10045",
+      "name": "iOS / Chrome / Address Bar",
+      "type": "FRAME",
+      "parent": "1:10029",
+      "depth": 2,
+      "order": 2,
+      "file": "elements/1-10045__ios-chrome-address-bar.json"
+    },
+    {
+      "id": "1:10046",
+      "name": "bar-input",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10045",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10046__bar-input.json"
+    },
+    {
+      "id": "1:10047",
+      "name": "iOS / Chrome / Address",
+      "type": "FRAME",
+      "parent": "1:10045",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10047__ios-chrome-address.json"
+    },
+    {
+      "id": "1:10048",
+      "name": "Union",
+      "type": "BOOLEAN-OPERATION",
+      "parent": "1:10047",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10048__union.json"
+    },
+    {
+      "id": "1:10051",
+      "name": "domain",
+      "type": "TEXT",
+      "parent": "1:10047",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10051__domain.json"
+    },
+    {
+      "id": "1:10052",
+      "name": "Union",
+      "type": "BOOLEAN-OPERATION",
+      "parent": "1:10045",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-10052__union.json"
+    },
+    {
+      "id": "1:10059",
+      "name": "Frame 1984077606",
+      "type": "FRAME",
+      "parent": "1:9947",
+      "depth": 1,
+      "order": 2,
+      "file": "elements/1-10059__frame-1984077606.json"
+    },
+    {
+      "id": "1:10060",
+      "name": "Frame 1984077596",
+      "type": "FRAME",
+      "parent": "1:10059",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10060__frame-1984077596.json"
+    },
+    {
+      "id": "1:10061",
+      "name": "Primary Button - White",
+      "type": "FRAME",
+      "parent": "1:10060",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10061__primary-button-white.json"
+    },
+    {
+      "id": "1:10062",
+      "name": "icon_line/Arrow_Left",
+      "type": "INSTANCE",
+      "parent": "1:10061",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10062__iconlinearrowleft.json"
+    },
+    {
+      "id": "1:10063",
+      "name": "Previous",
+      "type": "TEXT",
+      "parent": "1:10061",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10063__previous.json"
+    },
+    {
+      "id": "1:10064",
+      "name": "Primary Button - Dark",
+      "type": "INSTANCE",
+      "parent": "1:10060",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10064__primary-button-dark.json"
+    },
+    {
+      "id": "1:10065",
+      "name": "Frame 1618872293",
+      "type": "FRAME",
+      "parent": "1:10059",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-10065__frame-1618872293.json"
+    },
+    {
+      "id": "1:10066",
+      "name": "Frame 1984077234",
+      "type": "FRAME",
+      "parent": "1:10065",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10066__frame-1984077234.json"
+    },
+    {
+      "id": "1:10067",
+      "name": "Frame 1984077232",
+      "type": "FRAME",
+      "parent": "1:10066",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10067__frame-1984077232.json"
+    },
+    {
+      "id": "1:10068",
+      "name": "Frame 1618872292",
+      "type": "FRAME",
+      "parent": "1:10067",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-10068__frame-1618872292.json"
+    },
+    {
+      "id": "1:10069",
+      "name": "Frame 1618872290",
+      "type": "FRAME",
+      "parent": "1:10068",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-10069__frame-1618872290.json"
+    },
+    {
+      "id": "1:10070",
+      "name": "Rectangle 8",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10069",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-10070__rectangle-8.json"
+    },
+    {
+      "id": "1:10071",
+      "name": "Rectangle 7",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10069",
+      "depth": 7,
+      "order": 1,
+      "file": "elements/1-10071__rectangle-7.json"
+    },
+    {
+      "id": "1:10072",
+      "name": "Frame 1618872291",
+      "type": "FRAME",
+      "parent": "1:10068",
+      "depth": 6,
+      "order": 1,
+      "file": "elements/1-10072__frame-1618872291.json"
+    },
+    {
+      "id": "1:10073",
+      "name": "Rectangle 10",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10072",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-10073__rectangle-10.json"
+    },
+    {
+      "id": "1:10074",
+      "name": "Rectangle 9",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:10072",
+      "depth": 7,
+      "order": 1,
+      "file": "elements/1-10074__rectangle-9.json"
+    },
+    {
+      "id": "1:10075",
+      "name": "Home",
+      "type": "TEXT",
+      "parent": "1:10067",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-10075__home.json"
+    },
+    {
+      "id": "1:10076",
+      "name": "Frame 1618872292",
+      "type": "FRAME",
+      "parent": "1:10065",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10076__frame-1618872292.json"
+    },
+    {
+      "id": "1:10077",
+      "name": "Frame 1984077233",
+      "type": "FRAME",
+      "parent": "1:10076",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10077__frame-1984077233.json"
+    },
+    {
+      "id": "1:10078",
+      "name": "icon_filled/Calendar",
+      "type": "INSTANCE",
+      "parent": "1:10077",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-10078__iconfilledcalendar.json"
+    },
+    {
+      "id": "1:10079",
+      "name": "My Groups",
+      "type": "TEXT",
+      "parent": "1:10077",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-10079__my-groups.json"
+    },
+    {
+      "id": "1:10080",
+      "name": "Frame 1618872293",
+      "type": "FRAME",
+      "parent": "1:10065",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-10080__frame-1618872293.json"
+    },
+    {
+      "id": "1:10081",
+      "name": "icon_filled/file-text_plus",
+      "type": "INSTANCE",
+      "parent": "1:10080",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10081__iconfilledfile-textplus.json"
+    },
+    {
+      "id": "1:10082",
+      "name": "Library",
+      "type": "TEXT",
+      "parent": "1:10080",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10082__library.json"
+    },
+    {
+      "id": "1:10083",
+      "name": "Frame 1984077235",
+      "type": "FRAME",
+      "parent": "1:10065",
+      "depth": 3,
+      "order": 3,
+      "file": "elements/1-10083__frame-1984077235.json"
+    },
+    {
+      "id": "1:10084",
+      "name": "Frame 1618872409",
+      "type": "FRAME",
+      "parent": "1:10083",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10084__frame-1618872409.json"
+    },
+    {
+      "id": "1:10086",
+      "name": "AI Toolkit",
+      "type": "TEXT",
+      "parent": "1:10083",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10086__ai-toolkit.json"
+    },
+    {
+      "id": "1:10087",
+      "name": "Line 1",
+      "type": "VECTOR",
+      "parent": "1:10059",
+      "depth": 2,
+      "order": 2,
+      "file": "elements/1-10087__line-1.json"
+    },
+    {
+      "id": "1:10088",
+      "name": "Frame 1984077205",
+      "type": "FRAME",
+      "parent": "1:9947",
+      "depth": 1,
+      "order": 3,
+      "file": "elements/1-10088__frame-1984077205.json"
+    },
+    {
+      "id": "1:10089",
+      "name": "Frame 1618872397",
+      "type": "FRAME",
+      "parent": "1:10088",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-10089__frame-1618872397.json"
+    },
+    {
+      "id": "1:10090",
+      "name": "Frame 1984077294",
+      "type": "FRAME",
+      "parent": "1:10089",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-10090__frame-1984077294.json"
+    },
+    {
+      "id": "1:10091",
+      "name": "Component 1",
+      "type": "FRAME",
+      "parent": "1:10090",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10091__component-1.json"
+    },
+    {
+      "id": "1:10096",
+      "name": "VedaAI",
+      "type": "TEXT",
+      "parent": "1:10090",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10096__vedaai.json"
+    },
+    {
+      "id": "1:10097",
+      "name": "Frame 1984077614",
+      "type": "FRAME",
+      "parent": "1:10089",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-10097__frame-1984077614.json"
+    },
+    {
+      "id": "1:10098",
+      "name": "Frame 1618872411",
+      "type": "FRAME",
+      "parent": "1:10097",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-10098__frame-1618872411.json"
+    },
+    {
+      "id": "1:10099",
+      "name": ".Icon",
+      "type": "INSTANCE",
+      "parent": "1:10098",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-10099__icon.json"
+    },
+    {
+      "id": "1:10100",
+      "name": "Ellipse 9",
+      "type": "ELLIPSE",
+      "parent": "1:10098",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-10100__ellipse-9.json"
+    },
+    {
+      "id": "1:10101",
+      "name": "Frame 1618872412",
+      "type": "FRAME",
+      "parent": "1:10097",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-10101__frame-1618872412.json"
+    },
+    {
+      "id": "1:10102",
+      "name": "menu",
+      "type": "INSTANCE",
+      "parent": "1:10097",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-10102__menu.json"
+    }
+  ]
+}

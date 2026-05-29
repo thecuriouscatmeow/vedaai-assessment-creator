@@ -1,0 +1,736 @@
+{
+  "frameId": "1:9771",
+  "platform": "desktop",
+  "root": "1:9771",
+  "nodes": [
+    {
+      "id": "1:9771",
+      "name": "Assignment Ouput",
+      "type": "FRAME",
+      "parent": null,
+      "depth": 0,
+      "order": 0,
+      "file": null
+    },
+    {
+      "id": "1:9772",
+      "name": "Side Bar",
+      "type": "FRAME",
+      "parent": "1:9771",
+      "depth": 1,
+      "order": 0,
+      "file": "elements/1-9772__side-bar.json"
+    },
+    {
+      "id": "1:9773",
+      "name": "Frame 39962",
+      "type": "FRAME",
+      "parent": "1:9772",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-9773__frame-39962.json"
+    },
+    {
+      "id": "1:9774",
+      "name": "Frame 1618872393",
+      "type": "FRAME",
+      "parent": "1:9773",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9774__frame-1618872393.json"
+    },
+    {
+      "id": "1:9775",
+      "name": "Frame 1984077293",
+      "type": "FRAME",
+      "parent": "1:9774",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9775__frame-1984077293.json"
+    },
+    {
+      "id": "1:9776",
+      "name": "Component 1",
+      "type": "FRAME",
+      "parent": "1:9775",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9776__component-1.json"
+    },
+    {
+      "id": "1:9781",
+      "name": "VedaAI",
+      "type": "TEXT",
+      "parent": "1:9775",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9781__vedaai.json"
+    },
+    {
+      "id": "1:9782",
+      "name": "Frame 18",
+      "type": "FRAME",
+      "parent": "1:9773",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9782__frame-18.json"
+    },
+    {
+      "id": "1:9783",
+      "name": "Frame 17",
+      "type": "FRAME",
+      "parent": "1:9782",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9783__frame-17.json"
+    },
+    {
+      "id": "1:9784",
+      "name": "Frame 1618872409",
+      "type": "FRAME",
+      "parent": "1:9783",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9784__frame-1618872409.json"
+    },
+    {
+      "id": "1:9786",
+      "name": "AI Teacher\u2019s Toolkit",
+      "type": "TEXT",
+      "parent": "1:9783",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9786__ai-teachers-toolkit.json"
+    },
+    {
+      "id": "1:9787",
+      "name": "Menu",
+      "type": "FRAME",
+      "parent": "1:9773",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-9787__menu.json"
+    },
+    {
+      "id": "1:9788",
+      "name": "Dashboard",
+      "type": "INSTANCE",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9788__dashboard.json"
+    },
+    {
+      "id": "1:9789",
+      "name": "Menu",
+      "type": "INSTANCE",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9789__menu.json"
+    },
+    {
+      "id": "1:9790",
+      "name": "Settings",
+      "type": "FRAME",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-9790__settings.json"
+    },
+    {
+      "id": "1:9791",
+      "name": "icon_line/file-text",
+      "type": "INSTANCE",
+      "parent": "1:9790",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9791__iconlinefile-text.json"
+    },
+    {
+      "id": "1:9792",
+      "name": "Assignments",
+      "type": "TEXT",
+      "parent": "1:9790",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9792__assignments.json"
+    },
+    {
+      "id": "1:9793",
+      "name": "Frame 41",
+      "type": "FRAME",
+      "parent": "1:9790",
+      "depth": 5,
+      "order": 2,
+      "file": "elements/1-9793__frame-41.json"
+    },
+    {
+      "id": "1:9794",
+      "name": "32",
+      "type": "TEXT",
+      "parent": "1:9793",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9794__32.json"
+    },
+    {
+      "id": "1:9795",
+      "name": "Settings",
+      "type": "INSTANCE",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 3,
+      "file": "elements/1-9795__settings.json"
+    },
+    {
+      "id": "1:9796",
+      "name": "Credit Report",
+      "type": "INSTANCE",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 4,
+      "file": "elements/1-9796__credit-report.json"
+    },
+    {
+      "id": "1:9797",
+      "name": "Settings",
+      "type": "FRAME",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 5,
+      "file": "elements/1-9797__settings.json"
+    },
+    {
+      "id": "1:9798",
+      "name": "icon_line/file-text_plus",
+      "type": "INSTANCE",
+      "parent": "1:9797",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9798__iconlinefile-textplus.json"
+    },
+    {
+      "id": "1:9799",
+      "name": "Review",
+      "type": "TEXT",
+      "parent": "1:9797",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9799__review.json"
+    },
+    {
+      "id": "1:9800",
+      "name": "Settings",
+      "type": "FRAME",
+      "parent": "1:9787",
+      "depth": 4,
+      "order": 6,
+      "file": "elements/1-9800__settings.json"
+    },
+    {
+      "id": "1:9801",
+      "name": "icon_line/Bar-chart_up",
+      "type": "INSTANCE",
+      "parent": "1:9800",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9801__iconlinebar-chartup.json"
+    },
+    {
+      "id": "1:9802",
+      "name": "Analytics",
+      "type": "TEXT",
+      "parent": "1:9800",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9802__analytics.json"
+    },
+    {
+      "id": "1:9803",
+      "name": "Frame 1984077460",
+      "type": "FRAME",
+      "parent": "1:9772",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-9803__frame-1984077460.json"
+    },
+    {
+      "id": "1:9804",
+      "name": "Settings",
+      "type": "FRAME",
+      "parent": "1:9803",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9804__settings.json"
+    },
+    {
+      "id": "1:9805",
+      "name": "icon_line/Setting",
+      "type": "INSTANCE",
+      "parent": "1:9804",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9805__iconlinesetting.json"
+    },
+    {
+      "id": "1:9806",
+      "name": "Settings",
+      "type": "TEXT",
+      "parent": "1:9804",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9806__settings.json"
+    },
+    {
+      "id": "1:9807",
+      "name": "Frame 39959",
+      "type": "FRAME",
+      "parent": "1:9803",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9807__frame-39959.json"
+    },
+    {
+      "id": "1:9808",
+      "name": "Frame 39958",
+      "type": "FRAME",
+      "parent": "1:9807",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9808__frame-39958.json"
+    },
+    {
+      "id": "1:9809",
+      "name": "image 3",
+      "type": "ROUNDED-RECTANGLE",
+      "parent": "1:9808",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9809__image-3.json"
+    },
+    {
+      "id": "1:9810",
+      "name": "Content",
+      "type": "FRAME",
+      "parent": "1:9808",
+      "depth": 5,
+      "order": 1,
+      "file": "elements/1-9810__content.json"
+    },
+    {
+      "id": "1:9811",
+      "name": "Delhi Public School",
+      "type": "TEXT",
+      "parent": "1:9810",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9811__delhi-public-school.json"
+    },
+    {
+      "id": "1:9812",
+      "name": "Bokaro Steel City",
+      "type": "TEXT",
+      "parent": "1:9810",
+      "depth": 6,
+      "order": 1,
+      "file": "elements/1-9812__bokaro-steel-city.json"
+    },
+    {
+      "id": "1:9813",
+      "name": "Frame 1618872395",
+      "type": "FRAME",
+      "parent": "1:9771",
+      "depth": 1,
+      "order": 1,
+      "file": "elements/1-9813__frame-1618872395.json"
+    },
+    {
+      "id": "1:9814",
+      "name": "Frame 1618872450",
+      "type": "FRAME",
+      "parent": "1:9813",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-9814__frame-1618872450.json"
+    },
+    {
+      "id": "1:9815",
+      "name": "Frame 1618872453",
+      "type": "FRAME",
+      "parent": "1:9814",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9815__frame-1618872453.json"
+    },
+    {
+      "id": "1:9816",
+      "name": "Frame 1618872452",
+      "type": "FRAME",
+      "parent": "1:9815",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9816__frame-1618872452.json"
+    },
+    {
+      "id": "1:9817",
+      "name": "Frame 1984077288",
+      "type": "FRAME",
+      "parent": "1:9816",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9817__frame-1984077288.json"
+    },
+    {
+      "id": "1:9818",
+      "name": "Certainly, Lakshya! Here are customized Question Paper for your CBSE Grade 8 Science classes on the NCERT chapters:",
+      "type": "TEXT",
+      "parent": "1:9817",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9818__certainly-lakshya-here-are-customized-qu.json"
+    },
+    {
+      "id": "1:9819",
+      "name": "Frame 1618872463",
+      "type": "FRAME",
+      "parent": "1:9815",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9819__frame-1618872463.json"
+    },
+    {
+      "id": "1:9820",
+      "name": "Frame 1618872346",
+      "type": "FRAME",
+      "parent": "1:9819",
+      "depth": 5,
+      "order": 0,
+      "file": "elements/1-9820__frame-1618872346.json"
+    },
+    {
+      "id": "1:9821",
+      "name": "Frame 1984077260",
+      "type": "FRAME",
+      "parent": "1:9820",
+      "depth": 6,
+      "order": 0,
+      "file": "elements/1-9821__frame-1984077260.json"
+    },
+    {
+      "id": "1:9822",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "1:9821",
+      "depth": 7,
+      "order": 0,
+      "file": "elements/1-9822__frame.json"
+    },
+    {
+      "id": "1:9824",
+      "name": "Download as PDF",
+      "type": "TEXT",
+      "parent": "1:9821",
+      "depth": 7,
+      "order": 1,
+      "file": "elements/1-9824__download-as-pdf.json"
+    },
+    {
+      "id": "1:9825",
+      "name": "Frame 1618872449",
+      "type": "FRAME",
+      "parent": "1:9813",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-9825__frame-1618872449.json"
+    },
+    {
+      "id": "1:9826",
+      "name": "Delhi Public School, Sector-4, Bokaro\u2028Subject: English\u2028Class: 5th",
+      "type": "TEXT",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9826__delhi-public-school-sector-4-bokaro-subj.json"
+    },
+    {
+      "id": "1:9827",
+      "name": "Frame 1984077298",
+      "type": "FRAME",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9827__frame-1984077298.json"
+    },
+    {
+      "id": "1:9828",
+      "name": "Time Allowed: 45 minutes",
+      "type": "TEXT",
+      "parent": "1:9827",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9828__time-allowed-45-minutes.json"
+    },
+    {
+      "id": "1:9829",
+      "name": "Maximum Marks: 20",
+      "type": "TEXT",
+      "parent": "1:9827",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9829__maximum-marks-20.json"
+    },
+    {
+      "id": "1:9830",
+      "name": "Frame 1984077299",
+      "type": "FRAME",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 2,
+      "file": "elements/1-9830__frame-1984077299.json"
+    },
+    {
+      "id": "1:9831",
+      "name": "All questions are compulsory unless stated otherwise.",
+      "type": "TEXT",
+      "parent": "1:9830",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9831__all-questions-are-compulsory-unless-stat.json"
+    },
+    {
+      "id": "1:9832",
+      "name": "Frame 1984077300",
+      "type": "FRAME",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 3,
+      "file": "elements/1-9832__frame-1984077300.json"
+    },
+    {
+      "id": "1:9833",
+      "name": "Name: ______________________",
+      "type": "TEXT",
+      "parent": "1:9832",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9833__name.json"
+    },
+    {
+      "id": "1:9834",
+      "name": "Roll Number: ________________",
+      "type": "TEXT",
+      "parent": "1:9832",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9834__roll-number.json"
+    },
+    {
+      "id": "1:9835",
+      "name": "Class: 5th Section: __________",
+      "type": "TEXT",
+      "parent": "1:9832",
+      "depth": 4,
+      "order": 2,
+      "file": "elements/1-9835__class-5th-section.json"
+    },
+    {
+      "id": "1:9836",
+      "name": "Frame 1984077301",
+      "type": "FRAME",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 4,
+      "file": "elements/1-9836__frame-1984077301.json"
+    },
+    {
+      "id": "1:9837",
+      "name": "Section A",
+      "type": "TEXT",
+      "parent": "1:9836",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9837__section-a.json"
+    },
+    {
+      "id": "1:9838",
+      "name": "Frame 1984077302",
+      "type": "FRAME",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 5,
+      "file": "elements/1-9838__frame-1984077302.json"
+    },
+    {
+      "id": "1:9839",
+      "name": "Short Answer Questions Attempt all questions. Each question carries 2 marks",
+      "type": "TEXT",
+      "parent": "1:9838",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9839__short-answer-questions-attempt-all-quest.json"
+    },
+    {
+      "id": "1:9840",
+      "name": "Frame 1984077303",
+      "type": "FRAME",
+      "parent": "1:9825",
+      "depth": 3,
+      "order": 6,
+      "file": "elements/1-9840__frame-1984077303.json"
+    },
+    {
+      "id": "1:9841",
+      "name": "[Easy] Define electroplating. Explain its purpose. [2 Marks] [Moderate] What is the role of a conductor in the process of electrolysis? [2 Marks] [Easy] Why does a solution of copper sulfate conduct electricity? [2 Marks] [Moderate] Describe one example of the chemical effect of electric current in daily life. [2 Marks] [Moderate] Explain why electric current is said to have chemical effects. [2 Marks] [Challenging] How is sodium hydroxide prepared during the electrolysis of brine? Write the chemical reaction involved. [2 Marks] [Challenging] What happens at the cathode and anode during the electrolysis of water? Name the gases evolved. [2 Marks] [Easy] Mention the type of current used in electroplating and justify why it is used. [2 Marks] [Moderate] What is the importance of electric current in the field of metallurgy? [2 Marks] [Challenging] Explain with a chemical equation how copper is deposited during the electroplating of an object. [2 Marks] End of Question Paper Answer Key: Electroplating is the process of depositing a thin layer of metal on the surface of another metal using electric current. Its purpose is to prevent corrosion, improve appearance, or increase thickness. A conductor allows the flow of electric current, causing ions in the electrolyte to move and enabling chemical changes at electrodes. Copper sulfate solution contains free copper and sulfate ions which carry electric charge, thus conducting electricity. An example is the electroplating of silver on jewelry to prevent tarnishing. Electric current causes the movement of ions leading to chemical changes at the electrodes, hence it shows chemical effects. Sodium hydroxide is formed at the cathode during brine electrolysis as water gains electrons:\u20282H2O + 2e- \u2192 H2 + 2OH-\u2028Na+ + OH- \u2192 NaOH (in solution) At the cathode: water is reduced to hydrogen gas and hydroxide ions.\u2028At the anode: water is oxidized to oxygen gas and hydrogen ions. Direct current (DC) is used because it produces a consistent flow of electrons necessary for controlled deposition of metals. Electric current helps extract metals from their ores and purify metals by electrolysis in metallurgy. During copper electroplating, copper ions in solution gain electrons at the cathode and deposit as copper metal:\u2028Cu\u00b2\u207a + 2e\u207b \u2192 Cu (solid)",
+      "type": "TEXT",
+      "parent": "1:9840",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9841__easy-define-electroplating-explain-its-p.json"
+    },
+    {
+      "id": "1:9842",
+      "name": "Frame 1618872397",
+      "type": "FRAME",
+      "parent": "1:9771",
+      "depth": 1,
+      "order": 2,
+      "file": "elements/1-9842__frame-1618872397.json"
+    },
+    {
+      "id": "1:9843",
+      "name": "Frame 1984077293",
+      "type": "FRAME",
+      "parent": "1:9842",
+      "depth": 2,
+      "order": 0,
+      "file": "elements/1-9843__frame-1984077293.json"
+    },
+    {
+      "id": "1:9844",
+      "name": "Frame 1984077294",
+      "type": "FRAME",
+      "parent": "1:9843",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9844__frame-1984077294.json"
+    },
+    {
+      "id": "1:9845",
+      "name": "icon_line/Arrow_Left",
+      "type": "INSTANCE",
+      "parent": "1:9844",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9845__iconlinearrowleft.json"
+    },
+    {
+      "id": "1:9846",
+      "name": "Frame 1618872410",
+      "type": "FRAME",
+      "parent": "1:9842",
+      "depth": 2,
+      "order": 1,
+      "file": "elements/1-9846__frame-1618872410.json"
+    },
+    {
+      "id": "1:9847",
+      "name": "Frame 1984077625",
+      "type": "FRAME",
+      "parent": "1:9846",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9847__frame-1984077625.json"
+    },
+    {
+      "id": "1:9848",
+      "name": "Frame 1618872409",
+      "type": "FRAME",
+      "parent": "1:9847",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9848__frame-1618872409.json"
+    },
+    {
+      "id": "1:9850",
+      "name": "Create New",
+      "type": "TEXT",
+      "parent": "1:9847",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9850__create-new.json"
+    },
+    {
+      "id": "1:9851",
+      "name": "Frame 1618872411",
+      "type": "FRAME",
+      "parent": "1:9842",
+      "depth": 2,
+      "order": 2,
+      "file": "elements/1-9851__frame-1618872411.json"
+    },
+    {
+      "id": "1:9852",
+      "name": ".Icon",
+      "type": "INSTANCE",
+      "parent": "1:9851",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9852__icon.json"
+    },
+    {
+      "id": "1:9853",
+      "name": "Ellipse 9",
+      "type": "ELLIPSE",
+      "parent": "1:9851",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9853__ellipse-9.json"
+    },
+    {
+      "id": "1:9854",
+      "name": "Frame 1984077287",
+      "type": "FRAME",
+      "parent": "1:9842",
+      "depth": 2,
+      "order": 3,
+      "file": "elements/1-9854__frame-1984077287.json"
+    },
+    {
+      "id": "1:9855",
+      "name": "Frame 1618872412",
+      "type": "FRAME",
+      "parent": "1:9854",
+      "depth": 3,
+      "order": 0,
+      "file": "elements/1-9855__frame-1618872412.json"
+    },
+    {
+      "id": "1:9856",
+      "name": "Frame 1984077288",
+      "type": "FRAME",
+      "parent": "1:9854",
+      "depth": 3,
+      "order": 1,
+      "file": "elements/1-9856__frame-1984077288.json"
+    },
+    {
+      "id": "1:9857",
+      "name": "John Doe",
+      "type": "TEXT",
+      "parent": "1:9856",
+      "depth": 4,
+      "order": 0,
+      "file": "elements/1-9857__john-doe.json"
+    },
+    {
+      "id": "1:9858",
+      "name": "Chevron down",
+      "type": "INSTANCE",
+      "parent": "1:9856",
+      "depth": 4,
+      "order": 1,
+      "file": "elements/1-9858__chevron-down.json"
+    }
+  ]
+}

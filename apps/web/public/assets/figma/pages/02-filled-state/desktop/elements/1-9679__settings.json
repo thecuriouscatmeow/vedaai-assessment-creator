@@ -1,0 +1,40 @@
+{
+  "id": "1:9679",
+  "name": "Settings",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9678",
+  "children": [
+    "1:9680",
+    "1:9681"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 256,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 8,
+      "padding": [
+        8,
+        12,
+        8,
+        12
+      ],
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex gap-[8px] items-center px-[12px] py-[8px] relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex gap-[8px] items-center px-[12px] py-[8px] relative shrink-0 w-full\" data-node-id=\"1:9679\" data-name=\"Settings\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9680\" data-name=\"icon_line/Setting\">\n              <div className=\"absolute inset-[33.33%]\" data-node-id=\"I1:9680;3309:8117\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke1} />\n              </div>\n              <div className=\"absolute inset-[8.33%_10.72%]\" data-node-id=\"I1:9680;3309:8118\" data-name=\"Union (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnionStroke} />\n              </div>\n            </div>\n            <div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center leading-[0] min-w-px overflow-hidden relative text-[16px] text-[rgba(94,94,94,0.8)] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9681\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Settings</p>\n            </div>\n          </div>"
+  }
+}

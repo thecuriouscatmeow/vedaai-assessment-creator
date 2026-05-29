@@ -1,0 +1,58 @@
+{
+  "id": "1:10325",
+  "name": "Frame 1984077613",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10321",
+  "children": [
+    "1:10326",
+    "1:10336",
+    "1:10340",
+    "1:10343"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 61,
+    "width": 373,
+    "height": 72,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "padding": [
+        8,
+        24,
+        8,
+        24
+      ],
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#181818] content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex h-[72px] items-center justify-between px-[24px] py-[8px] relative rounded-[24px] shrink-0 w-full; style:",
+    "tokenRefs": [
+      "color-buttons-buttons-primary"
+    ],
+    "borderRadius": 24,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#181818"
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "value": "0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#181818] content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex h-[72px] items-center justify-between px-[24px] py-[8px] relative rounded-[24px] shrink-0 w-full\" data-node-id=\"1:10325\">\n            <div className=\"content-stretch flex flex-col items-center justify-center relative shrink-0 size-[52px]\" data-node-id=\"1:10326\">\n              <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0\" data-node-id=\"1:10327\">\n                <div className=\"content-stretch flex flex-col gap-[1.019px] items-start relative shrink-0 size-[18px]\" data-node-id=\"1:10328\">\n                  <div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10329\">\n                    <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10330\" />\n                    <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10331\" />\n                  </div>\n                  <div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10332\">\n                    <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10333\" />\n                    <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10334\" />\n                  </div>\n                </div>\n                <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10335\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  Home\n                </p>\n              </div>\n            </div>\n            <div className=\"content-stretch flex items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10336\">\n              <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0\" data-node-id=\"1:10337\">\n                <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10338\" data-name=\"icon_filled/Calendar\">\n                  <div className=\"absolute inset-[8.33%]\" data-node-id=\"I1:10338;3309:9418\" data-name=\"Union\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion2} />\n                  </div>\n                </div>\n                <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-center text-white tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10339\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  Assignments\n                </p>\n              </div>\n            </div>\n            <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10340\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10341\" data-name=\"icon_filled/file-text_plus\">\n                <div className=\"absolute inset-[8.33%_16.67%]\" data-node-id=\"I1:10341;3309:8686\" data-name=\"Exclude\">\n                  <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgExclude} />\n                </div>\n              </div>\n              <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10342\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                Library\n              </p>\n            </div>\n            <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10343\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10344\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgFrame1618872409} />\n              </div>\n              <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10346\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                AI Toolkit\n              </p>\n            </div>\n          </div>"
+  }
+}

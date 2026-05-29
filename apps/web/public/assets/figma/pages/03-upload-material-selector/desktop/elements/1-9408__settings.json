@@ -1,0 +1,40 @@
+{
+  "id": "1:9408",
+  "name": "Settings",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9406",
+  "children": [],
+  "layout": {
+    "x": 40,
+    "y": 8,
+    "width": 204,
+    "height": 22,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-[1_0_0] flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center leading-[0] min-w-px overflow-hidden relative text-[16px] text-[rgba(94,94,94,0.8)] text-ellipsis tracking-[-0.64px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-medium-500-p3"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Regular",
+      "size": 16,
+      "weight": 400,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.64
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal h-[22px] justify-center leading-[0] min-w-px overflow-hidden relative text-[16px] text-[rgba(94,94,94,0.8)] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9408\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Settings</p>\n            </div>"
+  }
+}

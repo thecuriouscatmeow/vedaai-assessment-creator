@@ -1,0 +1,33 @@
+{
+  "id": "1:10066",
+  "name": "Frame 1984077234",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10065",
+  "children": [
+    "1:10067"
+  ],
+  "layout": {
+    "x": 24,
+    "y": 10,
+    "width": 52,
+    "height": 52,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col items-center justify-center relative shrink-0 size-[52px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col items-center justify-center relative shrink-0 size-[52px]\" data-node-id=\"1:10066\">\n            <div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center relative shrink-0\" data-node-id=\"1:10067\">\n              <div className=\"content-stretch flex flex-col gap-[1.019px] items-start relative shrink-0 size-[18px]\" data-node-id=\"1:10068\">\n                <div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10069\">\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10070\" />\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10071\" />\n                </div>\n                <div className=\"content-stretch flex gap-[1.019px] items-center relative shrink-0 w-full\" data-node-id=\"1:10072\">\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10073\" />\n                  <div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10074\" />\n                </div>\n              </div>\n              <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10075\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                Home\n              </p>\n            </div>\n          </div>"
+  }
+}

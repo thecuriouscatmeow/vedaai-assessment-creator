@@ -1,0 +1,30 @@
+{
+  "id": "1:9833",
+  "name": "Name: ______________________",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9832",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 230,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col justify-center relative shrink-0 w-[230px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col justify-center relative shrink-0 w-[230px]\" data-node-id=\"1:9833\">\n              <p className=\"leading-[1.6]\">{`Name: ______________________ `}</p>\n            </div>"
+  }
+}

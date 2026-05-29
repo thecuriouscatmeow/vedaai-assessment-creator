@@ -1,0 +1,35 @@
+{
+  "id": "1:9958",
+  "name": "Frame 1984077354",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9955",
+  "children": [],
+  "layout": {
+    "x": 180,
+    "y": 0,
+    "width": 168,
+    "height": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row"
+    }
+  },
+  "style": {
+    "css": "className: flex-[1_0_0] h-0 min-w-px relative; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-9958-asset.svg",
+      "role": "asset"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"flex-[1_0_0] h-0 min-w-px relative\" data-node-id=\"1:9958\">\n              <div className=\"absolute inset-[-2.5px_-1.48%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgFrame1984077354} />\n              </div>\n            </div>"
+  }
+}

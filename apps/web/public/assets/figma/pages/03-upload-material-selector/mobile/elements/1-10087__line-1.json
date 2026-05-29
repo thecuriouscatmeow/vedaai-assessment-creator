@@ -1,0 +1,32 @@
+{
+  "id": "1:10087",
+  "name": "Line 1",
+  "type": "VECTOR",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10059",
+  "children": [],
+  "layout": {
+    "x": 132,
+    "y": 150,
+    "width": 128,
+    "height": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: h-0 relative shrink-0 w-[128px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-10087-asset.svg",
+      "role": "asset"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"h-0 relative shrink-0 w-[128px]\" data-node-id=\"1:10087\">\n          <div className=\"absolute inset-[-2.5px_-1.95%]\">\n            <img alt=\"\" className=\"block max-w-none size-full\" src={imgLine1} />\n          </div>\n        </div>"
+  }
+}

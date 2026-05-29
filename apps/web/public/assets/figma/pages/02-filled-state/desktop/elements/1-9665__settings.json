@@ -1,0 +1,51 @@
+{
+  "id": "1:9665",
+  "name": "Settings",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9662",
+  "children": [
+    "1:9666",
+    "1:9667",
+    "1:9668"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 94,
+    "width": 254,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 8,
+      "padding": [
+        8,
+        12,
+        8,
+        12
+      ],
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[#f0f0f0] content-stretch flex gap-[8px] items-center px-[12px] py-[8px] relative rounded-[8px] shrink-0 w-[254px]; style:",
+    "tokenRefs": [
+      "color-background-bgoff-white-20"
+    ],
+    "borderRadius": 8,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#F0F0F0"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[#f0f0f0] content-stretch flex gap-[8px] items-center px-[12px] py-[8px] relative rounded-[8px] shrink-0 w-[254px]\" data-node-id=\"1:9665\" data-name=\"Settings\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9666\" data-name=\"icon_line/file-text\">\n                <div className=\"absolute inset-[70.83%_37.5%_29.17%_37.5%]\" data-node-id=\"I1:9666;3309:5708\">\n                  <div className=\"absolute inset-[-1px_-20%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector5} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[54.17%_37.5%_45.83%_37.5%]\" data-node-id=\"I1:9666;3309:5709\">\n                  <div className=\"absolute inset-[-1px_-20%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector5} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[37.5%_58.33%_62.5%_37.5%]\" data-node-id=\"I1:9666;3309:5710\">\n                  <div className=\"absolute inset-[-1px_-120%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector6} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[12.5%_20.83%]\" data-node-id=\"I1:9666;3309:5711\">\n                  <div className=\"absolute inset-[-6.67%_-8.57%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgRectangle14} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[12.5%_20.83%_62.5%_54.17%]\" data-node-id=\"I1:9666;3309:5712\">\n                  <div className=\"absolute inset-[0_0_-20%_-20%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgRectangle15} />\n                  </div>\n                </div>\n              </div>\n              <div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium h-[22px] justify-center leading-[0] min-w-px overflow-hidden relative text-[#303030] text-[16px] text-ellipsis tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9667\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                <p className=\"leading-[1.4] overflow-hidden text-ellipsis\">Assignments</p>\n              </div>\n              <div className=\"content-stretch flex flex-col items-start px-[10px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9668\">\n                <div aria-hidden=\"true\" className=\"absolute bg-[#ff5623] inset-0 pointer-events-none rounded-[var(--number,48px)]\" />\n                <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[14px] text-white tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9669\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  10\n                </p>\n                <div className=\"absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_32.3px_0px_rgba(255,161,10,0.25)]\" />\n              </div>\n            </div>"
+  }
+}

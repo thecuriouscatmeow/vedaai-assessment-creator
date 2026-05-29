@@ -1,0 +1,31 @@
+{
+  "id": "1:9693",
+  "name": ".Icon",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9692",
+  "children": [
+    "I1:9693;1:1410",
+    "I1:9693;1:1411",
+    "I1:9693;1:1412",
+    "I1:9693;1:1413"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: overflow-clip relative shrink-0 size-[20px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"overflow-clip relative shrink-0 size-[20px]\" data-node-id=\"1:9693\" data-name=\".Icon\">\n            <div className=\"absolute inset-[58.33%_12.5%_12.5%_58.33%]\" data-node-id=\"I1:9693;1:1410\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[58.33%_58.33%_12.5%_12.5%]\" data-node-id=\"I1:9693;1:1411\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[12.5%_12.5%_58.33%_58.33%]\" data-node-id=\"I1:9693;1:1412\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n            <div className=\"absolute inset-[12.5%_58.33%_58.33%_12.5%]\" data-node-id=\"I1:9693;1:1413\" data-name=\"Vector\">\n              <div className=\"absolute inset-[-17.14%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector4} />\n              </div>\n            </div>\n          </div>"
+  }
+}

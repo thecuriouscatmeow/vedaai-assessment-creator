@@ -1,0 +1,33 @@
+{
+  "id": "1:10125",
+  "name": "Frame 1984077302",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10112",
+  "children": [
+    "1:10126"
+  ],
+  "layout": {
+    "x": 16,
+    "y": 458,
+    "width": 323,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center justify-center relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center justify-center relative shrink-0 w-full\" data-node-id=\"1:10125\">\n            <div className=\"[word-break:break-word] flex flex-[1_0_0] flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] min-w-px not-italic relative text-[#303030] text-[0px] tracking-[-0.56px]\" data-node-id=\"1:10126\">\n              <p className=\"leading-[1.6] mb-0 text-[14px]\">Short Answer Questions</p>\n              <p className=\"font-['Inter:Italic',sans-serif] font-normal italic leading-[1.6] text-[14px]\">Attempt all questions. Each question carries 2 marks</p>\n            </div>\n          </div>"
+  }
+}

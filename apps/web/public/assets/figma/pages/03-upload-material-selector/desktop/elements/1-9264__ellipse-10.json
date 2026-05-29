@@ -1,0 +1,32 @@
+{
+  "id": "1:9264",
+  "name": "Ellipse 10",
+  "type": "ELLIPSE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9263",
+  "children": [],
+  "layout": {
+    "x": 4,
+    "y": 19,
+    "width": 12,
+    "height": 12,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[12px]; style:"
+  },
+  "assets": [
+    {
+      "kind": "svg",
+      "path": "assets/1-9264-asset.svg",
+      "role": "asset"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[12px]\" data-node-id=\"1:9264\">\n              <div className=\"absolute inset-[-300%_-433.33%_-700%_-433.33%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgEllipse10} />\n              </div>\n            </div>"
+  }
+}

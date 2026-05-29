@@ -1,0 +1,37 @@
+{
+  "id": "1:9283",
+  "name": "Frame 1618872516",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9280",
+  "children": [
+    "1:9284",
+    "1:9285"
+  ],
+  "layout": {
+    "x": 32,
+    "y": 80,
+    "width": 682,
+    "height": 46,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 4,
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] content-stretch flex flex-col gap-[4px] items-start leading-[0] relative shrink-0 text-center w-full; style:",
+    "typography": {
+      "lineHeight": 0.0
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] content-stretch flex flex-col gap-[4px] items-start leading-[0] relative shrink-0 text-center w-full\" data-node-id=\"1:9283\">\n                  <div className=\"flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] w-full\" data-node-id=\"1:9284\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">{`Choose a file or drag & drop it here`}</p>\n                  </div>\n                  <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[#a9a9a9] text-[14px] tracking-[-0.56px] w-full\" data-node-id=\"1:9285\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">JPEG, PNG, upto 10MB</p>\n                  </div>\n                </div>"
+  }
+}

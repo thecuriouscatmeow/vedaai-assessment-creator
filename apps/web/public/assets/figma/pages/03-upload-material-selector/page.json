@@ -1,0 +1,13 @@
+{
+  "n": "03",
+  "slug": "upload-material-selector",
+  "path": "pages/03-upload-material-selector/page.json",
+  "platforms": {
+    "desktop": {
+      "frameId": "1:9259"
+    },
+    "mobile": {
+      "frameId": "1:9947"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1:10047",
+  "name": "iOS / Chrome / Address",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10045",
+  "children": [
+    "1:10048",
+    "1:10051"
+  ],
+  "layout": {
+    "x": 101,
+    "y": 11,
+    "width": 173,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 7,
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: -translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[7px] items-center justify-center left-[calc(50%+1px)] top-[calc(50%+0.5px)]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[7px] items-center justify-center left-[calc(50%+1px)] top-[calc(50%+0.5px)]\" data-node-id=\"1:10047\" data-name=\"iOS / Chrome / Address\">\n            <div className=\"h-[10px] relative shrink-0 w-[8px]\" data-node-id=\"1:10048\" data-name=\"Union\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion} />\n            </div>\n            <p className=\"[word-break:break-word] font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap\" data-node-id=\"1:10051\">\n              web-to-figma.design\n            </p>\n          </div>"
+  }
+}

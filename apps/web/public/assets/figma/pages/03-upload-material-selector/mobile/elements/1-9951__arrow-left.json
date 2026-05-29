@@ -1,0 +1,28 @@
+{
+  "id": "1:9951",
+  "name": "Arrow left",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9950",
+  "children": [
+    "I1:9951;7758:11045"
+  ],
+  "layout": {
+    "x": 12,
+    "y": 12,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: overflow-clip relative shrink-0 size-[24px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:9951\" data-name=\"Arrow left\">\n              <div className=\"absolute inset-[20.83%]\" data-node-id=\"I1:9951;7758:11045\" data-name=\"Icon\">\n                <div className=\"absolute inset-[-8.93%]\">\n                  <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon2} />\n                </div>\n              </div>\n            </div>"
+  }
+}

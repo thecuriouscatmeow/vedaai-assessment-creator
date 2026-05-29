@@ -1,0 +1,36 @@
+{
+  "id": "1:10304",
+  "name": "icon wi-fi",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10297",
+  "children": [],
+  "layout": {
+    "x": 21,
+    "y": -1,
+    "width": 19,
+    "height": 17,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[21px] not-italic text-[14px] text-white top-[-1px] whitespace-nowrap; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "SF_Pro_Text:Regular",
+      "size": 14
+    }
+  },
+  "assets": [],
+  "content": {
+    "characters": "{`\\u{100647}`}"
+  },
+  "code": {
+    "react": "<p className=\"[word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[21px] not-italic text-[14px] text-white top-[-1px] whitespace-nowrap\" data-node-id=\"1:10304\">{`\\u{100647}`}</p>"
+  }
+}

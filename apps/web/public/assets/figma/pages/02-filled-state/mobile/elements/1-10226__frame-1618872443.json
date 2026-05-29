@@ -1,0 +1,34 @@
+{
+  "id": "1:10226",
+  "name": "Frame 1618872443",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10219",
+  "children": [
+    "1:10227",
+    "1:10229"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 57,
+    "width": 182,
+    "height": 19,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 10,
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex gap-[10px] items-start relative shrink-0 w-[182px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex gap-[10px] items-start relative shrink-0 w-[182px]\" data-node-id=\"1:10226\">\n                  <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:10227\">\n                    <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10228\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p>\n                        <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          Assigned on\n                        </span>\n                        <span className=\"leading-[1.2]\">{` : 20-06-2025`}</span>\n                      </p>\n                    </div>\n                  </div>\n                  <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:10229\">\n                    <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10230\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p>\n                        <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          Due\n                        </span>\n                        <span className=\"leading-[1.2]\">{` : 21-06-2025`}</span>\n                      </p>\n                    </div>\n                  </div>\n                </div>"
+  }
+}

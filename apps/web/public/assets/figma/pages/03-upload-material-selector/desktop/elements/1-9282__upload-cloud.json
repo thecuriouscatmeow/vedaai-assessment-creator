@@ -1,0 +1,23 @@
+{
+  "id": "1:9282",
+  "name": "Upload cloud",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9281",
+  "children": [],
+  "layout": {
+    "x": 8,
+    "y": 8,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

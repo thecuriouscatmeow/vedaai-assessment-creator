@@ -1,0 +1,33 @@
+{
+  "id": "1:10322",
+  "name": "Frame 1984077612",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10321",
+  "children": [
+    "1:10323"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 373,
+    "height": 48,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "end"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center justify-end relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center justify-end relative shrink-0 w-full\" data-node-id=\"1:10322\">\n            <div className=\"bg-white content-stretch drop-shadow-[0px_16px_24px_rgba(0,0,0,0.12),0px_32px_24px_rgba(0,0,0,0.2)] flex items-center justify-center relative rounded-[100px] shrink-0 size-[48px]\" data-node-id=\"1:10323\">\n              <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10324\" data-name=\"icon_line/Plus\">\n                <div className=\"absolute inset-[12.5%]\" data-node-id=\"I1:10324;3309:8340\">\n                  <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgGroup33489} />\n                </div>\n              </div>\n            </div>\n          </div>"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1:9448",
+  "name": "Search Assignment",
+  "type": "TEXT",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9446",
+  "children": [],
+  "layout": {
+    "x": 32,
+    "y": 0,
+    "width": 125,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#a9a9a9] text-[0px] tracking-[-0.56px] whitespace-nowrap; style: {{",
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Regular",
+      "size": 0,
+      "weight": 400,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#a9a9a9] text-[0px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9448\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"font-['Bricolage_Grotesque:Bold',sans-serif] font-bold leading-[1.4] text-[14px]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    Search Assignment\n                  </p>\n                </div>"
+  }
+}

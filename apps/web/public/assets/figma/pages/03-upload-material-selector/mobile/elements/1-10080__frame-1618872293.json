@@ -1,0 +1,36 @@
+{
+  "id": "1:10080",
+  "name": "Frame 1618872293",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10065",
+  "children": [
+    "1:10081",
+    "1:10082"
+  ],
+  "layout": {
+    "x": 206,
+    "y": 10,
+    "width": 52,
+    "height": 52,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 4,
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col gap-[4px] items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]; style:",
+    "borderRadius": 26
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col gap-[4px] items-center justify-center p-[13px] relative rounded-[26px] shrink-0 size-[52px]\" data-node-id=\"1:10080\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10081\" data-name=\"icon_filled/file-text_plus\">\n              <div className=\"absolute inset-[8.33%_16.67%]\" data-node-id=\"I1:10081;3309:8686\" data-name=\"Exclude\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgExclude} />\n              </div>\n            </div>\n            <p className=\"[word-break:break-word] font-['Bricolage_Grotesque:SemiBold',sans-serif] font-semibold leading-[1.4] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.25)] text-center tracking-[-0.48px] whitespace-nowrap\" data-node-id=\"1:10082\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              Library\n            </p>\n          </div>"
+  }
+}

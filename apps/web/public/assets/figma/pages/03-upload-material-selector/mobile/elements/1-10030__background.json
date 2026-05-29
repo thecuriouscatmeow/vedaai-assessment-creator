@@ -1,0 +1,26 @@
+{
+  "id": "1:10030",
+  "name": "Background",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10029",
+  "children": [
+    "1-10031",
+    "1-10032"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 105,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

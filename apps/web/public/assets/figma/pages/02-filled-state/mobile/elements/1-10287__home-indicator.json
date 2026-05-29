@@ -1,0 +1,28 @@
+{
+  "id": "1:10287",
+  "name": "Home Indicator",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10200",
+  "children": [
+    "1:10288"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 1091,
+    "width": 393,
+    "height": 34,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: absolute bottom-0 h-[34px] left-0 right-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"absolute bottom-0 h-[34px] left-0 right-0\" data-node-id=\"1:10287\" data-name=\"Home Indicator\">\n        <div className=\"-translate-x-1/2 absolute bg-[#ddd] bottom-[8px] h-[5px] left-1/2 rounded-[100px] w-[135px]\" data-node-id=\"1:10288\" data-name=\"Line\" />\n      </div>"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "1:10288",
+  "name": "Line",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10287",
+  "children": [],
+  "layout": {
+    "x": 129,
+    "y": 21,
+    "width": 135,
+    "height": 5,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: -translate-x-1/2 absolute bg-[#ddd] bottom-[8px] h-[5px] left-1/2 rounded-[100px] w-[135px]; style:",
+    "borderRadius": 100,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "#DDD"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"-translate-x-1/2 absolute bg-[#ddd] bottom-[8px] h-[5px] left-1/2 rounded-[100px] w-[135px]\" data-node-id=\"1:10288\" data-name=\"Line\" />"
+  }
+}

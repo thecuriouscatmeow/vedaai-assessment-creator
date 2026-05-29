@@ -1,0 +1,39 @@
+{
+  "id": "1:9971",
+  "name": "JPEG, PNG, upto 10MB",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9969",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 26,
+    "width": 253,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[#a9a9a9] text-[14px] tracking-[-0.56px] w-full; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Regular",
+      "size": 14,
+      "weight": 400,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[#a9a9a9] text-[14px] tracking-[-0.56px] w-full\" data-node-id=\"1:9971\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                    <p className=\"leading-[1.4]\">JPEG, PNG, upto 10MB</p>\n                  </div>"
+  }
+}

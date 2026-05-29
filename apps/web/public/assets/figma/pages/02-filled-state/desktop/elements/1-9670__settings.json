@@ -1,0 +1,23 @@
+{
+  "id": "1:9670",
+  "name": "Settings",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9662",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 140,
+    "width": 254,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

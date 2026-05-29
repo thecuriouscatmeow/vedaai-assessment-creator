@@ -1,0 +1,41 @@
+{
+  "id": "1:9312",
+  "name": "Frame 1618872169",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9311",
+  "children": [
+    "1:9313",
+    "1:9314"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 443,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "padding": [
+        11,
+        16,
+        11,
+        16
+      ],
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex h-[44px] items-center justify-between px-[16px] py-[11px] relative rounded-[100px] shrink-0 w-[443px]; style:",
+    "borderRadius": 100
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex h-[44px] items-center justify-between px-[16px] py-[11px] relative rounded-[100px] shrink-0 w-[443px]\" data-node-id=\"1:9312\">\n                        <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9313\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.4]\">Diagram/Graph-Based Questions</p>\n                        </div>\n                        <div className=\"overflow-clip relative shrink-0 size-[16px]\" data-node-id=\"1:9314\" data-name=\"Chevron down\">\n                          <div className=\"absolute bottom-[37.5%] left-1/4 right-1/4 top-[37.5%]\" data-node-id=\"I1:9314;7758:11219\" data-name=\"Icon\">\n                            <div className=\"absolute inset-[-18.75%_-9.38%]\">\n                              <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon3} />\n                            </div>\n                          </div>\n                        </div>\n                      </div>"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1:9369",
+  "name": "e.g Generate a question paper for 3 hour exam duration...",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9368",
+  "children": [],
+  "layout": {
+    "x": 16,
+    "y": 16,
+    "width": 714,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[14px] text-[rgba(48,48,48,0.6)] tracking-[-0.56px] w-[min-content]; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Medium",
+      "size": 14,
+      "weight": 500,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[14px] text-[rgba(48,48,48,0.6)] tracking-[-0.56px] w-[min-content]\" data-node-id=\"1:9369\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">e.g Generate a question paper for 3 hour exam duration...</p>\n                </div>"
+  }
+}

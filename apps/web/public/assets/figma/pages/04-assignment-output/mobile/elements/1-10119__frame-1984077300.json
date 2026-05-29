@@ -1,0 +1,44 @@
+{
+  "id": "1:10119",
+  "name": "Frame 1984077300",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10112",
+  "children": [
+    "1:10120",
+    "1:10121",
+    "1:10122"
+  ],
+  "layout": {
+    "x": 16,
+    "y": 318,
+    "width": 323,
+    "height": 66,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] content-stretch flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold items-start leading-[0] not-italic relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] w-full; style:",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Inter:Semi_Bold",
+      "size": 14,
+      "weight": 600,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] content-stretch flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold items-start leading-[0] not-italic relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] w-full\" data-node-id=\"1:10119\">\n            <div className=\"flex flex-col justify-center relative shrink-0 w-[230px]\" data-node-id=\"1:10120\">\n              <p className=\"leading-[1.6]\">{`Name: ______________________ `}</p>\n            </div>\n            <div className=\"flex flex-col justify-center relative shrink-0 w-[232px]\" data-node-id=\"1:10121\">\n              <p className=\"leading-[1.6]\">Roll Number: ________________</p>\n            </div>\n            <div className=\"flex flex-col justify-center relative shrink-0 w-[232px]\" data-node-id=\"1:10122\">\n              <p className=\"leading-[1.6]\">Class: 5th Section: __________</p>\n            </div>\n          </div>"
+  }
+}

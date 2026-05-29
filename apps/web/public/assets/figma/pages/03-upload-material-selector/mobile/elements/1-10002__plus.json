@@ -1,0 +1,28 @@
+{
+  "id": "1:10002",
+  "name": "Plus",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9999",
+  "children": [
+    "I1:10002;7758:12109"
+  ],
+  "layout": {
+    "x": 108,
+    "y": 11,
+    "width": 16,
+    "height": 16,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: overflow-clip relative shrink-0 size-[16px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"overflow-clip relative shrink-0 size-[16px]\" data-node-id=\"1:10002\" data-name=\"Plus\">\n                            <div className=\"absolute inset-[20.83%]\" data-node-id=\"I1:10002;7758:12109\" data-name=\"Icon\">\n                              <div className=\"absolute inset-[-8.04%]\">\n                                <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon5} />\n                              </div>\n                            </div>\n                          </div>"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "1:9649",
+  "name": "Frame 1984077293",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9648",
+  "children": [
+    "1:9650",
+    "1:9656"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 136,
+    "height": 40,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 8,
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex gap-[8px] items-center relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex gap-[8px] items-center relative shrink-0\" data-node-id=\"1:9649\">\n              <div className=\"relative rounded-[15px] shrink-0 size-[40px]\" data-node-id=\"1:9650\" data-name=\"logo 2\">\n                <div className=\"absolute inset-0 rounded-[10px]\" data-node-id=\"1:9651\" data-name=\"background\">\n                  <div aria-hidden=\"true\" className=\"absolute inset-0 pointer-events-none rounded-[10px]\">\n                    <div className=\"absolute bg-gradient-to-b from-[#e56820] inset-0 rounded-[10px] to-[#d45e3e]\" />\n                    <div className=\"absolute inset-0 overflow-hidden rounded-[10px]\">\n                      <img alt=\"\" className=\"absolute h-[162.5%] left-[-21.2%] max-w-none top-[-33.02%] w-[290.14%]\" src={imgBackground} />\n                    </div>\n                  </div>\n                </div>\n                <div className=\"absolute inset-[27.5%_15%_23.94%_15%]\" data-node-id=\"1:9652\">\n                  <div className=\"absolute inset-[-66.2%_-91.84%_-198.6%_-91.84%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgGroup5} />\n                  </div>\n                </div>\n              </div>\n              <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[28px] tracking-[-1.68px] whitespace-nowrap\" data-node-id=\"1:9656\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                <p className=\"leading-[var(--font-size\\/20,20px)]\">VedaAI</p>\n              </div>\n            </div>"
+  }
+}

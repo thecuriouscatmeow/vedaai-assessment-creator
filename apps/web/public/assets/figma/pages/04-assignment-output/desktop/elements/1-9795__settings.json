@@ -1,0 +1,23 @@
+{
+  "id": "1:9795",
+  "name": "Settings",
+  "type": "INSTANCE",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9787",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 140,
+    "width": 254,
+    "height": 38,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

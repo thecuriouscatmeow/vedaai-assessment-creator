@@ -1,0 +1,34 @@
+{
+  "id": "1:9372",
+  "name": "Frame 1984077363",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9261",
+  "children": [
+    "1:9373",
+    "1:9376"
+  ],
+  "layout": {
+    "x": 146,
+    "y": 1172,
+    "width": 810,
+    "height": 46,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center justify-between relative shrink-0 w-[810px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center justify-between relative shrink-0 w-[810px]\" data-node-id=\"1:9372\">\n          <div className=\"bg-white content-stretch flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9373\" data-name=\"Primary Button - White\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9374\" data-name=\"icon_line/Arrow_Left\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:9374;3309:8536\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke1} />\n              </div>\n            </div>\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] text-center tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9375\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Previous</p>\n            </div>\n          </div>\n          <div className=\"bg-[#181818] border-[1.5px] border-[rgba(255,255,255,0.5)] border-solid content-stretch flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9376\" data-name=\"Primary Button - Dark\">\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"I1:9376;9847:2536\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Next</p>\n            </div>\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"I1:9376;9847:2537\" data-name=\"icon_line/Arrow_Right\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:9376;9847:2537;3309:8538\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke2} />\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

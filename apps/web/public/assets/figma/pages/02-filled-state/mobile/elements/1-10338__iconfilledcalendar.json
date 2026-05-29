@@ -1,0 +1,28 @@
+{
+  "id": "1:10338",
+  "name": "icon_filled/Calendar",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10337",
+  "children": [
+    "I1:10338;3309:9418"
+  ],
+  "layout": {
+    "x": 25,
+    "y": 0,
+    "width": 20,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[20px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:10338\" data-name=\"icon_filled/Calendar\">\n                  <div className=\"absolute inset-[8.33%]\" data-node-id=\"I1:10338;3309:9418\" data-name=\"Union\">\n                    <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion2} />\n                  </div>\n                </div>"
+  }
+}

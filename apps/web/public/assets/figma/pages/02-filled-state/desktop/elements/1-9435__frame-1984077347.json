@@ -1,0 +1,29 @@
+{
+  "id": "1:9435",
+  "name": "Frame 1984077347",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9433",
+  "children": [
+    "1:9436",
+    "1:9437"
+  ],
+  "layout": {
+    "x": 32,
+    "y": 0,
+    "width": 301,
+    "height": 50,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0\" data-node-id=\"1:9435\">\n              <div className=\"[word-break:break-word] bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[2px] items-start justify-center leading-[0] relative size-full text-center whitespace-nowrap\">\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#303030] text-[20px] tracking-[-0.8px]\" data-node-id=\"1:9436\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Assignments</p>\n                </div>\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[14px] text-[rgba(94,94,94,0.55)] tracking-[-0.56px]\" data-node-id=\"1:9437\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Manage and create assignments for your classes.</p>\n                </div>\n              </div>\n            </div>"
+  }
+}

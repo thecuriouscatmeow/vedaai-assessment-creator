@@ -1,0 +1,29 @@
+{
+  "id": "1:10099",
+  "name": ".Icon",
+  "type": "INSTANCE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10098",
+  "children": [
+    "I1:10099;1:719",
+    "I1:10099;1:720"
+  ],
+  "layout": {
+    "x": 6,
+    "y": 6,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: overflow-clip relative shrink-0 size-[24px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:10099\" data-name=\".Icon\">\n                <div className=\"absolute inset-[8.33%_12.5%_29.17%_12.5%]\" data-node-id=\"I1:10099;1:719\" data-name=\"Vector\">\n                  <div className=\"absolute inset-[-6.67%_-5.56%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector} />\n                  </div>\n                </div>\n                <div className=\"absolute inset-[87.5%_42.79%_8.35%_42.79%]\" data-node-id=\"I1:10099;1:720\" data-name=\"Vector\">\n                  <div className=\"absolute inset-[-100.37%_-28.91%_-100.36%_-28.91%]\">\n                    <img alt=\"\" className=\"block max-w-none size-full\" src={imgVector1} />\n                  </div>\n                </div>\n              </div>"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1:9818",
+  "name": "Certainly, Lakshya! Here are customized Question Paper for your CBSE Grade 8 Science classes on the NCERT chapters:",
+  "type": "TEXT",
+  "page": "04-assignment-output",
+  "platform": "desktop",
+  "parent": "1:9817",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 996,
+    "height": 56,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[20px] text-white tracking-[-0.8px] w-full; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-bold-700-p1"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Bold",
+      "size": 20,
+      "weight": 700,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.8
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[20px] text-white tracking-[-0.8px] w-full\" data-node-id=\"1:9818\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Certainly, Lakshya! Here are customized Question Paper for your CBSE Grade 8 Science classes on the NCERT chapters:</p>\n                </div>"
+  }
+}

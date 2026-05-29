@@ -1,0 +1,32 @@
+{
+  "id": "1:9604",
+  "name": "Frame 1984077325",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "desktop",
+  "parent": "1:9603",
+  "children": [
+    "1:9605"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 494,
+    "height": 29,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col items-start relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:9604\">\n                      <div className=\"content-stretch flex items-center justify-between relative shrink-0 w-full\" data-node-id=\"1:9605\">\n                        <div className=\"content-stretch flex items-center relative shrink-0 w-[418px]\" data-node-id=\"1:9606\">\n                          <div className=\"content-stretch flex flex-col items-start justify-center relative shrink-0 w-[199px]\" data-node-id=\"1:9607\">\n                            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[#303030] text-[24px] tracking-[-0.96px] w-full\" data-node-id=\"1:9608\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                              <p className=\"leading-[1.2]\">Quiz on Electricity</p>\n                            </div>\n                          </div>\n                        </div>\n                        <div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:9609\" data-name=\"icon_line/More-vertical\">\n                          <div className=\"absolute flex inset-[41.67%] items-center justify-center\" style={{ containerType: \"size\" }}>\n                            <div className=\"flex-none h-[100cqw] rotate-90 w-[100cqh]\">\n                              <div className=\"relative size-full\" data-node-id=\"I1:9609;3309:8568\" data-name=\"Vector (Stroke)\">\n                                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke} />\n                              </div>\n                            </div>\n                          </div>\n                          <div className=\"absolute flex inset-[70.83%_41.67%_12.5%_41.67%] items-center justify-center\" style={{ containerType: \"size\" }}>\n                            <div className=\"flex-none h-[100cqw] rotate-90 w-[100cqh]\">\n                              <div className=\"relative size-full\" data-node-id=\"I1:9609;3309:8569\" data-name=\"Vector (Stroke)\">\n                                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke} />\n                              </div>\n                            </div>\n                          </div>\n                          <div className=\"absolute flex inset-[12.5%_41.67%_70.83%_41.67%] items-center justify-center\" style={{ containerType: \"size\" }}>\n                            <div className=\"flex-none h-[100cqw] rotate-90 w-[100cqh]\">\n                              <div className=\"relative size-full\" data-node-id=\"I1:9609;3309:8570\" data-name=\"Vector (Stroke)\">\n                                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke} />\n                              </div>\n                            </div>\n                          </div>\n                        </div>\n                      </div>\n                    </div>"
+  }
+}

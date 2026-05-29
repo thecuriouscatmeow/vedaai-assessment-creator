@@ -1,0 +1,32 @@
+{
+  "id": "1:10071",
+  "name": "Rectangle 7",
+  "type": "ROUNDED-RECTANGLE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10069",
+  "children": [],
+  "layout": {
+    "x": 9,
+    "y": 0,
+    "width": 8,
+    "height": 8,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]; style:",
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.25)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[rgba(255,255,255,0.25)] relative rounded-[2.717px] shrink-0 size-[8.491px]\" data-node-id=\"1:10071\" />"
+  }
+}

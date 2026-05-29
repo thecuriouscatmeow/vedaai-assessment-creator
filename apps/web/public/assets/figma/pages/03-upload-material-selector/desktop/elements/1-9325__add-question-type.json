@@ -1,0 +1,40 @@
+{
+  "id": "1:9325",
+  "name": "Add Question Type",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9322",
+  "children": [],
+  "layout": {
+    "x": 44,
+    "y": 8,
+    "width": 120,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] whitespace-nowrap; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Bold",
+      "size": 14,
+      "weight": 700,
+      "lineHeight": 0.0,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[14px] tracking-[-0.56px] whitespace-nowrap\" data-node-id=\"1:9325\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p className=\"leading-[1.4]\">Add Question Type</p>\n                    </div>"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "1:10036",
+  "name": "Time",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10035",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 54,
+    "height": 18,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: -translate-x-1/2 [word-break:break-word] absolute font-['SF_Pro_Text:Semibold',sans-serif] leading-[normal] left-[27px] not-italic text-[15px] text-center text-white top-[calc(50%-9px)] tracking-[-0.165px] w-[54px]; style:",
+    "typography": {
+      "fontFamily": "SF_Pro_Text:Semibold",
+      "size": 15,
+      "letterSpacing": -0.165
+    }
+  },
+  "assets": [],
+  "content": {
+    "characters": "9:41"
+  },
+  "code": {
+    "react": "<p className=\"-translate-x-1/2 [word-break:break-word] absolute font-['SF_Pro_Text:Semibold',sans-serif] leading-[normal] left-[27px] not-italic text-[15px] text-center text-white top-[calc(50%-9px)] tracking-[-0.165px] w-[54px]\" data-node-id=\"1:10036\">\n              9:41\n            </p>"
+  }
+}

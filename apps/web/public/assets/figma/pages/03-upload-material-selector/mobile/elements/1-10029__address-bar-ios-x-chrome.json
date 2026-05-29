@@ -1,0 +1,31 @@
+{
+  "id": "1:10029",
+  "name": "Address Bar iOS / X Chrome",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9947",
+  "children": [
+    "1:10031",
+    "1:10032",
+    "1:10034",
+    "1:10045"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 105,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: -translate-x-1/2 absolute h-[105px] left-1/2 top-0 w-[393px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"-translate-x-1/2 absolute h-[105px] left-1/2 top-0 w-[393px]\" data-node-id=\"1:10029\" data-name=\"Address Bar iOS / X Chrome\">\n        <div className=\"absolute backdrop-blur-[13.591px] bg-[#353739] inset-0\" data-node-id=\"1:10031\" data-name=\"Background\" />\n        <div className=\"absolute bottom-0 flex h-px items-center justify-center left-0 right-0\" style={{ containerType: \"size\" }}>\n          <div className=\"-rotate-180 -scale-x-100 flex-none h-[100cqh] w-[100cqw]\">\n            <div className=\"relative size-full\" data-node-id=\"1:10032\" data-name=\"iOS / Separator\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIOsSeparator} />\n            </div>\n          </div>\n        </div>\n        <div className=\"absolute h-[44px] left-0 right-0 top-0\" data-node-id=\"1:10034\" data-name=\"iOS / Status Bar / X / Default\">\n          <div className=\"absolute inset-[43.18%_80.37%_15.91%_5.3%] overflow-clip\" data-node-id=\"1:10035\" data-name=\"Action\">\n            <p className=\"-translate-x-1/2 [word-break:break-word] absolute font-['SF_Pro_Text:Semibold',sans-serif] leading-[normal] left-[27px] not-italic text-[15px] text-center text-white top-[calc(50%-9px)] tracking-[-0.165px] w-[54px]\" data-node-id=\"1:10036\">\n              9:41\n            </p>\n          </div>\n          <div className=\"-translate-y-1/2 absolute h-[14px] overflow-clip right-[34px] top-[calc(50%+6px)] w-[68px]\" data-node-id=\"1:10037\" data-name=\"Container\">\n            <p className=\"[word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[41px] not-italic text-[17px] text-white top-[-3px] whitespace-nowrap\" data-node-id=\"1:10038\">{`\\u{1006E8}`}</p>\n            <div className=\"absolute inset-[11.43%_74.12%_12.14%_0.74%]\" data-node-id=\"1:10039\" data-name=\"Combined Shape\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgCombinedShape} />\n            </div>\n            <p className=\"[word-break:break-word] absolute font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] left-[21px] not-italic text-[14px] text-white top-[-1px] whitespace-nowrap\" data-node-id=\"1:10044\">{`\\u{100647}`}</p>\n          </div>\n        </div>\n        <div className=\"absolute bottom-[11px] h-[40px] left-[10px] right-[10px]\" data-node-id=\"1:10045\" data-name=\"iOS / Chrome / Address Bar\">\n          <div className=\"absolute bg-[#5e6268] inset-0 rounded-[30px]\" data-node-id=\"1:10046\" data-name=\"bar-input\" />\n          <div className=\"-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[7px] items-center justify-center left-[calc(50%+1px)] top-[calc(50%+0.5px)]\" data-node-id=\"1:10047\" data-name=\"iOS / Chrome / Address\">\n            <div className=\"h-[10px] relative shrink-0 w-[8px]\" data-node-id=\"1:10048\" data-name=\"Union\">\n              <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion} />\n            </div>\n            <p className=\"[word-break:break-word] font-['SF_Pro_Text:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap\" data-node-id=\"1:10051\">\n              web-to-figma.design\n            </p>\n          </div>\n          <div className=\"-translate-y-1/2 absolute h-[18px] right-[17px] top-1/2 w-[14px]\" data-node-id=\"1:10052\" data-name=\"Union\">\n            <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgUnion1} />\n          </div>\n        </div>\n      </div>"
+  }
+}

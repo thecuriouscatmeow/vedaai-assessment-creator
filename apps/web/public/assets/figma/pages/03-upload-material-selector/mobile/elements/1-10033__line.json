@@ -1,0 +1,23 @@
+{
+  "id": "1:10033",
+  "name": "Line",
+  "type": "LINE",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:10032",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 393,
+    "height": 0,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: ; style:"
+  },
+  "assets": []
+}

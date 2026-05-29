@@ -1,0 +1,40 @@
+{
+  "id": "1:9373",
+  "name": "Primary Button - White",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9372",
+  "children": [
+    "1:9374",
+    "1:9375"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 134,
+    "height": 46,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "gap": 4,
+      "padding": [
+        12,
+        24,
+        12,
+        24
+      ],
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex gap-[4px] items-center px-[24px] py-[12px] relative rounded-[var(--number,48px)] shrink-0\" data-node-id=\"1:9373\" data-name=\"Primary Button - White\">\n            <div className=\"relative shrink-0 size-[20px]\" data-node-id=\"1:9374\" data-name=\"icon_line/Arrow_Left\">\n              <div className=\"absolute inset-[16.67%_8.33%]\" data-node-id=\"I1:9374;3309:8536\" data-name=\"Vector (Stroke)\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVectorStroke1} />\n              </div>\n            </div>\n            <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] text-center tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9375\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Previous</p>\n            </div>\n          </div>"
+  }
+}

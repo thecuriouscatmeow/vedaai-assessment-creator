@@ -1,0 +1,34 @@
+{
+  "id": "1:10261",
+  "name": "Frame 1984077333",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10260",
+  "children": [
+    "1:10262",
+    "1:10268"
+  ],
+  "layout": {
+    "x": 20,
+    "y": 20,
+    "width": 333,
+    "height": 76,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 32,
+      "align": "start"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full\" data-node-id=\"1:10261\">\n                <div className=\"content-stretch flex flex-col items-start relative shrink-0 w-full\" data-node-id=\"1:10262\">\n                  <div className=\"content-stretch flex items-center justify-between relative shrink-0 w-full\" data-node-id=\"1:10263\">\n                    <div className=\"content-stretch flex items-center relative shrink-0\" data-node-id=\"1:10264\">\n                      <div className=\"content-stretch flex flex-col items-start justify-center relative shrink-0 w-[147px]\" data-node-id=\"1:10265\">\n                        <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#303030] text-[18px] tracking-[-0.72px] w-full\" data-node-id=\"1:10266\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          <p className=\"leading-[1.4]\">Quiz on Electricity</p>\n                        </div>\n                      </div>\n                    </div>\n                    <IconLineMoreVertical className=\"relative shrink-0 size-[24px]\" />\n                  </div>\n                </div>\n                <div className=\"content-stretch flex gap-[10px] items-start relative shrink-0 w-[182px]\" data-node-id=\"1:10268\">\n                  <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:10269\">\n                    <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10270\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p>\n                        <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          Assigned on\n                        </span>\n                        <span className=\"leading-[1.2]\">{` : 20-06-2025`}</span>\n                      </p>\n                    </div>\n                  </div>\n                  <div className=\"content-stretch flex items-start relative shrink-0\" data-node-id=\"1:10271\">\n                    <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.5)] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:10272\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                      <p>\n                        <span className=\"[word-break:break-word] font-['Bricolage_Grotesque:ExtraBold',sans-serif] font-extrabold leading-[1.2] text-[#303030]\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                          Due\n                        </span>\n                        <span className=\"leading-[1.2]\">{` : 21-06-2025`}</span>\n                      </p>\n                    </div>\n                  </div>\n                </div>\n              </div>"
+  }
+}

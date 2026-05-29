@@ -1,0 +1,39 @@
+{
+  "id": "1:9963",
+  "name": "Basic information about your assignment",
+  "type": "TEXT",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9961",
+  "children": [],
+  "layout": {
+    "x": 0,
+    "y": 30,
+    "width": 251,
+    "height": 20,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[14px] text-[rgba(94,94,94,0.8)] tracking-[-0.56px] w-[251px]; style: {{",
+    "tokenRefs": [
+      "text-typographytokens-paragraph-paragraph-primary-regular-400-p4"
+    ],
+    "typography": {
+      "fontFamily": "Bricolage_Grotesque:Regular",
+      "size": 14,
+      "weight": 400,
+      "letterSpacing": -0.56
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[14px] text-[rgba(94,94,94,0.8)] tracking-[-0.56px] w-[251px]\" data-node-id=\"1:9963\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Basic information about your assignment</p>\n            </div>"
+  }
+}

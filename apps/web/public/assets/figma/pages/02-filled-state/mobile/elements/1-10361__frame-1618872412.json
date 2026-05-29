@@ -1,0 +1,33 @@
+{
+  "id": "1:10361",
+  "name": "Frame 1618872412",
+  "type": "FRAME",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10357",
+  "children": [],
+  "layout": {
+    "x": 48,
+    "y": 2,
+    "width": 32,
+    "height": 32,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative rounded-[100px] shrink-0 size-[32px]; style:",
+    "borderRadius": 100
+  },
+  "assets": [
+    {
+      "kind": "png",
+      "path": "assets/1-10361-asset.png",
+      "role": "asset"
+    }
+  ],
+  "code": {
+    "react": "<div className=\"relative rounded-[100px] shrink-0 size-[32px]\" data-node-id=\"1:10361\">\n              <div aria-hidden=\"true\" className=\"absolute inset-0 pointer-events-none rounded-[100px]\">\n                <div className=\"absolute bg-[#f6f6f6] inset-0 rounded-[100px]\" />\n                <img alt=\"\" className=\"absolute max-w-none object-cover rounded-[100px] size-full\" src={imgFrame1618872412} />\n              </div>\n            </div>"
+  }
+}

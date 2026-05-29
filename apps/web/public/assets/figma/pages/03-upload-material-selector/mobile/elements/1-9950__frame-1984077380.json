@@ -1,0 +1,40 @@
+{
+  "id": "1:9950",
+  "name": "Frame 1984077380",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9949",
+  "children": [
+    "1:9951"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 48,
+    "height": 48,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: backdrop-blur-[12px] bg-[rgba(255,255,255,0.25)] content-stretch flex items-center justify-center mr-[-48px] relative rounded-[100px] shrink-0 size-[48px]; style:",
+    "borderRadius": 100,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(255,255,255,0.25)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"backdrop-blur-[12px] bg-[rgba(255,255,255,0.25)] content-stretch flex items-center justify-center mr-[-48px] relative rounded-[100px] shrink-0 size-[48px]\" data-node-id=\"1:9950\">\n            <div className=\"overflow-clip relative shrink-0 size-[24px]\" data-node-id=\"1:9951\" data-name=\"Arrow left\">\n              <div className=\"absolute inset-[20.83%]\" data-node-id=\"I1:9951;7758:11045\" data-name=\"Icon\">\n                <div className=\"absolute inset-[-8.93%]\">\n                  <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon2} />\n                </div>\n              </div>\n            </div>\n          </div>"
+  }
+}

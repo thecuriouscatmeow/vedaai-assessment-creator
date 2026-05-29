@@ -1,0 +1,32 @@
+{
+  "id": "1:9262",
+  "name": "Frame 1984077332",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9261",
+  "children": [
+    "1:9263"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 1103,
+    "height": 66,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center"
+    }
+  },
+  "style": {
+    "css": "className: content-stretch flex items-center p-[8px] relative shrink-0 w-full; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"content-stretch flex items-center p-[8px] relative shrink-0 w-full\" data-node-id=\"1:9262\">\n          <div className=\"content-stretch flex gap-[12px] items-center relative shrink-0\" data-node-id=\"1:9263\">\n            <div className=\"relative shrink-0 size-[12px]\" data-node-id=\"1:9264\">\n              <div className=\"absolute inset-[-300%_-433.33%_-700%_-433.33%]\">\n                <img alt=\"\" className=\"block max-w-none size-full\" src={imgEllipse10} />\n              </div>\n            </div>\n            <div className=\"relative shrink-0\" data-node-id=\"1:9265\">\n              <div className=\"[word-break:break-word] bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[2px] items-start justify-center leading-[0] relative size-full text-center whitespace-nowrap\">\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#303030] text-[20px] tracking-[-0.8px]\" data-node-id=\"1:9266\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Create Assignment</p>\n                </div>\n                <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[14px] text-[rgba(94,94,94,0.55)] tracking-[-0.56px]\" data-node-id=\"1:9267\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                  <p className=\"leading-[1.4]\">Set up a new assignment for your students</p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>"
+  }
+}

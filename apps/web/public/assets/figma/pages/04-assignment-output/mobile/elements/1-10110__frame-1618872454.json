@@ -1,0 +1,40 @@
+{
+  "id": "1:10110",
+  "name": "Frame 1618872454",
+  "type": "FRAME",
+  "page": "04-assignment-output",
+  "platform": "mobile",
+  "parent": "1:10109",
+  "children": [
+    "1:10111"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 0,
+    "width": 36,
+    "height": 36,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-[rgba(246,246,246,0.1)] content-stretch flex items-center justify-center relative rounded-[100px] shrink-0 size-[36px]; style:",
+    "borderRadius": 100,
+    "fills": [
+      {
+        "type": "SOLID",
+        "color": "RGBA(246,246,246,0.1)"
+      }
+    ]
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-[rgba(246,246,246,0.1)] content-stretch flex items-center justify-center relative rounded-[100px] shrink-0 size-[36px]\" data-node-id=\"1:10110\">\n              <div className=\"overflow-clip relative shrink-0 size-[20px]\" data-node-id=\"1:10111\" data-name=\"download\">\n                <div className=\"absolute inset-[16.67%]\" data-node-id=\"I1:10111;54616:25492\" data-name=\"icon\">\n                  <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIcon} />\n                </div>\n              </div>\n            </div>"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "1:10362",
+  "name": "menu",
+  "type": "INSTANCE",
+  "page": "02-filled-state",
+  "platform": "mobile",
+  "parent": "1:10357",
+  "children": [
+    "I1:10362;54616:25398"
+  ],
+  "layout": {
+    "x": 92,
+    "y": 6,
+    "width": 24,
+    "height": 24,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    }
+  },
+  "style": {
+    "css": "className: relative shrink-0 size-[24px]; style:"
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"relative shrink-0 size-[24px]\" data-node-id=\"1:10362\" data-name=\"menu\">\n              <div className=\"absolute bottom-1/4 left-[12.5%] right-[12.5%] top-1/4\" data-node-id=\"I1:10362;54616:25398\" data-name=\"icon\">\n                <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgIcon1} />\n              </div>\n            </div>"
+  }
+}

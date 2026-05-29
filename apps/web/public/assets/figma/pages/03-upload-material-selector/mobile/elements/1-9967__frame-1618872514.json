@@ -1,0 +1,32 @@
+{
+  "id": "1:9967",
+  "name": "Frame 1618872514",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9966",
+  "children": [],
+  "layout": {
+    "x": 138,
+    "y": 24,
+    "width": 40,
+    "height": 40,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "align": "center",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[40px]; style:",
+    "borderRadius": 8
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[40px]\" data-node-id=\"1:9967\">\n                  <UploadCloud className=\"overflow-clip relative shrink-0 size-[24px]\" size=\"24\" />\n                </div>"
+  }
+}

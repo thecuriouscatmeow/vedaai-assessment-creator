@@ -1,0 +1,42 @@
+{
+  "id": "1:9351",
+  "name": "Frame 1618872169",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "desktop",
+  "parent": "1:9345",
+  "children": [
+    "1:9352",
+    "1:9353",
+    "1:9354"
+  ],
+  "layout": {
+    "x": 0,
+    "y": 98,
+    "width": 100,
+    "height": 44,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "row",
+      "padding": [
+        11,
+        8,
+        11,
+        8
+      ],
+      "align": "center",
+      "justify": "space-between"
+    }
+  },
+  "style": {
+    "css": "className: bg-white content-stretch flex flex-[1_0_0] items-center justify-between min-h-px px-[8px] py-[11px] relative rounded-[100px] w-[100px]; style:",
+    "borderRadius": 100
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"bg-white content-stretch flex flex-[1_0_0] items-center justify-between min-h-px px-[8px] py-[11px] relative rounded-[100px] w-[100px]\" data-node-id=\"1:9351\">\n                      <div className=\"relative shrink-0 size-[16px]\" data-node-id=\"1:9352\" data-name=\"icon_line/Minus\">\n                        <div className=\"absolute inset-[45.83%_12.5%]\" data-node-id=\"I1:9352;3309:8335\" data-name=\"Vector 5 (Stroke)\">\n                          <img alt=\"\" className=\"absolute block inset-0 max-w-none size-full\" src={imgVector5Stroke} />\n                        </div>\n                      </div>\n                      <div className=\"[word-break:break-word] flex flex-col font-['Bricolage_Grotesque:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#303030] text-[16px] tracking-[-0.64px] whitespace-nowrap\" data-node-id=\"1:9353\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n                        <p className=\"leading-[1.4]\">2</p>\n                      </div>\n                      <div className=\"overflow-clip relative shrink-0 size-[16px]\" data-node-id=\"1:9354\" data-name=\"Plus\">\n                        <div className=\"absolute inset-[20.83%]\" data-node-id=\"I1:9354;7758:12109\" data-name=\"Icon\">\n                          <div className=\"absolute inset-[-8.04%]\">\n                            <img alt=\"\" className=\"block max-w-none size-full\" src={imgIcon5} />\n                          </div>\n                        </div>\n                      </div>\n                    </div>"
+  }
+}

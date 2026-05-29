@@ -1,0 +1,38 @@
+{
+  "id": "1:9961",
+  "name": "Frame 1984077347",
+  "type": "FRAME",
+  "page": "03-upload-material-selector",
+  "platform": "mobile",
+  "parent": "1:9960",
+  "children": [
+    "1:9962",
+    "1:9963"
+  ],
+  "layout": {
+    "x": 16,
+    "y": 32,
+    "width": 251,
+    "height": 50,
+    "constraints": {
+      "horizontal": "MIN",
+      "vertical": "MIN"
+    },
+    "autolayout": {
+      "direction": "column",
+      "gap": 2,
+      "align": "start",
+      "justify": "center"
+    }
+  },
+  "style": {
+    "css": "className: [word-break:break-word] content-stretch flex flex-col gap-[2px] items-start justify-center leading-[0] relative shrink-0 text-center; style:",
+    "typography": {
+      "lineHeight": 0.0
+    }
+  },
+  "assets": [],
+  "code": {
+    "react": "<div className=\"[word-break:break-word] content-stretch flex flex-col gap-[2px] items-start justify-center leading-[0] relative shrink-0 text-center\" data-node-id=\"1:9961\">\n            <div className=\"flex flex-col font-['Bricolage_Grotesque:Bold',sans-serif] font-bold justify-center relative shrink-0 text-[#303030] text-[20px] tracking-[-0.8px] whitespace-nowrap\" data-node-id=\"1:9962\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Assignment Details</p>\n            </div>\n            <div className=\"flex flex-col font-['Bricolage_Grotesque:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[14px] text-[rgba(94,94,94,0.8)] tracking-[-0.56px] w-[251px]\" data-node-id=\"1:9963\" style={{ fontVariationSettings: \"'opsz' 14, 'wdth' 100\" }}>\n              <p className=\"leading-[1.4]\">Basic information about your assignment</p>\n            </div>\n          </div>"
+  }
+}
