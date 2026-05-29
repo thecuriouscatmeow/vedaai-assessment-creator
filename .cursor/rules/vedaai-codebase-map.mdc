@@ -1,0 +1,102 @@
+---
+description: VedaAI monorepo architecture map for surgical changes (from graphify-out + STATUS)
+alwaysApply: true
+---
+
+# VedaAI Codebase Map (surgical-change guide)
+
+**Phase:** 6 — Backend hardening (middleware largely done). Phase 5 frontend DONE.
+**Tests:** shared 30 · api 71 · web 77 = **178** (must stay green).
+**Truth order:** code/tests > git > `graphify-out/GRAPH_REPORT.md` > docs.
+
+## Monorepo layout
+
+| Package | Role |
+|---------|------|
+| `packages/shared` | **Frozen contracts** — Zod schemas; types = `z.infer`. Never duplicate types elsewhere. |
+| `apps/api` | Express API + BullMQ worker (`ENTRY=api` \| `worker` on Railway) |
+| `apps/web` | Next.js 16 App Router, Redux Toolkit, Socket.IO client |
+
+## Generation pipeline (touch carefully)
+
+```
+AssignmentForm → POST /api/assignments
+  → assignment.service.create → repo.create + queue.enqueue
+  → worker: buildPrompt → llm.complete (gemini) → parsePaper (+ repair)
+  → repo.setDone → QueueEvents → Socket.IO (assignment:done|failed)
+  → AssignmentOutputClient / QuestionPaperView
+```
+
+**Key files (backend):**
+- `apps/api/src/server.ts` — API entry: Mongo, Redis, queue, Socket.IO, `createApp`
+- `apps/api/src/worker.ts` — Worker entry + `createGenerateProcessor`
+- `apps/api/src/services/assignment.service.ts` — create/list/find/delete
+- `apps/api/src/adapters/db/assignment.repository.ts` — Mongo persistence
+- `apps/api/src/domain/prompt.ts`, `parse.ts` — prompt + Zod validation/repair
+- `apps/api/src/adapters/llm/providers/gemini.ts` — `GEMINI_MODEL` env (default gemini-3.1-flash-lite)
+- `apps/api/src/lib/queue.ts`, `socket.ts` — BullMQ + realtime events
+
+**Key files (frontend):**
+- `apps/web/src/components/AssignmentForm.tsx` — create form + upload
+- `apps/web/src/lib/useAssignmentSocket.ts` — generation status socket
+- `apps/web/src/lib/useCloudinaryUpload.ts` — signed upload (URL only to API)
+- `apps/web/src/components/AssignmentOutputClient.tsx`, `QuestionPaperView.tsx`
+- `apps/web/src/store/slices/*` — form, assignments list, generation state
+
+## Layering rule (every API change)
+
+`route` → `service` → `domain` → Zod (`@vedaai/shared`) → `adapter` (db/llm/cache/storage).
+
+Middleware stack on assignment routes: `validateBody` → `sanitize` → handler → `validateOutput`.
+App-wide: `securityHeaders`, `rateLimitMiddleware`, `asyncHandler`, central `errorHandler`.
+
+## Shared schemas (`packages/shared/src/schemas/`)
+
+- `assignment.ts` — `AssignmentInput`, `AssignmentSummary`, status enum
+- `question-paper.ts` — `QuestionPaper` (sections, questions, difficulty, marks)
+- `socket.ts` — `assignment:queued|processing|done|failed` event payloads
+
+## Routes (web)
+
+- `/assignments` — list (`AssignmentsList`)
+- `/assignments/create` — form (`AssignmentForm`)
+- `/assignments/[id]` — output (`AssignmentOutputClient`); mobile hides bottom tab bar
+
+Nav: `Sidebar` (desktop 304px), `MobileHeader`, `BottomTabBar`.
+
+## DB (DEC-0004)
+
+Normalized: `assignments` + `question_papers` + `questions` collections. Models in `apps/api/src/models/`.
+
+## Infra (live)
+
+- Web: https://vedaai-assessment-creator-two.vercel.app (`apps/web`)
+- API: Railway `api` service; worker separate (`ENTRY=worker`)
+- Redis: job queue + cache target (Phase 6 M3+)
+- Uploads: Cloudinary signed from frontend; backend stores URL only
+
+## Safe vs risky edits
+
+| Safer (localized) | Higher blast radius |
+|--------------------|---------------------|
+| Single component styling/copy (`content/copy.json`) | `packages/shared` schema changes |
+| `DifficultyBadge`, nav shell, PDF export | `assignment.repository`, worker processor |
+| Middleware tuning in `apps/api/src/middleware/` | Socket event names/payloads |
+| `domain/prompt.ts` wording | `createApp` middleware order |
+
+## Scaffolding to remove before submission (do not extend)
+
+- `apps/api/src/routes/ping.ts`, `services/ping.service.ts`
+- `apps/api/src/domain/stub-generation.ts` (`buildStubPaper`)
+- `apps/web/src/components/PingPanel.tsx`
+
+## Graphify usage
+
+- Index: `graphify-out/GRAPH_REPORT.md` (400 nodes, AST-heavy; 26% inferred edges)
+- Live queries: `graphify explain "ModuleName" --budget 600`, `graphify path "A" "B"`
+- Hook: post-checkout installed; post-commit needs `graphify` on PATH
+- God nodes: `createApp()`, assignment router, BullMQ/LLM adapter cluster
+
+## Resume point (from STATUS)
+
+Next planned: Redis caching layer; canonical test freeze; README. Real-Gemini smoke blocked on API quota.

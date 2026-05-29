@@ -1,8 +1,14 @@
 @import 'tailwindcss';
 
+/* Figma MCP JSON under public/ embeds raw class strings (e.g. var names with `/`). */
+@source not '../../public/**';
+
 @theme {
   /* ── Figma color tokens ─────────────────────────────────────────────── */
   --color-bg-page:           #F6F6F6;
+  --color-bg-mobile:         #CECECE;
+  --color-bg-desktop-start:  #EEEEEE;
+  --color-bg-desktop-end:    #DADADA;
   --color-surface:           #FFFFFF;
   --color-surface-hover:     #F0F0F0;
   --color-surface-mid:       #DADADA;

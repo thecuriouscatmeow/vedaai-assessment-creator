@@ -1,4 +1,48 @@
 import { z } from 'zod';
+import { readFileSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+function loadEnvFile(filePath: string) {
+  if (!existsSync(filePath)) return;
+  try {
+    const content = readFileSync(filePath, 'utf-8');
+    for (const line of content.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const index = trimmed.indexOf('=');
+      if (index > 0) {
+        const key = trimmed.slice(0, index).trim();
+        let val = trimmed.slice(index + 1).trim();
+        if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+          val = val.slice(1, -1);
+        }
+        if (!(key in process.env)) {
+          process.env[key] = val;
+        }
+      }
+    }
+  } catch {
+    // Ignore read errors
+  }
+}
+
+const cwd = process.cwd();
+const envPaths = [
+  join(cwd, '.env'),
+  join(cwd, '.env.local'),
+  join(cwd, 'apps/api/.env'),
+  join(cwd, 'apps/api/.env.local'),
+  join(__dirname, '../../.env'),
+  join(__dirname, '../../.env.local'),
+];
+
+for (const path of envPaths) {
+  loadEnvFile(path);
+}
 
 /**
  * Typed, fail-fast configuration.

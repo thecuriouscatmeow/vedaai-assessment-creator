@@ -6,6 +6,7 @@ import type { QuestionPaper } from '@vedaai/shared';
 import { DifficultyBadge } from '@/components/DifficultyBadge';
 import copy from '@/content/copy.json';
 import { AssignmentPDF } from '@/components/AssignmentPDF';
+import { figmaAssets } from '@/lib/figmaAssets';
 
 interface Props {
   paper: QuestionPaper;
@@ -46,6 +47,12 @@ export function QuestionPaperView({ paper }: Props) {
     >
       {/* Paper header */}
       <header className="flex flex-col gap-2">
+        <img
+          src={figmaAssets.output.headerArt}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-28 object-cover rounded-[16px]"
+        />
         <h1 className="font-bold text-p1 text-text-primary text-center">{paper.title}</h1>
         <p className="font-bold text-p1 text-text-primary text-center">{paper.schoolName}</p>
         {paper.schoolAddress && (
@@ -187,16 +194,12 @@ export function QuestionPaperView({ paper }: Props) {
             className="flex items-center gap-2 font-bold text-p3 text-text-primary cursor-pointer mb-3"
           >
             <span>{copy.output.answerKey.heading}</span>
-            <svg
+            <img
+              src={figmaAssets.output.collapseIcon}
+              alt=""
               aria-hidden="true"
               className={`w-4 h-4 transition-transform ${answerKeyOpen ? 'rotate-180' : ''}`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
+            />
           </button>
           {answerKeyOpen && (
             <ol className="list-none space-y-3">
@@ -234,8 +237,9 @@ export function QuestionPaperView({ paper }: Props) {
           {({ loading }: { loading: boolean }) => (
             <span
               data-testid="download-pdf-button"
-              className="bg-btn-dark text-white rounded-full px-6 py-3 text-p3 font-medium cursor-pointer inline-block"
+              className="bg-btn-dark text-white rounded-full px-6 py-3 text-p3 font-medium cursor-pointer inline-flex items-center gap-2"
             >
+              <img src={figmaAssets.output.downloadIcon} alt="" aria-hidden="true" className="size-4" />
               {loading ? copy.output.downloadPdfPreparing : copy.output.downloadPdf}
             </span>
           )}

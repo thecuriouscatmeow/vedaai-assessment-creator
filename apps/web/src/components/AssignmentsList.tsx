@@ -12,6 +12,7 @@ import {
 } from '@/store/slices/assignmentsSlice';
 import { API_URL } from '@/lib/config';
 import copy from '@/content/copy.json';
+import { figmaAssets } from '@/lib/figmaAssets';
 
 /**
  * AssignmentsList — the Assignments list screen.
@@ -101,18 +102,24 @@ export function AssignmentsList() {
     return (
       <div
         className="flex flex-col items-center justify-center min-h-[60dvh] gap-8 text-center px-4"
+        style={{ backgroundImage: `url(${figmaAssets.assignments.empty.background})` }}
         data-testid="assignments-empty"
       >
         {/* Illustration placeholder */}
-        <div className="size-[clamp(12rem,30vw,18.75rem)] rounded-full bg-surface-hover flex items-center justify-center text-[4rem]">
-          📋
+        <div className="size-[clamp(12rem,30vw,18.75rem)] rounded-full bg-surface-hover flex items-center justify-center overflow-hidden">
+          <img
+            src={figmaAssets.assignments.empty.illustration}
+            alt=""
+            aria-hidden="true"
+            className="size-full object-cover"
+          />
         </div>
         <div className="flex flex-col gap-3 items-center max-w-[30rem]">
           <h2 className="font-bold text-p1 text-text-primary">
             {copy.assignmentsList.empty.heading}
           </h2>
           <p className="text-p3 text-text-secondary/80">
-            {copy.assignmentsList.empty.subtext}
+            {copy.assignmentsList.empty.description}
           </p>
         </div>
         <Link
@@ -200,7 +207,8 @@ function AssignmentCard({
   return (
     <article
       data-testid={`assignment-card-${assignment.id}`}
-      className="bg-surface rounded-[16px] shadow-[var(--shadow-card)] p-4 flex flex-col gap-3 hover:bg-surface-hover transition-colors"
+      className="bg-surface rounded-[16px] shadow-[var(--shadow-card)] p-4 flex flex-col gap-3 hover:bg-surface-hover transition-colors bg-cover bg-center"
+      style={{ backgroundImage: `url(${figmaAssets.assignments.filled.cardBg})` }}
     >
       {/* Title */}
       <div className="flex-1">
@@ -242,7 +250,7 @@ function AssignmentCard({
             onClick={() => setOpenMenuId(openMenuId === assignment.id ? null : assignment.id)}
             className="p-1 text-text-secondary hover:text-text-primary transition-colors"
           >
-            ⋮
+            <img src={figmaAssets.assignments.filled.menuIcon} alt="" aria-hidden="true" className="size-5" />
           </button>
 
           {openMenuId === assignment.id && (

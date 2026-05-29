@@ -17,6 +17,7 @@ import { useAssignmentSocket } from '@/lib/useAssignmentSocket';
 import { API_URL } from '@/lib/config';
 import copy from '@/content/copy.json';
 import { GenerationStatus } from './GenerationStatus';
+import { figmaAssets } from '@/lib/figmaAssets';
 
 const QUESTION_TYPE_OPTIONS: { value: QuestionType; label: string }[] = (
   Object.entries(QUESTION_TYPE_LABELS) as [QuestionType, string][]
@@ -200,12 +201,11 @@ export function AssignmentForm() {
               className="
                 border-2 border-dashed border-grey-3 rounded-[12px]
                 p-8 flex flex-col items-center gap-3
-                cursor-pointer hover:bg-surface-hover transition-colors
+                cursor-pointer hover:bg-surface-hover transition-colors bg-contain bg-center bg-no-repeat
               "
+              style={{ backgroundImage: `url(${figmaAssets.create.uploadBackdrop})` }}
             >
-              <span className="text-[2rem] leading-none" aria-hidden="true">
-                ☁
-              </span>
+              <img src={figmaAssets.create.uploadCloud} alt="" aria-hidden="true" className="size-8" />
               <span className="text-p3 font-medium text-text-primary">
                 {copy.assignmentForm.fields.file.dragDrop}
               </span>

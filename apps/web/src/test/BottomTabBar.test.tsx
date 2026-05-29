@@ -43,13 +43,14 @@ describe('BottomTabBar', () => {
     mockUsePathname.mockReturnValue('/assignments');
     const { container } = renderWithStore(<BottomTabBar />);
     expect(container).not.toBeEmptyDOMElement();
-    expect(screen.getAllByRole('link')).toHaveLength(4);
+    expect(screen.getAllByRole('link')).toHaveLength(1);
+    expect(container.querySelectorAll('[aria-disabled="true"]')).toHaveLength(3);
   });
 
   it('renders when pathname is /assignments/create', () => {
     mockUsePathname.mockReturnValue('/assignments/create');
     const { container } = renderWithStore(<BottomTabBar />);
     expect(container).not.toBeEmptyDOMElement();
-    expect(screen.getAllByRole('link')).toHaveLength(4);
+    expect(screen.getAllByRole('link')).toHaveLength(1);
   });
 });

@@ -1,12 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import copy from '@/content/copy.json';
-
-/**
- * Mobile top header — visible below md breakpoint, hidden on md+.
- * Includes a sub-header with a back button and page title for inner pages.
- */
+import { figmaAssets } from '@/lib/figmaAssets';
+import { MobileNavDrawer } from './MobileNavDrawer';
 
 function getPageTitle(pathname: string): string {
   if (pathname === '/assignments/create') {
@@ -28,63 +26,75 @@ function showSubHeader(pathname: string): boolean {
 export function MobileHeader() {
   const pathname = usePathname();
   const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
   const pageTitle = getPageTitle(pathname);
   const hasSubHeader = showSubHeader(pathname);
 
   return (
-    <header className="md:hidden">
-      {/* Main header card */}
-      <div className="bg-surface rounded-[16px] shadow-[var(--shadow-card)] mx-3 mt-3 px-4 py-3 flex items-center justify-between">
-        {/* Left: logo */}
-        <div className="flex items-center gap-3">
-          <div className="size-10 rounded-[10px] bg-gradient-to-b from-[#e56820] to-[#d45e3e] flex items-center justify-center text-white font-bold select-none">
-            V
-          </div>
-          <span className="font-bold text-[1.75rem] tracking-[-0.105rem] text-text-primary leading-none">
+    <header className="lg:hidden">
+      <div className="bg-surface rounded-[1rem] shadow-[var(--shadow-card)] mx-3 mt-3 pl-3 pr-4 py-3 flex items-center justify-between min-h-14">
+        <div className="flex items-center gap-2">
+          <img
+            src={figmaAssets.shell.mobile.logoMark || '/assets/logo_desktop.png'}
+            onError={(e) => {
+              e.currentTarget.src = '/assets/logo_desktop.png';
+            }}
+            alt={copy.layout.sidebar.logoAlt}
+            className="size-7 shrink-0"
+          />
+          <span className="font-bold text-[1.25rem] tracking-[-0.075rem] text-text-primary leading-[1.4]">
             {copy.app.name}
           </span>
         </div>
 
-        {/* Right: actions */}
         <div className="flex items-center gap-3">
-          {/* Notification bell with badge */}
           <button
             type="button"
             aria-label={copy.layout.topbar.notificationLabel}
-            className="relative"
+            className="relative flex size-9 items-center justify-center rounded-full bg-bg-page shrink-0"
           >
-            <span aria-hidden="true" className="text-text-secondary text-p2">🔔</span>
-            <span className="absolute size-2 bg-red rounded-full top-0 right-0" aria-hidden="true" />
+            <img src={figmaAssets.shell.mobile.bell} alt="" aria-hidden="true" className="size-6" />
+            <span
+              className="absolute size-2 bg-red rounded-full top-0.5 right-0.5"
+              aria-hidden="true"
+            />
           </button>
 
-          {/* User avatar */}
           <button
             type="button"
-            className="size-8 rounded-full bg-grey-2"
+            className="size-8 rounded-full overflow-hidden shrink-0"
             aria-label={copy.layout.topbar.userMenuLabel}
-          />
+          >
+            <img
+              src={figmaAssets.shell.mobile.avatar}
+              alt=""
+              aria-hidden="true"
+              className="size-8 rounded-full object-cover"
+            />
+          </button>
 
-          {/* Hamburger */}
           <button
             type="button"
-            aria-label="Menu"
-            className="text-text-primary text-p1"
+            aria-label={copy.layout.topbar.menuLabel}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav-drawer"
+            onClick={() => setMenuOpen(true)}
+            className="shrink-0"
           >
-            ≡
+            <img src={figmaAssets.shell.mobile.menu} alt="" aria-hidden="true" className="size-6" />
           </button>
         </div>
       </div>
 
-      {/* Sub-header for inner pages */}
       {hasSubHeader && (
         <div className="flex items-center px-4 py-2">
           <button
             type="button"
-            aria-label="Go back"
+            aria-label={copy.layout.topbar.backLabel}
             onClick={() => router.back()}
-            className="text-text-primary text-p3 shrink-0"
+            className="text-text-primary shrink-0"
           >
-            ←
+            <img src={figmaAssets.shell.mobile.back} alt="" aria-hidden="true" className="size-4" />
           </button>
           {pageTitle && (
             <p className="flex-1 text-center font-semibold text-p3 text-text-primary">
@@ -93,6 +103,8 @@ export function MobileHeader() {
           )}
         </div>
       )}
+
+      <MobileNavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} />
     </header>
   );
 }
