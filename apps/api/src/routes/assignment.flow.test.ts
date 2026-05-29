@@ -10,7 +10,7 @@ import request from 'supertest';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import type { Express } from 'express';
-import { QuestionPaperSchema } from '@vedaai/shared';
+import { QuestionPaperSchema, type QuestionPaper } from '@vedaai/shared';
 import { createApp } from '../app';
 import { loadConfig } from '../lib/config';
 import { createLogger } from '../lib/logger';
@@ -18,7 +18,8 @@ import { createAssignmentRepository } from '../adapters/db/assignment.repository
 import { createAssignmentService } from '../services/assignment.service';
 import { createGenerateProcessor } from '../worker';
 import type { GenerateQueue } from '../lib/queue';
-import type { LlmAdapter } from '../adapters/llm/index';
+import type { GenerationPipeline } from '../domain/pipeline';
+import { SCHOOL_NAME, SCHOOL_ADDRESS } from '../lib/school';
 
 let mongod: MongoMemoryServer;
 
@@ -39,8 +40,10 @@ beforeEach(async () => {
   }
 });
 
-const validPaperJson = JSON.stringify({
+const validPaper: QuestionPaper = {
   title: 'Full Flow Paper',
+  schoolName: SCHOOL_NAME,
+  schoolAddress: SCHOOL_ADDRESS,
   subject: 'History',
   className: 'Class 8',
   totalMarks: 20,
@@ -54,14 +57,9 @@ const validPaperJson = JSON.stringify({
       ],
     },
   ],
-});
-
-const mockLlm: LlmAdapter = {
-  name: 'mock',
-  async complete() {
-    return validPaperJson;
-  },
 };
+
+const mockPipeline: GenerationPipeline = { invoke: async () => validPaper };
 
 function makeCaptureQueue(captured: string[]): GenerateQueue {
   return {
@@ -107,7 +105,7 @@ describe('Full flow: create → process → read', () => {
 
     // Step 2: Simulate worker processing (directly calling processor)
     const repo = createAssignmentRepository();
-    const processor = createGenerateProcessor({ repo, llm: mockLlm });
+    const processor = createGenerateProcessor({ repo, pipeline: mockPipeline });
     const paper = await processor({ data: { assignmentId } });
 
     // Paper should be schema-valid
