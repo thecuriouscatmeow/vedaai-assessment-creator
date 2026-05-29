@@ -1,45 +1,17 @@
-import type { LlmAdapter } from './index';
-import { createGeminiAdapter } from './providers/gemini';
+import type { ChatGoogleGenerativeAI } from '@langchain/google-genai';
 import type { AppConfig } from '../../lib/config';
+import { createGeminiChatModel } from './providers/gemini';
 
 /**
- * LLM adapter factory.
- *
- * Keyed by the `LLM_PROVIDER` env var (default: 'gemini'). Gemini is the
- * committed, production provider. Claude is a dev-only stub: its module
- * (`./providers/claude`) is gitignored and absent from committed builds, so it
- * is loaded lazily via dynamic import and only resolves when present locally —
- * the committed build never statically depends on it.
+ * Chat-model factory keyed by config.llmProvider (default: gemini). Gemini is
+ * the committed provider; other providers throw until added.
  */
-export async function createLlmAdapter(config: AppConfig): Promise<LlmAdapter> {
+export function createChatModel(config: AppConfig): ChatGoogleGenerativeAI {
   const provider = config.llmProvider ?? 'gemini';
-
   switch (provider) {
     case 'gemini':
-      return createGeminiAdapter(config.gemini.apiKey);
-    case 'claude': {
-      try {
-        // Variable specifier: keeps the gitignored module out of static
-        // resolution so the committed build typechecks without it.
-        const claudeModulePath = './providers/claude';
-        const { createClaudeAdapter } = await import(claudeModulePath);
-        return createClaudeAdapter(''); // API key sourced from env in a full impl
-      } catch (err: unknown) {
-        // Only swallow "module not found" errors for the gitignored dev stub.
-        // Any other error (e.g. a runtime crash inside the module) must propagate.
-        const isModuleNotFound =
-          (err instanceof Error &&
-            ((err as NodeJS.ErrnoException).code === 'ERR_MODULE_NOT_FOUND' ||
-              err.message.includes('./providers/claude'))) ;
-        if (isModuleNotFound) {
-          throw new Error(
-            'LLM_PROVIDER="claude" is a dev-only stub and is not present in this build. Use "gemini".',
-          );
-        }
-        throw err;
-      }
-    }
+      return createGeminiChatModel(config.gemini.apiKey);
     default:
-      throw new Error(`Unknown LLM_PROVIDER: "${provider}". Supported: gemini, claude.`);
+      throw new Error(`Unsupported LLM_PROVIDER: "${provider}". Supported: gemini.`);
   }
 }
