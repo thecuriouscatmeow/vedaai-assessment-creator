@@ -162,7 +162,7 @@ export function AssignmentForm() {
             {copy.assignmentForm.headingCreate}
           </h1>
           <p className="text-p4 text-text-secondary leading-snug">
-            {copy.assignmentForm.subtitle}
+            {copy.assignmentForm.subheadingCreate}
           </p>
         </div>
       </div>
@@ -217,11 +217,11 @@ export function AssignmentForm() {
             >
               {/* Cloud Icon wrapper */}
               <div className="bg-white border-[1.75px] border-dashed border-btn-dark/20 flex items-center justify-center rounded-[8px] size-10 shadow-sm">
-                <img 
-                  src={figmaAssets.create.uploadCloud} 
-                  alt="" 
-                  aria-hidden="true" 
-                  className="size-6" 
+                <img
+                  src={figmaAssets.create.uploadCloud}
+                  alt=""
+                  aria-hidden="true"
+                  className="size-6"
                 />
               </div>
 
@@ -288,11 +288,11 @@ export function AssignmentForm() {
               <span className={`text-p3 ${watchedDueDate ? 'text-text-primary font-medium' : 'text-text-disabled font-normal'}`}>
                 {watchedDueDate ? watchedDueDate : 'DD-MM-YYYY'}
               </span>
-              <img 
-                src={figmaAssets.create.calendarIcon} 
-                alt="" 
-                aria-hidden="true" 
-                className="size-6" 
+              <img
+                src={figmaAssets.create.calendarIcon}
+                alt=""
+                aria-hidden="true"
+                className="size-6"
               />
               <input
                 id="dueDate"
@@ -357,11 +357,11 @@ export function AssignmentForm() {
                           </option>
                         ))}
                       </select>
-                      <img 
-                        src={figmaAssets.create.chevronDown} 
-                        alt="" 
-                        aria-hidden="true" 
-                        className="absolute right-4 top-1/2 -translate-y-1/2 size-4 pointer-events-none" 
+                      <img
+                        src={figmaAssets.create.chevronDown}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 size-4 pointer-events-none"
                       />
                     </div>
 
@@ -372,10 +372,10 @@ export function AssignmentForm() {
                         className="p-2 hover:bg-surface-hover rounded-full transition-all shrink-0 active:scale-90"
                         onClick={() => remove(index)}
                       >
-                        <img 
-                          src={figmaAssets.create.deleteRow} 
-                          alt="Remove row" 
-                          className="size-4" 
+                        <img
+                          src={figmaAssets.create.deleteRow}
+                          alt="Remove row"
+                          className="size-4"
                         />
                       </button>
                     )}
@@ -383,7 +383,7 @@ export function AssignmentForm() {
 
                   {/* Steppers Column (Side-by-side) */}
                   <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end shrink-0">
-                    
+
                     {/* Stepper 1: Questions */}
                     <div className="flex flex-col items-center md:items-stretch gap-1">
                       <span className="md:hidden text-p5 font-semibold text-text-disabled uppercase tracking-wider text-center">
@@ -401,7 +401,7 @@ export function AssignmentForm() {
                         >
                           <img src={figmaAssets.create.stepperMinus} alt="Minus" className="size-4" />
                         </button>
-                        
+
                         <label
                           htmlFor={`questions-${String(index)}-count`}
                           className="sr-only"
@@ -418,7 +418,7 @@ export function AssignmentForm() {
                           "
                           {...register(`questions.${index}.count`, { valueAsNumber: true })}
                         />
-                        
+
                         <button
                           type="button"
                           aria-label={`Increase count for row ${String(index + 1)}`}
@@ -450,7 +450,7 @@ export function AssignmentForm() {
                         >
                           <img src={figmaAssets.create.stepperMinus} alt="Minus" className="size-4" />
                         </button>
-                        
+
                         <label
                           htmlFor={`questions-${String(index)}-marks`}
                           className="sr-only"
@@ -467,7 +467,7 @@ export function AssignmentForm() {
                           "
                           {...register(`questions.${index}.marks`, { valueAsNumber: true })}
                         />
-                        
+
                         <button
                           type="button"
                           aria-label={`Increase marks for row ${String(index + 1)}`}
@@ -540,7 +540,7 @@ export function AssignmentForm() {
                 "
                 {...register('additionalInfo')}
               />
-              
+
               <button
                 type="button"
                 aria-label="Voice input (dictation)"
