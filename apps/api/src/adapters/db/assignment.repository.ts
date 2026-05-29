@@ -180,7 +180,10 @@ export function createAssignmentRepository(): AssignmentRepository {
 
     async listAll() {
       const docs = await AssignmentModel.find({})
-        .sort({ createdAt: -1 })
+        // `_id` is the deterministic tie-breaker: same-millisecond createdAt
+        // values would otherwise sort unpredictably. ObjectIds increase
+        // monotonically within a process, so `_id: -1` keeps "newest first".
+        .sort({ createdAt: -1, _id: -1 })
         .select({ input: 1, status: 1, title: 1, createdAt: 1 })
         .lean()
         .exec();
