@@ -14,7 +14,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
+    "@langchain/core": "^1.1.48",
+    "@langchain/google-genai": "^2.1.31",
     "@vedaai/shared": "workspace:*",
     "bullmq": "^5.77.3",
     "cloudinary": "^2.10.0",
@@ -23,10 +24,12 @@
     "express-rate-limit": "^8.5.2",
     "helmet": "^8.2.0",
     "ioredis": "^5.10.1",
+    "langchain": "^1.4.2",
     "mongoose": "^9.6.2",
     "pino": "^10.3.1",
     "pino-http": "^11.0.0",
     "socket.io": "^4.8.3",
+    "unpdf": "^1.6.2",
     "xss": "^1.0.15",
     "zod": "^4.4.3"
   },
