@@ -14,7 +14,7 @@ import { QUESTION_TYPE_LABELS, type AssignmentInput } from '@vedaai/shared';
  * Callers treat the returned string as opaque; only `parsePaper` and the LLM
  * adapter care about the format.
  */
-export function buildPrompt(input: AssignmentInput): string {
+export function buildPrompt(input: AssignmentInput, sourceText: string): string {
   const questionSpecLines = input.questions
     .map((q, i) => {
       const label = QUESTION_TYPE_LABELS[q.type] ?? q.type;
@@ -26,11 +26,10 @@ export function buildPrompt(input: AssignmentInput): string {
     ? `\nAdditional instructions from the teacher: ${input.additionalInfo}`
     : '';
 
-  // Note: fileUrl is handled as inlineData by the Gemini adapter; we still
-  // mention the attachment in the prompt so the model knows to derive content
-  // from the supplied material.
-  const fileContext = input.fileUrl
-    ? `\nAn image or PDF of source material has been attached inline. Use it to derive relevant, context-specific questions.`
+  // The uploaded file is extracted to plain text upstream (PDF native / image
+  // vision) and passed in as source material — the model no longer sees the file.
+  const sourceContext = sourceText.trim()
+    ? `\nSource material extracted from the teacher's uploaded file (use it to derive relevant, context-specific questions):\n"""\n${sourceText.trim()}\n"""`
     : '';
 
   return `You are an expert educator creating a well-structured exam question paper.
@@ -73,7 +72,7 @@ IMPORTANT CONSTRAINTS:
 Assignment requirements:
 - Due date: ${input.dueDate}
 - Question breakdown (grouped by type into separate sections A, B, C…):
-${questionSpecLines}${fileContext}${extraInstructions}
+${questionSpecLines}${sourceContext}${extraInstructions}
 
 Guidelines:
 - Group questions by type into separate named sections (e.g., "Section A: Multiple Choice Questions").
