@@ -15,11 +15,11 @@ interface NavItemLinkProps {
 
 const variantClasses: Record<NavItemLinkVariant, { base: string; active: string }> = {
   sidebar: {
-    base: 'flex items-center gap-2 px-3 py-[0.5625rem] w-full text-p3 rounded-[0.5rem] transition-colors',
+    base: 'flex items-center gap-2 px-3 py-[0.5625rem] w-full text-p3 rounded-[0.5rem] transition-all hover:bg-surface-hover hover:text-text-primary cursor-pointer',
     active: 'bg-surface-hover text-text-primary font-medium',
   },
   drawer: {
-    base: 'flex items-center gap-2 px-3 py-[0.5625rem] w-full text-p3 rounded-[0.5rem] transition-colors',
+    base: 'flex items-center gap-2 px-3 py-[0.5625rem] w-full text-p3 rounded-[0.5rem] transition-all hover:bg-surface-hover hover:text-text-primary cursor-pointer',
     active: 'bg-surface-hover text-text-primary font-medium',
   },
   tab: {
@@ -30,7 +30,7 @@ const variantClasses: Record<NavItemLinkVariant, { base: string; active: string 
 
 /**
  * Shared nav row — sidebar, mobile drawer, and bottom tabs.
- * Disabled items render as non-interactive spans (no dead links).
+ * Disabled items render as non-interactive buttons with hover effects (no dead links).
  */
 export function NavItemLink({ item, pathname, variant, onNavigate }: NavItemLinkProps) {
   const isActive = !item.disabled && isNavItemActive(pathname, item.href);
@@ -55,9 +55,14 @@ export function NavItemLink({ item, pathname, variant, onNavigate }: NavItemLink
 
   if (item.disabled) {
     return (
-      <span className={className} aria-disabled="true">
+      <button
+        type="button"
+        className={`${className} text-left border-none outline-none`}
+        aria-disabled="true"
+        onClick={(e) => e.preventDefault()}
+      >
         {content}
-      </span>
+      </button>
     );
   }
 

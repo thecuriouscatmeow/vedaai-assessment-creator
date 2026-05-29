@@ -75,6 +75,7 @@ export function isAssignmentDetailPath(pathname: string): boolean {
 
 /** Active nav item — assignments matches all `/assignments/*` routes. */
 export function isNavItemActive(pathname: string, href: string): boolean {
+  if (href === '/assignments') return pathname === '/assignments';
   if (href === '#' || href === '/') return pathname === href;
   return pathname === href || pathname.startsWith(`${href}/`);
 }

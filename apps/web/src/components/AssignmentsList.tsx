@@ -101,7 +101,7 @@ export function AssignmentsList() {
   if (items.length === 0) {
     return (
       <div
-        className="flex flex-col items-center justify-center min-h-[60dvh] gap-8 text-center px-4"
+        className="flex-1 flex flex-col items-center justify-center min-h-full gap-8 text-center px-4"
         style={{ backgroundImage: `url(${figmaAssets.assignments.empty.background})` }}
         data-testid="assignments-empty"
       >

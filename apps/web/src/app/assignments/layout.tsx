@@ -20,7 +20,7 @@ export default function AssignmentsLayout({
       {/* MOBILE SHELL */}
       <div className="lg:hidden flex flex-col min-h-dvh">
         <MobileHeader />
-        <main className="flex-1 px-4 py-4 pb-24 min-w-0">
+        <main className="flex-1 px-4 py-4 pb-24 min-w-0 flex flex-col">
           {children}
         </main>
         <BottomTabBar />
@@ -34,7 +34,7 @@ export default function AssignmentsLayout({
         {/* Right side area: topbar + main content */}
         <div className="flex-1 flex flex-col gap-6 h-full min-w-0">
           <DesktopHeader />
-          <main className="flex-1 overflow-auto min-h-0 min-w-0">
+          <main className="flex-1 overflow-auto min-h-0 min-w-0 flex flex-col">
             {children}
           </main>
         </div>
