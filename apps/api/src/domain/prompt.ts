@@ -11,8 +11,8 @@ import { QUESTION_TYPE_LABELS, type AssignmentInput } from '@vedaai/shared';
  * Uses `QUESTION_TYPE_LABELS` from `@vedaai/shared` so the model receives the
  * same human-readable labels displayed in the frontend dropdown.
  *
- * Callers treat the returned string as opaque; only `parsePaper` and the LLM
- * adapter care about the format.
+ * Callers treat the returned string as opaque; only the generation adapter and
+ * the LLM care about the format.
  */
 export function buildPrompt(input: AssignmentInput, sourceText: string): string {
   const questionSpecLines = input.questions

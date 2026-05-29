@@ -18,7 +18,6 @@ export {
 export { createPingService, type PingService } from './services/ping.service';
 export { createPingRouter, type PingRouterDeps } from './routes/ping';
 export { createGenerateProcessor, type ProcessorDeps } from './worker';
-export { buildStubPaper } from './domain/stub-generation';
 
 export type { DbAdapter } from './adapters/db/index';
 export type { CacheAdapter } from './adapters/cache/index';
