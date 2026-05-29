@@ -15,8 +15,6 @@ export {
   type SocketServerOptions,
   type QueueEventsOptions,
 } from './lib/socket';
-export { createPingService, type PingService } from './services/ping.service';
-export { createPingRouter, type PingRouterDeps } from './routes/ping';
 export { createGenerateProcessor, type ProcessorDeps } from './worker';
 
 export type { DbAdapter } from './adapters/db/index';

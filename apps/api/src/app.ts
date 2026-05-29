@@ -4,9 +4,7 @@ import type { Logger } from 'pino';
 import type { AppConfig } from './lib/config';
 import { httpLogger } from './lib/logger';
 import { errorHandler, notFoundHandler } from './lib/error';
-import type { PingService } from './services/ping.service';
 import type { AssignmentService } from './services/assignment.service';
-import { createPingRouter } from './routes/ping';
 import { createAssignmentRouter } from './routes/assignment';
 import { createUploadRouter } from './routes/upload';
 import type { StorageAdapter } from './adapters/storage/index';
@@ -26,7 +24,6 @@ import { rateLimitMiddleware } from './middleware/rate-limit';
  */
 
 export interface AppDeps {
-  pingService?: PingService;
   assignmentService?: AssignmentService;
   storageAdapter?: StorageAdapter;
 }
@@ -64,10 +61,6 @@ export function createApp({ config, logger, deps, mountTestRoutes }: CreateAppOp
   app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'ok', service: 'vedaai-api', uptime: process.uptime() });
   });
-
-  if (deps?.pingService) {
-    app.use('/api', createPingRouter({ pingService: deps.pingService }));
-  }
 
   if (deps?.assignmentService) {
     app.use(

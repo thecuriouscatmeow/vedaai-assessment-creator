@@ -1,5 +1,4 @@
 import copy from '@/content/copy.json';
-import { PingPanel } from '@/components/PingPanel';
 
 export default function HomePage() {
   return (
@@ -10,8 +9,6 @@ export default function HomePage() {
         </h1>
         <p className="text-muted">{copy.home.subheading}</p>
       </div>
-
-      <PingPanel />
     </main>
   );
 }
