@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { QuestionPaperSchema, DifficultySchema } from '../index';
+import { QuestionPaperSchema, DifficultySchema, GeneratedPaperSchema } from '../index';
 
 const validPaper = {
   title: 'Mid-Term Examination',
@@ -77,5 +77,27 @@ describe('QuestionPaperSchema', () => {
         sections: [{ title: 'A', questions: [{ text: 'Q', difficulty: 'easy', marks: 0 }] }],
       }),
     ).toThrow();
+  });
+});
+
+describe('GeneratedPaperSchema', () => {
+  const academic = {
+    title: 'Mid-Term',
+    subject: 'Science',
+    className: 'Class 5',
+    totalMarks: 10,
+    studentInfo: {},
+    sections: [{ title: 'A', questions: [{ text: 'Q1?', difficulty: 'easy', marks: 10 }] }],
+  };
+
+  it('accepts a paper without school identity', () => {
+    expect(() => GeneratedPaperSchema.parse(academic)).not.toThrow();
+  });
+
+  it('includes all academic fields from QuestionPaper', () => {
+    const parsed = GeneratedPaperSchema.parse(academic);
+    expect(parsed.title).toBe('Mid-Term');
+    expect(parsed.subject).toBe('Science');
+    expect(parsed.className).toBe('Class 5');
   });
 });

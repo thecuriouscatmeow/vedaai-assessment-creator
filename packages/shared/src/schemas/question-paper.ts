@@ -52,3 +52,14 @@ export const QuestionPaperSchema = z.object({
   sections: z.array(SectionSchema).min(1),
 });
 export type QuestionPaper = z.infer<typeof QuestionPaperSchema>;
+
+/**
+ * GeneratedPaper — the academic subset the LLM produces. School identity
+ * (schoolName/schoolAddress) is merged in by the backend after generation, so
+ * the model never needs to know the institution.
+ */
+export const GeneratedPaperSchema = QuestionPaperSchema.omit({
+  schoolName: true,
+  schoolAddress: true,
+});
+export type GeneratedPaper = z.infer<typeof GeneratedPaperSchema>;
